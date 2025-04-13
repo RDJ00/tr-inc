@@ -11,6 +11,7 @@
 - [x] Fix any existing hydration issues
 - [x] Update site footer with logo and contact information
 - [x] Update hero section with new title and animated CTA buttons
+- [x] Update mission/vision section with new content
 
 ## Medium Priority
 - [ ] Implement events management

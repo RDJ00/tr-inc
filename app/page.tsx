@@ -127,7 +127,7 @@ export default function Home() {
               Our Purpose
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
+              <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 bg-white border border-gold/20">
                 <CardHeader className="pb-2">
                   <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mb-4">
                     <Heart className="h-6 w-6 text-gold" />
@@ -136,13 +136,23 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-navy/70">
-                    To provide a safe, supportive environment for survivors of domestic violence, trauma, and abuse. We
-                    are committed to empowering individuals through healing, education, and advocacy to rebuild their
-                    lives and break the cycle of violence.
+                    To bring normality to the lives of adults or children and families who feel displaced.
                   </p>
+                  <div className="mt-4 p-4 bg-tan-light rounded-lg border border-gold/20">
+                    <p className="text-navy/80 text-sm font-medium">
+                      If you are in need of immediate help please call
+                      <br />
+                      <span className="text-purple font-bold">The National Domestic Violence hotline</span>
+                      <br />
+                      <a href="tel:8007997233" className="text-gold hover:underline">800-799-7233</a> or visit{" "}
+                      <a href="https://www.hotline.org" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">
+                        www.hotline.org
+                      </a>
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
-              <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
+              <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 bg-white border border-gold/20">
                 <CardHeader className="pb-2">
                   <div className="w-12 h-12 rounded-full bg-purple/20 flex items-center justify-center mb-4">
                     <Lightbulb className="h-6 w-6 text-purple" />
@@ -151,9 +161,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-navy/70">
-                    A world where all individuals live free from violence and abuse, with access to resources that
-                    promote healing, self-sufficiency, and the opportunity to thrive in safe, healthy relationships and
-                    communities.
+                    To provide housing and care for abused and displaced adults and children with parents.
                   </p>
                 </CardContent>
               </Card>
