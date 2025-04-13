@@ -183,65 +183,84 @@ export default function Home() {
             <p className="text-center text-navy/70 max-w-2xl mx-auto mb-12">
               Our comprehensive programs address the diverse needs of survivors at every stage of their healing journey.
             </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Domestic Violence",
                   description:
-                    "Crisis intervention, safety planning, and ongoing support for survivors of intimate partner violence.",
+                    "Providing crisis intervention, safety planning, and ongoing support for survivors of intimate partner violence to ensure immediate safety and long-term healing.",
                   icon: <Shield className="h-6 w-6 text-gold" />,
                   link: "/domestic-violence",
+                  delay: 0.1
                 },
                 {
                   title: "Children & Trauma",
                   description:
-                    "Age-appropriate therapy and support services for children who have witnessed or experienced trauma.",
+                    "Age-appropriate therapy and support services for children who have witnessed or experienced trauma, helping them process experiences and build resilience.",
                   icon: <Users className="h-6 w-6 text-gold" />,
                   link: "/children-trauma",
+                  delay: 0.2
                 },
                 {
                   title: "Sexual Assault",
                   description:
-                    "Specialized care and advocacy for survivors of sexual violence, including accompaniment services.",
+                    "Specialized care and advocacy for survivors of sexual violence, including crisis response, medical accompaniment, and trauma-informed counseling services.",
                   icon: <HandHeart className="h-6 w-6 text-gold" />,
                   link: "#",
+                  delay: 0.3
                 },
                 {
-                  title: "Client-Centered Practice",
+                  title: "Client-Centered Practice (CCP)",
                   description:
-                    "Individualized support plans that honor each survivor's unique needs, choices, and healing journey.",
+                    "Individualized support plans that honor each survivor's unique needs, choices, and healing journey, ensuring every person feels heard, valued, and empowered.",
                   icon: <Heart className="h-6 w-6 text-gold" />,
                   link: "#",
+                  delay: 0.4
                 },
                 {
                   title: "Awareness & Action",
-                  description: "Community education and prevention programs aimed at ending the cycle of violence.",
+                  description:
+                    "Community education and prevention programs aimed at ending the cycle of violence through increased awareness, bystander intervention, and systemic change.",
                   icon: <Megaphone className="h-6 w-6 text-gold" />,
                   link: "#",
+                  delay: 0.5
                 },
               ].map((program, index) => (
-                <Card
+                <motion.div
                   key={index}
-                  className="border-none shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.6, delay: program.delay }}
                 >
-                  <CardHeader>
-                    <div className="w-10 h-10 rounded-full bg-tan flex items-center justify-center mb-4">
-                      {program.icon}
-                    </div>
-                    <CardTitle className="text-xl text-navy">{program.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-navy/70">{program.description}</p>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href={program.link}
-                      className="text-gold text-sm font-medium flex items-center hover:text-gold-dark transition-colors group"
-                    >
-                      Learn More <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </CardFooter>
-                </Card>
+                  <Card
+                    className="border-none shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white h-full flex flex-col"
+                  >
+                    <CardHeader className="pb-3 border-b border-gold/10">
+                      <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-4">
+                        {program.icon}
+                      </div>
+                      <CardTitle className="text-xl text-navy font-bold">{program.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="py-6 flex-grow">
+                      <p className="text-navy/70">{program.description}</p>
+                    </CardContent>
+                    <CardFooter className="pt-0">
+                      <Button 
+                        variant="outline" 
+                        className="w-full border-gold/50 text-gold hover:bg-gold hover:text-white hover:border-gold transition-all duration-300"
+                        asChild
+                      >
+                        <Link
+                          href={program.link}
+                          className="flex items-center justify-center"
+                        >
+                          Learn More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        </Link>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           </ScrollAnimation>
