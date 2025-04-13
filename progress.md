@@ -21,7 +21,7 @@
 - Updated mission/vision section with new content and emergency contact information
 - Enhanced program cards with improved styling, expanded descriptions, and staggered fade-in animations
 - Changed program cards background color to light tan for better visual distinction
-- Redesigned upcoming events section with image thumbnails and Sanity-ready structure
+- Restructured events section to prepare for Sanity CMS integration with image thumbnails and excerpts
 
 ## Next Steps
 - Define project requirements

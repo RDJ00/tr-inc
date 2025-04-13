@@ -289,80 +289,69 @@ export default function Home() {
             <p className="text-center text-navy/70 max-w-2xl mx-auto mb-12">
               Join us at these upcoming events to learn, connect, and make a difference.
             </p>
-            
-            {/* Event cards - will be replaced with Sanity data in the future */}
             <div className="grid md:grid-cols-3 gap-6">
+              {/* This will be replaced with Sanity data in the future */}
               {[
                 {
                   title: "Healing Through Art Workshop",
                   date: "May 15, 2025",
-                  excerpt: "Join us for a therapeutic art workshop designed to help survivors express emotions and find healing through creative expression.",
-                  image: "/placeholder.jpg",
-                  slug: "healing-art-workshop"
+                  excerpt: "A therapeutic workshop using art to process trauma and express emotions in a safe, supportive environment guided by professional art therapists.",
+                  image: "/placeholder.svg?height=400&width=600",
                 },
                 {
                   title: "Volunteer Training Session",
                   date: "June 2, 2025",
-                  excerpt: "Learn how to support survivors of domestic violence and trauma through our comprehensive volunteer training program.",
-                  image: "/placeholder.jpg",
-                  slug: "volunteer-training"
+                  excerpt: "Learn how to effectively support survivors of domestic violence and trauma through our comprehensive volunteer training program.",
+                  image: "/placeholder.svg?height=400&width=600",
                 },
                 {
                   title: "Annual Fundraising Gala",
                   date: "June 18, 2025",
-                  excerpt: "Support our mission at our elegant fundraising gala featuring dinner, silent auction, and inspiring stories from survivors.",
-                  image: "/placeholder.jpg",
-                  slug: "fundraising-gala"
+                  excerpt: "Join us for an elegant evening of inspiration and community as we raise funds to support our mission of helping survivors rebuild their lives.",
+                  image: "/placeholder.svg?height=400&width=600",
                 },
               ].map((event, index) => (
-                <motion.div
+                <Card
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="border-none shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white"
                 >
-                  <Card className="overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
-                    <div className="relative aspect-[16/9] w-full overflow-hidden">
-                      <Image
-                        src={event.image}
-                        alt={event.title}
-                        fill
-                        className="object-cover transition-transform duration-500 hover:scale-105"
-                      />
-                      <div className="absolute top-4 left-4 bg-gold/90 text-white text-xs py-1 px-2 rounded">
-                        {event.date}
-                      </div>
+                  <div className="aspect-video relative">
+                    <Image
+                      src={event.image}
+                      alt={event.title}
+                      fill
+                      className="object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                    <div className="absolute top-3 right-3">
+                      <span className="bg-gold/90 text-white text-xs px-2 py-1 rounded">Event</span>
                     </div>
-                    
-                    <CardHeader>
-                      <CardTitle className="text-xl text-navy line-clamp-2">{event.title}</CardTitle>
-                    </CardHeader>
-                    
-                    <CardContent className="flex-grow">
-                      <p className="text-navy/70 line-clamp-3">
-                        {event.excerpt.length > 100 
-                          ? `${event.excerpt.substring(0, 100)}...` 
-                          : event.excerpt}
-                      </p>
-                    </CardContent>
-                    
-                    <CardFooter>
-                      <Button 
-                        variant="outline"
-                        className="w-full border-gold/50 text-gold hover:bg-gold hover:text-white transition-all duration-300"
-                        asChild
+                    <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-navy/80 to-transparent py-2 px-4">
+                      <span className="text-white text-sm font-medium">{event.date}</span>
+                    </div>
+                  </div>
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-xl text-navy">{event.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-navy/70 line-clamp-2">
+                      {event.excerpt.length > 100 ? `${event.excerpt.substring(0, 100)}...` : event.excerpt}
+                    </p>
+                  </CardContent>
+                  <CardFooter>
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-gold/50 text-gold hover:bg-gold hover:text-white hover:border-gold transition-all duration-300"
+                      asChild
+                    >
+                      <Link
+                        href="#"
+                        className="flex items-center justify-center"
                       >
-                        <Link
-                          href={`/events/${event.slug}`}
-                          className="flex items-center justify-center"
-                        >
-                          Read More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                        </Link>
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </motion.div>
+                        Read More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
               ))}
             </div>
           </ScrollAnimation>
