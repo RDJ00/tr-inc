@@ -13,10 +13,11 @@
 - Development server started
 - Deployed to Vercel production environment
 - Removed Sanity CMS integration (to be implemented later)
+- Focusing on hydration-safe implementation for all components
 
 ## Next Steps
 - Define project requirements
-- Set up basic UI components
-- Implement core functionality
+- Set up basic UI components with hydration safety in mind
+- Implement core functionality using proper client/server component patterns
 - Configure custom domain (if needed)
 - Improve site design and user experience 

@@ -6,6 +6,9 @@
 - [ ] Create essential UI components
 - [x] Deploy to Vercel
 - [ ] Implement CMS integration
+- [ ] Create proper client/server component separation
+- [ ] Implement hydration-safe state management
+- [ ] Fix any existing hydration issues
 
 ## Medium Priority
 - [ ] Implement events management
