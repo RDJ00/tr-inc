@@ -20,6 +20,7 @@
 - Fixed dependency conflicts between React 19 and older packages
 - Updated mission/vision section with new content and emergency contact information
 - Enhanced program cards with improved styling, expanded descriptions, and staggered fade-in animations
+- Changed program cards background color to light tan for better visual distinction
 
 ## Next Steps
 - Define project requirements

@@ -234,7 +234,7 @@ export default function Home() {
                   transition={{ duration: 0.6, delay: program.delay }}
                 >
                   <Card
-                    className="border-none shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white h-full flex flex-col"
+                    className="border-none shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-tan-light h-full flex flex-col"
                   >
                     <CardHeader className="pb-3 border-b border-gold/10">
                       <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-4">
