@@ -23,6 +23,7 @@
 - [x] Add smooth animations to About page sections
 - [x] Prepare Sanity CMS schema for About page content
 - [x] Update News page for mobile responsiveness with responsive grid and proper image/text handling
+- [x] Update News page header with new subtitle and enhanced gradient overlay
 
 ## Medium Priority
 - [ ] Implement events management

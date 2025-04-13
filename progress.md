@@ -34,6 +34,7 @@
 - Created Sanity CMS schema and data structure for the About page
 - Built CMS-ready version of About page with proper loading states and fallback content
 - Improved News page mobile responsiveness with better card layouts, proper text truncation, and responsive padding
+- Updated News page header with new subtitle and enhanced gradient overlay for cleaner visual design
 
 ## Next Steps
 - Define project requirements

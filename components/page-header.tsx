@@ -16,7 +16,7 @@ export function PageHeader({
     <section className="relative py-16 sm:py-20 md:py-28 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image src={backgroundImage || "/placeholder.svg"} alt={title} fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/80 to-navy/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/75 to-navy/60"></div>
       </div>
 
       {/* Decorative elements */}

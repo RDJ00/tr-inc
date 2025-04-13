@@ -110,7 +110,7 @@ export default function NewsPage() {
     <>
       <PageHeader
         title="Our Work In Action"
-        description="Making a difference in our community and beyond through impactful projects and events."
+        description="Explore the projects, fundraisers, and stories behind our mission"
         backgroundImage="/placeholder.svg?height=600&width=1920"
       />
 
