@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import ClientOnly from "./client-only"
 
 interface Testimonial {
   quote: string
@@ -39,6 +40,7 @@ export function TestimonialSlider() {
 
   const [current, setCurrent] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
+  const [autoRotate, setAutoRotate] = useState(false)
 
   const next = () => {
     if (!isAnimating) {
@@ -56,12 +58,20 @@ export function TestimonialSlider() {
     }
   }
 
+  // Only enable auto-rotation after component is mounted on client
   useEffect(() => {
+    setAutoRotate(true)
+  }, [])
+
+  // Separate effect for the actual rotation
+  useEffect(() => {
+    if (!autoRotate) return
+
     const interval = setInterval(() => {
       next()
     }, 8000)
     return () => clearInterval(interval)
-  }, [])
+  }, [autoRotate])
 
   return (
     <div className="relative bg-tan-light p-8 md:p-12 rounded-xl shadow-md overflow-hidden">
@@ -93,36 +103,38 @@ export function TestimonialSlider() {
           </div>
         </div>
 
-        <div className="relative h-[300px] md:h-[250px]">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className={`absolute top-0 left-0 w-full transition-all duration-500 ${
-                index === current
-                  ? "opacity-100 translate-x-0"
-                  : index < current
-                    ? "opacity-0 -translate-x-full"
-                    : "opacity-0 translate-x-full"
-              }`}
-            >
-              <div className="testimonial-quote text-lg md:text-xl text-navy/80 italic mb-8">{testimonial.quote}</div>
-              <div className="flex items-center gap-4">
-                <div className="relative h-12 w-12 rounded-full overflow-hidden border-2 border-gold/30">
-                  <Image
-                    src={testimonial.image || "/placeholder.svg"}
-                    alt={testimonial.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="font-bold text-navy">{testimonial.name}</p>
-                  <p className="text-sm text-navy/70">{testimonial.title}</p>
+        <ClientOnly>
+          <div className="relative h-[300px] md:h-[250px]">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className={`absolute top-0 left-0 w-full transition-all duration-500 ${
+                  index === current
+                    ? "opacity-100 translate-x-0"
+                    : index < current
+                      ? "opacity-0 -translate-x-full"
+                      : "opacity-0 translate-x-full"
+                }`}
+              >
+                <div className="testimonial-quote text-lg md:text-xl text-navy/80 italic mb-8">{testimonial.quote}</div>
+                <div className="flex items-center gap-4">
+                  <div className="relative h-12 w-12 rounded-full overflow-hidden border-2 border-gold/30">
+                    <Image
+                      src={testimonial.image || "/placeholder.svg"}
+                      alt={testimonial.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-navy">{testimonial.name}</p>
+                    <p className="text-sm text-navy/70">{testimonial.title}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </ClientOnly>
       </div>
     </div>
   )

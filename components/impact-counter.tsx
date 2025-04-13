@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState, useEffect, useRef } from "react"
 import { useInView } from "react-intersection-observer"
+import ClientOnly from "./client-only"
 
 interface ImpactCounterProps {
   end: number
@@ -49,7 +50,9 @@ export function ImpactCounter({ end, duration = 2000, label, icon }: ImpactCount
       <div className="flex justify-center mb-4">
         <div className="w-16 h-16 rounded-full bg-gold/20 flex items-center justify-center">{icon}</div>
       </div>
-      <div className="impact-counter">{count}</div>
+      <ClientOnly fallback={<div className="impact-counter">0</div>}>
+        <div className="impact-counter">{count}</div>
+      </ClientOnly>
       <p className="text-navy font-medium mt-2">{label}</p>
     </div>
   )
