@@ -58,20 +58,20 @@ export function ProjectCard({
         {date && (
           <div className="flex items-center gap-2 text-[#C79C4A] mb-2">
             <Calendar className="h-4 w-4" />
-            <span className="text-sm font-medium">
+            <span className="text-sm font-medium truncate">
               {date}
               {time && ` • ${time}`}
             </span>
           </div>
         )}
-        <CardTitle className="text-xl text-[#0A1E39]">{title}</CardTitle>
+        <CardTitle className="text-xl text-[#0A1E39] line-clamp-2">{title}</CardTitle>
       </CardHeader>
       <CardContent>
         <p className="text-muted-foreground line-clamp-3">{description}</p>
       </CardContent>
       <CardFooter>
-        <Link href={buttonLink}>
-          <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white">{buttonText}</Button>
+        <Link href={buttonLink} className="w-full sm:w-auto">
+          <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white w-full sm:w-auto">{buttonText}</Button>
         </Link>
       </CardFooter>
     </Card>

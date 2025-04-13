@@ -22,6 +22,7 @@
 - [x] Enhance About page mobile responsiveness
 - [x] Add smooth animations to About page sections
 - [x] Prepare Sanity CMS schema for About page content
+- [x] Update News page for mobile responsiveness with responsive grid and proper image/text handling
 
 ## Medium Priority
 - [ ] Implement events management

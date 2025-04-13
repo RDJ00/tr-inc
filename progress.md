@@ -33,6 +33,7 @@
 - Added Framer Motion animations to About page sections for smooth entry and scrolling effects
 - Created Sanity CMS schema and data structure for the About page
 - Built CMS-ready version of About page with proper loading states and fallback content
+- Improved News page mobile responsiveness with better card layouts, proper text truncation, and responsive padding
 
 ## Next Steps
 - Define project requirements

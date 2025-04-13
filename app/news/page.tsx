@@ -115,10 +115,10 @@ export default function NewsPage() {
       />
 
       <section className="py-16">
-        <div className="container">
+        <div className="container px-4 md:px-8 lg:px-12">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold mb-8 text-center text-[#0A1E39]">Upcoming Projects & Events</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {upcomingProjects.map((project, index) => (
                 <ProjectCard
                   key={index}
@@ -137,13 +137,13 @@ export default function NewsPage() {
       </section>
 
       <section className="py-16 bg-[#F6EFD6]/50">
-        <div className="container">
+        <div className="container px-4 md:px-8 lg:px-12">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold mb-8 text-center text-[#0A1E39]">Past Events & Highlights</h2>
 
             <TagFilter tags={allTags} onFilterChange={setSelectedTags} />
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredPastProjects.map((project, index) => (
                 <ProjectCard
                   key={index}
@@ -161,7 +161,7 @@ export default function NewsPage() {
       </section>
 
       <section className="py-16">
-        <div className="container">
+        <div className="container px-4 md:px-8 lg:px-12">
           <ScrollAnimation>
             <NewsletterSignup />
           </ScrollAnimation>
