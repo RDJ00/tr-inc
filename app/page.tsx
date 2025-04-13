@@ -291,63 +291,64 @@ export default function Home() {
             </p>
             <div className="relative">
               <div className="flex overflow-x-auto pb-6 gap-6 snap-x">
-                {/* This array will be replaced with Sanity data in the future */}
                 {[
                   {
-                    title: "Healing Through Art Workshop",
-                    excerpt: "Express your journey through guided art activities designed to promote healing and self-discovery.",
                     date: "May 15, 2025",
-                    image: "/placeholder.svg?height=400&width=600",
-                    slug: "healing-through-art"
+                    title: "Healing Through Art Workshop",
+                    excerpt: "Express emotions and process trauma through guided art therapy in a safe, supportive environment.",
+                    location: "Community Center, 123 Main St",
+                    image: "/placeholder.jpg"
                   },
                   {
-                    title: "Volunteer Training Session",
-                    excerpt: "Learn how you can support survivors through our comprehensive volunteer training program.",
                     date: "June 2, 2025",
-                    image: "/placeholder.svg?height=400&width=600",
-                    slug: "volunteer-training"
+                    title: "Volunteer Training Session",
+                    excerpt: "Learn how to support survivors with trauma-informed care approaches and essential resources.",
+                    location: "Touch & Restored Office",
+                    image: "/placeholder.jpg"
                   },
                   {
-                    title: "Annual Fundraising Gala",
-                    excerpt: "Join us for an elegant evening of celebration and support for our community programs.",
                     date: "June 18, 2025",
-                    image: "/placeholder.svg?height=400&width=600",
-                    slug: "fundraising-gala"
-                  }
+                    title: "Annual Fundraising Gala",
+                    excerpt: "Join us for an evening of inspiration, connection, and support for our shelter expansion project.",
+                    location: "Grand Hotel Ballroom",
+                    image: "/placeholder.jpg"
+                  },
                 ].map((event, index) => (
                   <Card
                     key={index}
                     className="min-w-[300px] sm:min-w-[350px] border-none shadow-md snap-start flex-shrink-0 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white overflow-hidden"
                   >
-                    <div className="relative aspect-[16/9]">
-                      <Image
-                        src={event.image}
+                    <div className="relative h-[150px] w-full">
+                      <Image 
+                        src={event.image} 
                         alt={event.title}
                         fill
                         className="object-cover"
                       />
-                      <div className="absolute top-3 left-3">
-                        <span className="bg-purple/90 text-white text-xs px-2 py-1 rounded-full">
-                          {event.date}
-                        </span>
+                      <div className="absolute top-0 left-0 bg-purple text-white text-xs px-3 py-1">
+                        {event.date}
                       </div>
                     </div>
-                    <CardHeader>
+                    <CardHeader className="pb-2">
                       <CardTitle className="text-xl text-navy">{event.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-navy/70 line-clamp-2">
+                      <p className="text-navy/70 text-sm line-clamp-2">
                         {event.excerpt.length > 100 ? `${event.excerpt.substring(0, 100)}...` : event.excerpt}
                       </p>
+                      <div className="flex items-start gap-2 mt-3">
+                        <MapPin className="h-4 w-4 text-navy/50 mt-0.5" />
+                        <span className="text-xs text-navy/70">{event.location}</span>
+                      </div>
                     </CardContent>
                     <CardFooter>
-                      <Button
-                        variant="outline"
+                      <Button 
+                        variant="outline" 
                         className="w-full border-gold/50 text-gold hover:bg-gold hover:text-white hover:border-gold transition-all duration-300"
                         asChild
                       >
                         <Link
-                          href={`/events/${event.slug}`}
+                          href={`/events/${event.title.toLowerCase().replace(/\s+/g, '-')}`}
                           className="flex items-center justify-center"
                         >
                           Read More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
