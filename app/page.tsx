@@ -507,7 +507,7 @@ export default function Home() {
                 <div className="space-y-6 mt-8">
                   {[
                     {
-                      title: "Share Our Organization",
+                      title: "Share Our Mission",
                       description:
                         "Help spread awareness by sharing our mission with friends, family, and on social media.",
                       icon: <Megaphone className="h-6 w-6 text-gold" />,
@@ -519,7 +519,7 @@ export default function Home() {
                       icon: <Heart className="h-6 w-6 text-gold" />,
                     },
                     {
-                      title: "Donate & Volunteer When You Can",
+                      title: "Donate or Volunteer",
                       description:
                         "Whether it's your time, skills, or resources, your contributions are valued and appreciated.",
                       icon: <HandHeart className="h-6 w-6 text-gold" />,
@@ -540,16 +540,71 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-              <div className="relative h-[400px] md:h-full rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/placeholder.svg?height=600&width=800"
-                  alt="Community support"
-                  fill
-                  className="object-cover transition-transform duration-700 hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <p className="text-white text-lg font-medium">Together, we can make a difference</p>
+              <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <h3 className="text-2xl font-bold text-navy mb-6 text-center">Support Our Cause</h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <motion.div
+                    whileHover={{ scale: 1.03 }}
+                    className="flex flex-col items-center"
+                  >
+                    <div className="w-16 h-16 rounded-full bg-[#00D632]/10 flex items-center justify-center mb-3">
+                      <Image 
+                        src="/cashapp-icon.png" 
+                        alt="CashApp" 
+                        width={40} 
+                        height={40}
+                        className="object-contain"
+                      />
+                    </div>
+                    <h4 className="font-medium text-navy mb-2">CashApp</h4>
+                    <p className="text-navy/70 text-sm text-center mb-3">Send to $TouchRestored</p>
+                    <Button 
+                      className="w-full bg-[#00D632] hover:bg-[#00C02D] text-white transition-all"
+                      asChild
+                    >
+                      <Link href="https://cash.app/$TouchRestored" target="_blank" rel="noopener noreferrer">
+                        Donate via CashApp
+                      </Link>
+                    </Button>
+                  </motion.div>
+                  
+                  <motion.div
+                    whileHover={{ scale: 1.03 }}
+                    className="flex flex-col items-center"
+                  >
+                    <div className="w-16 h-16 rounded-full bg-[#6D1ED4]/10 flex items-center justify-center mb-3">
+                      <Image 
+                        src="/zelle-icon.png" 
+                        alt="Zelle" 
+                        width={40} 
+                        height={40}
+                        className="object-contain"
+                      />
+                    </div>
+                    <h4 className="font-medium text-navy mb-2">Zelle</h4>
+                    <p className="text-navy/70 text-sm text-center mb-3">Send to info@touchandrestored.org</p>
+                    <Button 
+                      className="w-full bg-[#6D1ED4] hover:bg-[#5A19B0] text-white transition-all"
+                      asChild
+                    >
+                      <Link href="mailto:info@touchandrestored.org?subject=Zelle%20Donation%20Inquiry">
+                        Donate via Zelle
+                      </Link>
+                    </Button>
+                  </motion.div>
+                </div>
+                
+                <div className="text-center">
+                  <Button 
+                    variant="outline"
+                    className="border-gold text-gold hover:bg-gold hover:text-white transition-all duration-300"
+                    asChild
+                  >
+                    <Link href="/support-us">
+                      Explore More Ways to Give
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </div>

@@ -23,6 +23,7 @@
 - Changed program cards background color to light tan for better visual distinction
 - Redesigned upcoming events section with image thumbnails and excerpts, prepared for Sanity integration
 - Updated Impact & Updates section with consistent card design and Sanity NewsPost schema structure
+- Enhanced Ways to Give section with direct CashApp and Zelle payment options
 
 ## Next Steps
 - Define project requirements

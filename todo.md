@@ -15,6 +15,7 @@
 - [x] Enhance program cards with descriptions and animations
 - [x] Redesign upcoming events section for Sanity integration
 - [x] Update Impact & Updates section for Sanity NewsPost schema
+- [x] Update Ways to Give section with payment method CTAs
 
 ## Medium Priority
 - [ ] Implement events management
