@@ -21,11 +21,12 @@
 - Updated mission/vision section with new content and emergency contact information
 - Enhanced program cards with improved styling, expanded descriptions, and staggered fade-in animations
 - Changed program cards background color to light tan for better visual distinction
-- Restructured events section to prepare for Sanity CMS integration with image thumbnails and excerpts
+- Redesigned Upcoming Events section with image thumbnails, excerpts, and prepared for Sanity integration
 
 ## Next Steps
 - Define project requirements
 - Set up basic UI components with hydration safety in mind
 - Implement core functionality using proper client/server component patterns
 - Configure custom domain (if needed)
-- Improve site design and user experience 
+- Improve site design and user experience
+- Implement Sanity CMS for dynamic content (events, news, team bios) 

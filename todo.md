@@ -13,7 +13,7 @@
 - [x] Update hero section with new title and animated CTA buttons
 - [x] Update mission/vision section with new content
 - [x] Enhance program cards with descriptions and animations
-- [x] Prepare events section for Sanity CMS integration
+- [x] Prepare Upcoming Events section for Sanity CMS integration
 
 ## Medium Priority
 - [ ] Implement events management
@@ -23,6 +23,7 @@
 - [ ] Configure custom domain
 - [ ] Set up environment variables in Vercel
 - [x] Resolve package dependency conflicts
+- [ ] Design Sanity CMS schema for events
 
 ## Low Priority
 - [ ] Add testing framework
