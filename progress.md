@@ -22,6 +22,7 @@
 - Enhanced program cards with improved styling, expanded descriptions, and staggered fade-in animations
 - Changed program cards background color to light tan for better visual distinction
 - Redesigned upcoming events section with image thumbnails and excerpts, prepared for Sanity integration
+- Updated Impact & Updates section with consistent card design and Sanity NewsPost schema structure
 
 ## Next Steps
 - Define project requirements

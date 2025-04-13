@@ -376,54 +376,92 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
+                  _id: "news-1",
                   title: "Annual Care Bag Drive",
                   excerpt:
                     "Thanks to our generous community, we collected over 200 care bags filled with essential items for survivors entering our emergency shelter program.",
-                  image: "/placeholder.svg?height=400&width=600",
+                  mainImage: "/placeholder.jpg",
+                  slug: "annual-care-bag-drive",
+                  publishedAt: "2025-04-10T12:00:00Z",
+                  categories: ["Community", "Donations"]
                 },
                 {
+                  _id: "news-2",
                   title: "Trauma Therapy Sessions Launched",
                   excerpt:
                     "We're excited to announce our new trauma-informed therapy program, offering specialized healing sessions for survivors at no cost.",
-                  image: "/placeholder.svg?height=400&width=600",
+                  mainImage: "/placeholder.jpg",
+                  slug: "trauma-therapy-sessions-launched",
+                  publishedAt: "2025-03-27T10:30:00Z",
+                  categories: ["Services", "Healing"]
                 },
                 {
+                  _id: "news-3",
                   title: "Partner Spotlight: Local Shelter Collaboration",
                   excerpt:
                     "Our new partnership with City Shelter expands housing options for survivors, creating a seamless support network across our community.",
-                  image: "/placeholder.svg?height=400&width=600",
+                  mainImage: "/placeholder.jpg",
+                  slug: "partner-spotlight-local-shelter-collaboration",
+                  publishedAt: "2025-03-15T09:45:00Z",
+                  categories: ["Partnerships", "Housing"]
                 },
-              ].map((item, index) => (
-                <Card
-                  key={index}
-                  className="border-none shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white"
+              ].map((post, index) => (
+                <motion.div
+                  key={post._id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <div className="aspect-video relative">
-                    <Image
-                      src={item.image || "/placeholder.svg"}
-                      alt={item.title}
-                      fill
-                      className="object-cover transition-transform duration-500 hover:scale-105"
-                    />
-                    <div className="absolute top-3 right-3">
-                      <span className="bg-purple/90 text-white text-xs px-2 py-1 rounded">News</span>
+                  <Card
+                    className="border-none shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white h-full flex flex-col"
+                  >
+                    <div className="aspect-video relative">
+                      <Image
+                        src={post.mainImage}
+                        alt={post.title}
+                        fill
+                        className="object-cover transition-transform duration-500 hover:scale-105"
+                      />
+                      {post.categories && post.categories.length > 0 && (
+                        <div className="absolute top-3 right-3">
+                          <span className="bg-purple/90 text-white text-xs px-2 py-1 rounded">
+                            {post.categories[0]}
+                          </span>
+                        </div>
+                      )}
                     </div>
-                  </div>
-                  <CardHeader>
-                    <CardTitle className="text-xl text-navy">{item.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-navy/70 line-clamp-3">{item.excerpt}</p>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/news"
-                      className="text-gold text-sm font-medium flex items-center hover:text-gold-dark transition-colors group"
-                    >
-                      Read More <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </CardFooter>
-                </Card>
+                    <CardHeader>
+                      <CardTitle className="text-xl text-navy">{post.title}</CardTitle>
+                      <CardDescription className="text-navy/60 text-sm">
+                        {new Date(post.publishedAt).toLocaleDateString('en-US', {
+                          year: 'numeric',
+                          month: 'long',
+                          day: 'numeric'
+                        })}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                      <p className="text-navy/70 text-sm line-clamp-3">
+                        {post.excerpt.length > 100 ? `${post.excerpt.substring(0, 100)}...` : post.excerpt}
+                      </p>
+                    </CardContent>
+                    <CardFooter>
+                      <Button 
+                        variant="outline" 
+                        className="w-full border-gold/50 text-gold hover:bg-gold hover:text-white hover:border-gold transition-all duration-300"
+                        asChild
+                      >
+                        <Link
+                          href={`/news/${post.slug}`}
+                          className="flex items-center justify-center"
+                        >
+                          Read More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        </Link>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                </motion.div>
               ))}
             </div>
           </ScrollAnimation>
