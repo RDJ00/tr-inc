@@ -7,6 +7,7 @@ import { ScrollAnimation } from "@/components/scroll-animation"
 import { TeamMemberCard } from "@/components/team-member-card"
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Award, Calendar } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function AboutPage() {
   const teamMembers = [
@@ -62,79 +63,118 @@ export default function AboutPage() {
         backgroundImage="/placeholder.svg?height=600&width=1920"
       />
 
-      <section className="py-16">
-        <div className="container">
-          <ScrollAnimation>
+      <section className="py-12 md:py-16 overflow-hidden">
+        <div className="container px-4 sm:px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="max-w-3xl mx-auto">
-              <p className="text-lg text-muted-foreground font-serif italic">
+              <p className="text-base md:text-lg text-muted-foreground font-serif italic">
                 Touch & Restored is a 501(c)(3) non-profit Florida originated organization, founded by Jacqueline Sinclair in 2017. T.O.U.C.H. (Tender Outreach United Christian Home).
               </p>
             </div>
-          </ScrollAnimation>
+          </motion.div>
         </div>
       </section>
 
-      <section id="mission" className="py-16 bg-[#F6EFD6]">
-        <div className="container">
-          <ScrollAnimation>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#0A1E39]">Our Story</h2>
+      <section id="mission" className="py-12 md:py-16 bg-[#F6EFD6] overflow-hidden">
+        <div className="container px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-[#0A1E39]">Our Story</h2>
             <div className="max-w-4xl mx-auto">
-              <p className="text-muted-foreground mb-6 font-serif leading-relaxed">
+              <motion.p 
+                className="text-muted-foreground mb-6 font-serif leading-relaxed text-sm sm:text-base"
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
                 Touch & Restored Foundation is a beacon of blessings miraculously birthed out of the abuse of Jacqueline (Jackie) Sinclair as a child alongside her mother, Josephine as a battered woman. Domestic violence created a plague of personal tragedies for them both throughout their lives. Desperate to make sense of this violence, in 2017 Jackie realized that with a team she could make something positively impactful out of her experience as she recognized her world reflected the same pain. After the release of her book, <em>A Child Cries: The Pain of Searching for Love</em>, she searched for a team—united in accepting God's higher goal. That goal? Simply, a safe haven for the abused & battered. Together, we dedicate our lives in finding, creating & providing resources catering to the needs of those who have suffered.
-              </p>
-              <p className="text-muted-foreground font-serif leading-relaxed">
+              </motion.p>
+              <motion.p 
+                className="text-muted-foreground font-serif leading-relaxed text-sm sm:text-base"
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
                 Grateful for the support our family receives from the community, we are focused on paying our blessings forward. We feel a deep sense of responsibility to make a difference in the lives of all the Jackies we will never know and the Josephines we may never meet. Touch & Restored Foundation is committed to restore lives, and revive hope.
-              </p>
+              </motion.p>
             </div>
-          </ScrollAnimation>
+          </motion.div>
         </div>
       </section>
 
-      <section id="team" className="py-16 bg-[#B3D3F2]/20">
-        <div className="container">
-          <ScrollAnimation>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-[#0A1E39]">Meet the Team</h2>
-            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+      <section id="team" className="py-12 md:py-16 bg-[#B3D3F2]/20 overflow-hidden">
+        <div className="container px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4 md:mb-6 text-[#0A1E39]">Meet the Team</h2>
+            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-12 text-sm sm:text-base">
               Our dedicated board of directors brings diverse expertise and a shared commitment to our mission of
               supporting survivors and creating lasting change.
             </p>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {teamMembers.map((member, index) => (
-                <TeamMemberCard
+                <motion.div
                   key={index}
-                  name={member.name}
-                  title={member.title}
-                  bio={member.bio}
-                  image={member.image}
-                />
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="flex justify-center"
+                >
+                  <TeamMemberCard
+                    name={member.name}
+                    title={member.title}
+                    bio={member.bio}
+                    image={member.image}
+                  />
+                </motion.div>
               ))}
             </div>
-          </ScrollAnimation>
+          </motion.div>
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="container">
-          <ScrollAnimation>
-            <div className="bg-[#0A1E39] text-white p-8 md:p-12 rounded-xl">
+      <section className="py-12 md:py-16 overflow-hidden">
+        <div className="container px-4 sm:px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-[#0A1E39] text-white p-6 md:p-12 rounded-xl">
               <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl font-bold mb-6">Join Our Mission</h2>
-                <p className="mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Join Our Mission</h2>
+                <p className="mb-6 md:mb-8 text-sm sm:text-base">
                   We believe that everyone deserves to live free from violence and fear. By working together, we can
                   create a community where survivors are supported, empowered, and able to thrive. Join us in making a
                   difference.
                 </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white">Volunteer With Us</Button>
-                  <Button className="bg-white text-[#0A1E39] hover:bg-white/90">Make a Donation</Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white/10">
+                <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+                  <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white text-sm sm:text-base">Volunteer With Us</Button>
+                  <Button className="bg-white text-[#0A1E39] hover:bg-white/90 text-sm sm:text-base">Make a Donation</Button>
+                  <Button variant="outline" className="border-white text-white hover:bg-white/10 text-sm sm:text-base">
                     Contact Us
                   </Button>
                 </div>
               </div>
             </div>
-          </ScrollAnimation>
+          </motion.div>
         </div>
       </section>
     </>
