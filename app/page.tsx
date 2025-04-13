@@ -11,6 +11,7 @@ import { DonationCTA } from "@/components/donation-cta"
 import { ImpactCounter } from "@/components/impact-counter"
 import { TestimonialSlider } from "@/components/testimonial-slider"
 import { VolunteerCTA } from "@/components/volunteer-cta"
+import { motion } from "framer-motion"
 
 export default function Home() {
   return (
@@ -19,13 +20,13 @@ export default function Home() {
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
-            alt="Two women smiling together"
+            src="/community-support.jpg"
+            alt="Community support and empowerment"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/80 to-navy/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/70 to-navy/50 backdrop-blur-sm"></div>
         </div>
 
         {/* Decorative elements */}
@@ -36,42 +37,67 @@ export default function Home() {
         ></div>
 
         <div className="container relative z-10 text-center text-white">
-          <ScrollAnimation>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <div className="mb-4">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Sample_1_64412049136520-PC3f67sjeYytGHvJEZz87hgfHyofcC.png"
+                src="/tr-inc-logo.png"
                 alt="Touch & Restored Logo"
                 width={120}
                 height={120}
                 className="mx-auto"
               />
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">A Soft Touch for the Abused & Displaced</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              A Soft Touch for the Abused & Displaced
+            </h1>
             <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
               Providing support, healing, and empowerment to survivors of domestic violence, trauma, and abuse.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-gold hover:bg-gold-dark text-white transition-all duration-300 transform hover:scale-105">
-                Get Help
-              </Button>
-              <Button
-                variant="outline"
-                className="relative overflow-hidden group border-2 border-purple bg-purple/20 text-white hover:border-purple-light transition-all duration-300"
-                aria-label="Learn about volunteer opportunities"
-                onClick={() => (window.location.href = "/support-us#volunteer")}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
               >
-                <span className="relative z-10 flex items-center">
-                  <Users className="w-4 h-4 mr-2" />
-                  <span>Become a Volunteer</span>
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-purple-light transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                </span>
-                <span className="absolute inset-0 bg-purple opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              </Button>
-              <Button className="bg-purple hover:bg-purple-dark text-white transition-all duration-300 transform hover:scale-105 pulse-soft">
-                Donate
-              </Button>
+                <Button 
+                  className="bg-gold hover:bg-gold-dark text-white transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
+                  asChild
+                >
+                  <Link href="/contact">Get Help</Link>
+                </Button>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
+                <Button 
+                  className="bg-purple hover:bg-purple-dark text-white transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
+                  asChild
+                >
+                  <Link href="/support-us#volunteer">Volunteer</Link>
+                </Button>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+              >
+                <Button 
+                  className="bg-navy hover:bg-navy/80 text-white transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
+                  asChild
+                >
+                  <Link href="/support-us#donate">Donate</Link>
+                </Button>
+              </motion.div>
             </div>
-          </ScrollAnimation>
+          </motion.div>
         </div>
       </section>
 

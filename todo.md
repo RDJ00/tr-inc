@@ -10,6 +10,7 @@
 - [x] Implement hydration-safe state management
 - [x] Fix any existing hydration issues
 - [x] Update site footer with logo and contact information
+- [x] Update hero section with new title and animated CTA buttons
 
 ## Medium Priority
 - [ ] Implement events management

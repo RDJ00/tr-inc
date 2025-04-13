@@ -16,6 +16,7 @@
 - Focusing on hydration-safe implementation for all components
 - Updated site footer with organization logo, contact information, and improved newsletter signup
 - Fixed hydration issues by properly separating client and server components
+- Updated hero section with new title, warm background image, and Framer Motion animations
 
 ## Next Steps
 - Define project requirements
