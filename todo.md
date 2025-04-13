@@ -19,6 +19,7 @@
 - [ ] Create API endpoints
 - [ ] Configure custom domain
 - [ ] Set up environment variables in Vercel
+- [x] Resolve package dependency conflicts
 
 ## Low Priority
 - [ ] Add testing framework
