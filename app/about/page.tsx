@@ -59,11 +59,9 @@ export default function AboutPage() {
       <section className="py-16">
         <div className="container">
           <ScrollAnimation>
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="text-lg text-muted-foreground">
-                Touch & Restore is a 501(c)(3) nonprofit based in Florida, founded by Jacqueline Sinclair in 2017. Known
-                as T.O.U.C.H. (Tender Outreach United Christian Home), we are committed to restoring lives and reviving
-                hope through community action and support services.
+            <div className="max-w-3xl mx-auto">
+              <p className="text-lg text-muted-foreground font-serif italic">
+                Touch and Restored was founded by Jacqueline Sinclair after surviving childhood trauma and witnessing domestic abuse as a child. Inspired by her story and her book <em>A Child Cries</em>, she formed this nonprofit to provide hope and care for others.
               </p>
             </div>
           </ScrollAnimation>
@@ -138,22 +136,23 @@ export default function AboutPage() {
                   alt="Jacqueline Sinclair, Founder"
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#0A1E39]">Our Founder</h2>
-                <h3 className="text-xl font-bold text-[#C79C4A] mb-4">Jacqueline Sinclair</h3>
-                <p className="text-muted-foreground mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#0A1E39] font-serif">Our Founder</h2>
+                <h3 className="text-xl font-bold text-[#C79C4A] mb-4 font-serif">Jacqueline Sinclair</h3>
+                <p className="text-muted-foreground mb-4 font-serif">
                   Jacqueline Sinclair is a passionate advocate for survivors of domestic violence and trauma. With a
                   background in social work and community organizing, she has dedicated her career to creating safe
                   spaces for healing and empowerment.
                 </p>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-4 font-serif">
                   After witnessing the impact of domestic violence in her community and recognizing the gaps in support
                   services, Jacqueline founded Touch & Restore in 2017. Her vision was to create a holistic approach to
                   healing that addresses the physical, emotional, and spiritual needs of survivors.
                 </p>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-muted-foreground mb-6 font-serif">
                   Under her leadership, Touch & Restore has grown from a small grassroots initiative to a respected
                   nonprofit organization serving hundreds of individuals each year. Jacqueline continues to guide the
                   organization with compassion, innovation, and an unwavering commitment to those we serve.

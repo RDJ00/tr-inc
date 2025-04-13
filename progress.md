@@ -24,6 +24,7 @@
 - Redesigned upcoming events section with image thumbnails and excerpts, prepared for Sanity integration
 - Updated Impact & Updates section with consistent card design and Sanity NewsPost schema structure
 - Enhanced Ways to Give section with direct CashApp and Zelle payment options
+- Updated About page with new founder story and serif typography for emotional tone
 
 ## Next Steps
 - Define project requirements
