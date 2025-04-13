@@ -90,54 +90,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section id="founder" className="py-16">
-        <div className="container">
-          <ScrollAnimation>
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="relative h-[500px] rounded-lg overflow-hidden">
-                <Image
-                  src="/placeholder.svg?height=800&width=600"
-                  alt="Jacqueline Sinclair, Founder"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#0A1E39] font-serif">Our Founder</h2>
-                <h3 className="text-xl font-bold text-[#C79C4A] mb-4 font-serif">Jacqueline Sinclair</h3>
-                <p className="text-muted-foreground mb-4 font-serif">
-                  Jacqueline Sinclair is a passionate advocate for survivors of domestic violence and trauma. With a
-                  background in social work and community organizing, she has dedicated her career to creating safe
-                  spaces for healing and empowerment.
-                </p>
-                <p className="text-muted-foreground mb-4 font-serif">
-                  After witnessing the impact of domestic violence in her community and recognizing the gaps in support
-                  services, Jacqueline founded Touch & Restore in 2017. Her vision was to create a holistic approach to
-                  healing that addresses the physical, emotional, and spiritual needs of survivors.
-                </p>
-                <p className="text-muted-foreground mb-6 font-serif">
-                  Under her leadership, Touch & Restore has grown from a small grassroots initiative to a respected
-                  nonprofit organization serving hundreds of individuals each year. Jacqueline continues to guide the
-                  organization with compassion, innovation, and an unwavering commitment to those we serve.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <div className="bg-[#F6EFD6] px-4 py-2 rounded-full text-sm font-medium text-[#0A1E39]">
-                    Certified Crisis Counselor
-                  </div>
-                  <div className="bg-[#F6EFD6] px-4 py-2 rounded-full text-sm font-medium text-[#0A1E39]">
-                    Community Leadership Award 2020
-                  </div>
-                  <div className="bg-[#F6EFD6] px-4 py-2 rounded-full text-sm font-medium text-[#0A1E39]">
-                    MSW, University of Florida
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ScrollAnimation>
-        </div>
-      </section>
-
       <section id="team" className="py-16 bg-[#B3D3F2]/20">
         <div className="container">
           <ScrollAnimation>

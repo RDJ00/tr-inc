@@ -28,6 +28,7 @@
 - Updated About page hero section with title "About Us" and updated organization intro
 - Updated About page "Our Story" section with expanded narrative about Jacqueline Sinclair's personal journey
 - Updated "Meet the Team" section with current team members and leadership information
+- Removed redundant "Our Founder" section from About page as founder details are now in the story section
 
 ## Next Steps
 - Define project requirements
