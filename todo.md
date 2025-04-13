@@ -9,6 +9,7 @@
 - [ ] Create proper client/server component separation
 - [ ] Implement hydration-safe state management
 - [ ] Fix any existing hydration issues
+- [x] Update site footer with logo and contact information
 
 ## Medium Priority
 - [ ] Implement events management

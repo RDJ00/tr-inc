@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Instagram, Youtube, Mail, Phone, MapPin, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
@@ -16,9 +16,9 @@ export function SiteFooter() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-gold/50">
+              <div className="relative h-20 w-20 overflow-hidden rounded-full border-2 border-gold/50">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Sample_1_64412049136520-PC3f67sjeYytGHvJEZz87hgfHyofcC.png"
+                  src="/tr-inc-logo.png"
                   alt="Touch & Restored Logo"
                   fill
                   className="object-cover"
@@ -51,17 +51,20 @@ export function SiteFooter() {
               <Link href="/about" className="text-navy/80 hover:text-gold transition-colors">
                 About Us
               </Link>
+              <Link href="/events" className="text-navy/80 hover:text-gold transition-colors">
+                Events
+              </Link>
+              <Link href="/contact" className="text-navy/80 hover:text-gold transition-colors">
+                Contact
+              </Link>
+              <Link href="/support-us" className="text-navy/80 hover:text-gold transition-colors">
+                Donate
+              </Link>
               <Link href="/domestic-violence" className="text-navy/80 hover:text-gold transition-colors">
                 Domestic Violence
               </Link>
               <Link href="/children-trauma" className="text-navy/80 hover:text-gold transition-colors">
                 Children & Trauma
-              </Link>
-              <Link href="/news" className="text-navy/80 hover:text-gold transition-colors">
-                News
-              </Link>
-              <Link href="/contact" className="text-navy/80 hover:text-gold transition-colors">
-                Contact
               </Link>
             </nav>
           </div>
@@ -91,15 +94,18 @@ export function SiteFooter() {
             </div>
           </div>
           <div>
-            <h3 className="font-medium text-navy mb-4 relative inline-block brush-stroke">Newsletter</h3>
-            <p className="text-navy/80 mb-4">Stay updated with our latest news and events.</p>
+            <h3 className="font-medium text-navy mb-4 relative inline-block brush-stroke">Get Monthly Updates</h3>
+            <p className="text-navy/80 mb-4">Join our community to receive news, stories, and event notifications.</p>
             <form className="space-y-2">
               <Input
                 type="email"
                 placeholder="Your email address"
                 className="bg-white border-gold/30 focus:border-gold focus:ring-gold/50"
               />
-              <Button className="w-full bg-gold hover:bg-gold-dark text-white">Sign Up</Button>
+              <Button className="w-full bg-gold hover:bg-gold-dark text-white">
+                <span>Subscribe</span>
+                <Send className="ml-2 h-4 w-4" />
+              </Button>
             </form>
           </div>
         </div>
