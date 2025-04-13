@@ -27,6 +27,7 @@
 - Updated About page with new founder story and serif typography for emotional tone
 - Updated About page hero section with title "About Us" and updated organization intro
 - Updated About page "Our Story" section with expanded narrative about Jacqueline Sinclair's personal journey
+- Updated "Meet the Team" section with current team members and leadership information
 
 ## Next Steps
 - Define project requirements
