@@ -4,14 +4,17 @@
 - Initial repository setup completed
 - Next.js project structure in place
 - Development server running on localhost:3000
+- Site deployed to Vercel: https://tr-dpn6r1cyv-rj-s-projects-b9c93809.vercel.app
 
 ## Recent Updates
 - Repository initialized
 - Basic project structure created
 - Dependencies installed
 - Development server started
+- Deployed to Vercel production environment
 
 ## Next Steps
 - Define project requirements
 - Set up basic UI components
-- Implement core functionality 
+- Implement core functionality
+- Configure custom domain (if needed) 
