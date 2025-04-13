@@ -3,6 +3,7 @@ import Image from "next/image"
 import { Facebook, Instagram, Youtube, Mail, Phone, MapPin, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { NewsletterForm } from "./newsletter-form"
 
 export function SiteFooter() {
   return (
@@ -96,17 +97,7 @@ export function SiteFooter() {
           <div>
             <h3 className="font-medium text-navy mb-4 relative inline-block brush-stroke">Get Monthly Updates</h3>
             <p className="text-navy/80 mb-4">Join our community to receive news, stories, and event notifications.</p>
-            <form className="space-y-2">
-              <Input
-                type="email"
-                placeholder="Your email address"
-                className="bg-white border-gold/30 focus:border-gold focus:ring-gold/50"
-              />
-              <Button className="w-full bg-gold hover:bg-gold-dark text-white">
-                <span>Subscribe</span>
-                <Send className="ml-2 h-4 w-4" />
-              </Button>
-            </form>
+            <NewsletterForm />
           </div>
         </div>
         <div className="border-t border-gold/20 mt-8 pt-8 text-center text-sm text-navy/70">
