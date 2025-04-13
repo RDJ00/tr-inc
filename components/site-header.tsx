@@ -31,6 +31,7 @@ export function SiteHeader() {
         { title: "Board of Directors", href: "/about#team" },
       ],
     },
+    { title: "Events", href: "/events" },
     { title: "Projects / News", href: "/news" },
     { title: "Domestic Violence", href: "/domestic-violence" },
     {
