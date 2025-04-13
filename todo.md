@@ -24,6 +24,8 @@
 - [x] Prepare Sanity CMS schema for About page content
 - [x] Update News page for mobile responsiveness with responsive grid and proper image/text handling
 - [x] Update News page header with new subtitle and enhanced gradient overlay
+- [x] Create Sanity schema for events with title, date, location, image, and description fields
+- [x] Implement News page integration with Sanity CMS for upcoming events
 
 ## Medium Priority
 - [ ] Implement events management

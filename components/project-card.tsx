@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Calendar } from "lucide-react"
+import { Calendar, MapPin } from "lucide-react"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 
@@ -13,6 +13,7 @@ interface ProjectCardProps {
   image: string
   date?: string
   time?: string
+  location?: string
   buttonText?: string
   buttonLink?: string
   isPast?: boolean
@@ -25,6 +26,7 @@ export function ProjectCard({
   image,
   date,
   time,
+  location,
   buttonText = "Learn More",
   buttonLink = "#",
   isPast = false,
@@ -55,15 +57,23 @@ export function ProjectCard({
         )}
       </div>
       <CardHeader className="pb-2">
-        {date && (
-          <div className="flex items-center gap-2 text-[#C79C4A] mb-2">
-            <Calendar className="h-4 w-4" />
-            <span className="text-sm font-medium truncate">
-              {date}
-              {time && ` • ${time}`}
-            </span>
-          </div>
-        )}
+        <div className="space-y-2">
+          {date && (
+            <div className="flex items-center gap-2 text-[#C79C4A]">
+              <Calendar className="h-4 w-4" />
+              <span className="text-sm font-medium truncate">
+                {date}
+                {time && ` • ${time}`}
+              </span>
+            </div>
+          )}
+          {location && (
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <MapPin className="h-4 w-4" />
+              <span className="text-sm truncate">{location}</span>
+            </div>
+          )}
+        </div>
         <CardTitle className="text-xl text-[#0A1E39] line-clamp-2">{title}</CardTitle>
       </CardHeader>
       <CardContent>

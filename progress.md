@@ -35,6 +35,11 @@
 - Built CMS-ready version of About page with proper loading states and fallback content
 - Improved News page mobile responsiveness with better card layouts, proper text truncation, and responsive padding
 - Updated News page header with new subtitle and enhanced gradient overlay for cleaner visual design
+- Created Sanity schema for events with fields for title, date, location, description, images, and status
+- Updated News page to fetch upcoming events from Sanity CMS where status = "Upcoming"
+- Enhanced ProjectCard component to display event location with icon
+- Created detailed event page with full description, date/time info, and registration links
+- Properly separated client and server components in News page for optimal performance
 
 ## Next Steps
 - Define project requirements
