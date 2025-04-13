@@ -51,7 +51,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        title="About Touch & Restore"
+        title="About Us"
         description="Finding Inspiration in Every Turn"
         backgroundImage="/placeholder.svg?height=600&width=1920"
       />
@@ -61,7 +61,7 @@ export default function AboutPage() {
           <ScrollAnimation>
             <div className="max-w-3xl mx-auto">
               <p className="text-lg text-muted-foreground font-serif italic">
-                Touch and Restored was founded by Jacqueline Sinclair after surviving childhood trauma and witnessing domestic abuse as a child. Inspired by her story and her book <em>A Child Cries</em>, she formed this nonprofit to provide hope and care for others.
+                Touch & Restored is a 501(c)(3) non-profit Florida originated organization, founded by Jacqueline Sinclair in 2017. T.O.U.C.H. (Tender Outreach United Christian Home).
               </p>
             </div>
           </ScrollAnimation>
@@ -72,55 +72,13 @@ export default function AboutPage() {
         <div className="container">
           <ScrollAnimation>
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#0A1E39]">Our Story</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border-none shadow-lg">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-full bg-[#C79C4A]/20 flex items-center justify-center mb-4">
-                    <Heart className="h-6 w-6 text-[#C79C4A]" />
-                  </div>
-                  <h3 className="text-xl font-bold text-[#0A1E39] mb-4">Origin & Inspiration</h3>
-                  <p className="text-muted-foreground">
-                    Touch & Restore was born from Jacqueline Sinclair's personal journey and her recognition of the
-                    critical gaps in support for survivors of domestic violence. After witnessing the struggles of
-                    friends and community members, she was inspired to create a safe space where healing could begin and
-                    hope could be restored. In 2017, with a small team of dedicated volunteers, T.O.U.C.H. began its
-                    mission to transform lives.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-full bg-[#C79C4A]/20 flex items-center justify-center mb-4">
-                    <Award className="h-6 w-6 text-[#C79C4A]" />
-                  </div>
-                  <h3 className="text-xl font-bold text-[#0A1E39] mb-4">Mission & Vision</h3>
-                  <p className="text-muted-foreground">
-                    Our mission is to provide a safe, supportive environment for survivors of domestic violence, trauma,
-                    and abuse. We are committed to empowering individuals through healing, education, and advocacy to
-                    rebuild their lives and break the cycle of violence. Our vision is a world where all individuals
-                    live free from violence and abuse, with access to resources that promote healing, self-sufficiency,
-                    and the opportunity to thrive in safe, healthy relationships and communities.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg">
-                <CardContent className="pt-6">
-                  <div className="w-12 h-12 rounded-full bg-[#C79C4A]/20 flex items-center justify-center mb-4">
-                    <Calendar className="h-6 w-6 text-[#C79C4A]" />
-                  </div>
-                  <h3 className="text-xl font-bold text-[#0A1E39] mb-4">Milestones & Growth</h3>
-                  <p className="text-muted-foreground">Since our founding in 2017, Touch & Restore has:</p>
-                  <ul className="list-disc pl-5 space-y-2 text-muted-foreground mt-2">
-                    <li>Provided support services to over 500 survivors</li>
-                    <li>Established partnerships with 15 community organizations</li>
-                    <li>Conducted 30+ educational workshops on domestic violence awareness</li>
-                    <li>Trained 75 volunteers in trauma-informed care</li>
-                    <li>Expanded our programs to include specialized services for children</li>
-                  </ul>
-                </CardContent>
-              </Card>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-muted-foreground mb-6 font-serif leading-relaxed">
+                Touch & Restored Foundation is a beacon of blessings miraculously birthed out of the abuse of Jacqueline (Jackie) Sinclair as a child alongside her mother, Josephine as a battered woman. Domestic violence created a plague of personal tragedies for them both throughout their lives. Desperate to make sense of this violence, in 2017 Jackie realized that with a team she could make something positively impactful out of her experience as she recognized her world reflected the same pain. After the release of her book, <em>A Child Cries: The Pain of Searching for Love</em>, she searched for a team—united in accepting God's higher goal. That goal? Simply, a safe haven for the abused & battered. Together, we dedicate our lives in finding, creating & providing resources catering to the needs of those who have suffered.
+              </p>
+              <p className="text-muted-foreground font-serif leading-relaxed">
+                Grateful for the support our family receives from the community, we are focused on paying our blessings forward. We feel a deep sense of responsibility to make a difference in the lives of all the Jackies we will never know and the Josephines we may never meet. Touch & Restored Foundation is committed to restore lives, and revive hope.
+              </p>
             </div>
           </ScrollAnimation>
         </div>

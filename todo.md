@@ -17,6 +17,7 @@
 - [x] Update Impact & Updates section for Sanity NewsPost schema
 - [x] Update Ways to Give section with payment method CTAs
 - [x] Update About page with founder story and serif typography
+- [x] Update About page hero section and story content
 
 ## Medium Priority
 - [ ] Implement events management

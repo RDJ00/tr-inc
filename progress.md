@@ -25,6 +25,8 @@
 - Updated Impact & Updates section with consistent card design and Sanity NewsPost schema structure
 - Enhanced Ways to Give section with direct CashApp and Zelle payment options
 - Updated About page with new founder story and serif typography for emotional tone
+- Updated About page hero section with title "About Us" and updated organization intro
+- Updated About page "Our Story" section with expanded narrative about Jacqueline Sinclair's personal journey
 
 ## Next Steps
 - Define project requirements
