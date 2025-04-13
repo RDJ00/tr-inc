@@ -5,10 +5,10 @@
 - [ ] Set up basic page layouts
 - [ ] Create essential UI components
 - [x] Deploy to Vercel
-- [x] Integrate Sanity CMS
+- [ ] Implement CMS integration
 
 ## Medium Priority
-- [x] Implement events management
+- [ ] Implement events management
 - [ ] Implement user authentication
 - [ ] Set up database schema
 - [ ] Create API endpoints
