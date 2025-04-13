@@ -13,6 +13,7 @@
 - [x] Update hero section with new title and animated CTA buttons
 - [x] Update mission/vision section with new content
 - [x] Enhance program cards with descriptions and animations
+- [x] Redesign upcoming events section for Sanity integration
 
 ## Medium Priority
 - [ ] Implement events management

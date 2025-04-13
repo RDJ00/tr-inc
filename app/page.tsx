@@ -289,60 +289,81 @@ export default function Home() {
             <p className="text-center text-navy/70 max-w-2xl mx-auto mb-12">
               Join us at these upcoming events to learn, connect, and make a difference.
             </p>
-            <div className="relative">
-              <div className="flex overflow-x-auto pb-6 gap-6 snap-x">
-                {[
-                  {
-                    date: "May 15, 2025",
-                    time: "6:00 PM - 8:00 PM",
-                    title: "Healing Through Art Workshop",
-                    location: "Community Center, 123 Main St",
-                  },
-                  {
-                    date: "June 2, 2025",
-                    time: "12:00 PM - 2:00 PM",
-                    title: "Volunteer Training Session",
-                    location: "Touch & Restored Office",
-                  },
-                  {
-                    date: "June 18, 2025",
-                    time: "7:00 PM - 9:00 PM",
-                    title: "Annual Fundraising Gala",
-                    location: "Grand Hotel Ballroom",
-                  },
-                  {
-                    date: "July 10, 2025",
-                    time: "5:30 PM - 7:30 PM",
-                    title: "Support Group Meeting",
-                    location: "Virtual Event",
-                  },
-                ].map((event, index) => (
-                  <Card
-                    key={index}
-                    className="min-w-[300px] sm:min-w-[350px] border-none shadow-md snap-start flex-shrink-0 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white"
-                  >
-                    <CardHeader className="pb-2">
-                      <div className="flex items-center gap-2 text-gold mb-2">
-                        <Calendar className="h-4 w-4" />
-                        <span className="text-sm font-medium">{event.date}</span>
+            
+            {/* Event cards - will be replaced with Sanity data in the future */}
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Healing Through Art Workshop",
+                  date: "May 15, 2025",
+                  excerpt: "Join us for a therapeutic art workshop designed to help survivors express emotions and find healing through creative expression.",
+                  image: "/placeholder.jpg",
+                  slug: "healing-art-workshop"
+                },
+                {
+                  title: "Volunteer Training Session",
+                  date: "June 2, 2025",
+                  excerpt: "Learn how to support survivors of domestic violence and trauma through our comprehensive volunteer training program.",
+                  image: "/placeholder.jpg",
+                  slug: "volunteer-training"
+                },
+                {
+                  title: "Annual Fundraising Gala",
+                  date: "June 18, 2025",
+                  excerpt: "Support our mission at our elegant fundraising gala featuring dinner, silent auction, and inspiring stories from survivors.",
+                  image: "/placeholder.jpg",
+                  slug: "fundraising-gala"
+                },
+              ].map((event, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Card className="overflow-hidden border-none shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
+                    <div className="relative aspect-[16/9] w-full overflow-hidden">
+                      <Image
+                        src={event.image}
+                        alt={event.title}
+                        fill
+                        className="object-cover transition-transform duration-500 hover:scale-105"
+                      />
+                      <div className="absolute top-4 left-4 bg-gold/90 text-white text-xs py-1 px-2 rounded">
+                        {event.date}
                       </div>
-                      <CardTitle className="text-xl text-navy">{event.title}</CardTitle>
-                      <CardDescription className="text-navy/70">{event.time}</CardDescription>
+                    </div>
+                    
+                    <CardHeader>
+                      <CardTitle className="text-xl text-navy line-clamp-2">{event.title}</CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <div className="flex items-start gap-2">
-                        <MapPin className="h-4 w-4 text-navy/50 mt-0.5" />
-                        <span className="text-sm text-navy/70">{event.location}</span>
-                      </div>
+                    
+                    <CardContent className="flex-grow">
+                      <p className="text-navy/70 line-clamp-3">
+                        {event.excerpt.length > 100 
+                          ? `${event.excerpt.substring(0, 100)}...` 
+                          : event.excerpt}
+                      </p>
                     </CardContent>
+                    
                     <CardFooter>
-                      <Button variant="outline" className="w-full border-gold text-gold hover:bg-gold hover:text-white">
-                        Details
+                      <Button 
+                        variant="outline"
+                        className="w-full border-gold/50 text-gold hover:bg-gold hover:text-white transition-all duration-300"
+                        asChild
+                      >
+                        <Link
+                          href={`/events/${event.slug}`}
+                          className="flex items-center justify-center"
+                        >
+                          Read More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        </Link>
                       </Button>
                     </CardFooter>
                   </Card>
-                ))}
-              </div>
+                </motion.div>
+              ))}
             </div>
           </ScrollAnimation>
         </div>
