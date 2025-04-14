@@ -27,6 +27,7 @@
 - [x] Fix PageHeader component with proper client directive and simplified gradient overlay
 - [x] Standardize color scheme across the site using Tailwind color variables
 - [x] Improve card description text color for better readability and visual appeal
+- [x] Deploy latest changes to Vercel production environment
 
 ## Medium Priority
 - [ ] Implement events management
@@ -36,6 +37,7 @@
 - [ ] Configure custom domain
 - [ ] Set up environment variables in Vercel
 - [x] Resolve package dependency conflicts
+- [ ] Install and configure next-sanity package
 - [ ] Configure Sanity CMS schema for events, news, and team members
 
 ## Low Priority

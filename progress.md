@@ -4,7 +4,7 @@
 - Initial repository setup completed
 - Next.js project structure in place
 - Development server running on localhost:3000
-- Site deployed to Vercel: https://tr-dpn6r1cyv-rj-s-projects-b9c93809.vercel.app
+- Site deployed to Vercel: https://tr-gjil8ybnm-rj-s-projects-b9c93809.vercel.app
 
 ## Recent Updates
 - Repository initialized
@@ -38,6 +38,8 @@
 - Fixed PageHeader component issues with proper client directive and simplified gradient overlay
 - Standardized color scheme across the News page and components using Tailwind color variables
 - Refined project card description text color to use a softer navy tone instead of default black
+- Temporarily removed Sanity CMS related files to fix build issues
+- Deployed latest changes to Vercel with improved UI and color theme
 
 ## Next Steps
 - Define project requirements
@@ -45,4 +47,4 @@
 - Implement core functionality using proper client/server component patterns
 - Configure custom domain (if needed)
 - Improve site design and user experience
-- Implement Sanity CMS integration for dynamic content 
+- Implement Sanity CMS integration for dynamic content properly with all required dependencies 
