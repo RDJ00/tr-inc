@@ -37,6 +37,7 @@
 - Updated News page header with new subtitle and enhanced gradient overlay for cleaner visual design
 - Fixed PageHeader component issues with proper client directive and simplified gradient overlay
 - Standardized color scheme across the News page and components using Tailwind color variables
+- Refined project card description text color to use a softer navy tone instead of default black
 
 ## Next Steps
 - Define project requirements

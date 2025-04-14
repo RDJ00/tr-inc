@@ -26,6 +26,7 @@
 - [x] Update News page header with new subtitle and enhanced gradient overlay
 - [x] Fix PageHeader component with proper client directive and simplified gradient overlay
 - [x] Standardize color scheme across the site using Tailwind color variables
+- [x] Improve card description text color for better readability and visual appeal
 
 ## Medium Priority
 - [ ] Implement events management

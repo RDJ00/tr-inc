@@ -67,7 +67,7 @@ export function ProjectCard({
         <CardTitle className="text-xl text-navy line-clamp-2">{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <p className="text-muted-foreground line-clamp-3">{description}</p>
+        <p className="text-navy/70 line-clamp-3">{description}</p>
       </CardContent>
       <CardFooter>
         <Link href={buttonLink} className="w-full sm:w-auto">
