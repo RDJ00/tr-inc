@@ -1,18 +1,14 @@
+"use client"
+
+import { useState } from "react"
 import { PageHeader } from "@/components/page-header"
-import { getEvents } from "@/lib/sanity/client"
-import { EventData } from "@/lib/sanity/types"
-import { NewsContent } from "@/components/news-content"
+import { ScrollAnimation } from "@/components/scroll-animation"
+import { ProjectCard } from "@/components/project-card"
+import { TagFilter } from "@/components/tag-filter"
+import { NewsletterSignup } from "@/components/newsletter-signup"
 
-// This function is called at request time
-export default async function NewsPage() {
-  // Fetch upcoming events
-  const upcomingEvents = await getEvents('upcoming');
-  
-  // Fetch past events
-  const pastEvents = await getEvents('past');
-
-  // Fallback data in case the data hasn't loaded yet
-  const upcomingFallback = [
+export default function NewsPage() {
+  const upcomingProjects = [
     {
       title: "Annual Domestic Violence Awareness Gala",
       description:
@@ -45,6 +41,71 @@ export default async function NewsPage() {
     },
   ]
 
+  const allTags = ["Conferences", "Fundraisers", "Outreach", "Workshops", "Global Missions"]
+  const [selectedTags, setSelectedTags] = useState<string[]>([])
+
+  const pastProjects = [
+    {
+      title: "Survivor Support Group Launch",
+      description:
+        "We launched our weekly support group for survivors, providing a safe space for healing, connection, and growth. The group is facilitated by licensed therapists with expertise in trauma recovery.",
+      image: "/placeholder.svg?height=400&width=600",
+      date: "March 10, 2025",
+      isPast: true,
+      tags: ["Outreach"],
+    },
+    {
+      title: "Legislative Advocacy Day",
+      description:
+        "Our team and volunteers met with state legislators to advocate for stronger domestic violence laws and increased funding for survivor services. The day included training, meetings, and a press conference.",
+      image: "/placeholder.svg?height=400&width=600",
+      date: "February 15, 2025",
+      isPast: true,
+      tags: ["Conferences", "Outreach"],
+    },
+    {
+      title: "Holiday Gift Drive",
+      description:
+        "Thanks to our generous community, we collected and distributed gifts for over 100 families affected by domestic violence, bringing joy and hope during the holiday season.",
+      image: "/placeholder.svg?height=400&width=600",
+      date: "December 20, 2024",
+      isPast: true,
+      tags: ["Fundraisers"],
+    },
+    {
+      title: "International Women's Day Conference",
+      description:
+        "Our annual conference brought together experts, advocates, and survivors to discuss global perspectives on gender-based violence and strategies for prevention and intervention.",
+      image: "/placeholder.svg?height=400&width=600",
+      date: "March 8, 2024",
+      isPast: true,
+      tags: ["Conferences", "Global Missions"],
+    },
+    {
+      title: "Youth Prevention Workshop",
+      description:
+        "We conducted a series of workshops in local high schools on healthy relationships, consent, and recognizing warning signs of abuse. Over 500 students participated in these interactive sessions.",
+      image: "/placeholder.svg?height=400&width=600",
+      date: "October 5, 2024",
+      isPast: true,
+      tags: ["Workshops", "Outreach"],
+    },
+    {
+      title: "Survivor Scholarship Fundraiser",
+      description:
+        "Our annual fundraiser raised over $50,000 for educational scholarships for survivors of domestic violence, helping them achieve economic independence and pursue their dreams.",
+      image: "/placeholder.svg?height=400&width=600",
+      date: "September 18, 2024",
+      isPast: true,
+      tags: ["Fundraisers"],
+    },
+  ]
+
+  const filteredPastProjects =
+    selectedTags.length === 0
+      ? pastProjects
+      : pastProjects.filter((project) => project.tags?.some((tag) => selectedTags.includes(tag)))
+
   return (
     <>
       <PageHeader
@@ -52,12 +113,60 @@ export default async function NewsPage() {
         description="Explore the projects, fundraisers, and stories behind our mission"
         backgroundImage="/placeholder.svg?height=600&width=1920"
       />
-      
-      <NewsContent 
-        upcomingEvents={upcomingEvents} 
-        pastEvents={pastEvents} 
-        upcomingFallback={upcomingFallback}
-      />
+
+      <section className="py-16 bg-white">
+        <div className="container px-4 md:px-8 lg:px-12">
+          <ScrollAnimation>
+            <h2 className="text-3xl font-bold mb-8 text-center text-navy">Upcoming Projects & Events</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {upcomingProjects.map((project, index) => (
+                <ProjectCard
+                  key={index}
+                  title={project.title}
+                  description={project.description}
+                  image={project.image}
+                  date={project.date}
+                  time={project.time}
+                  buttonText={project.buttonText}
+                  buttonLink={project.buttonLink}
+                />
+              ))}
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section>
+
+      <section className="py-16 bg-tan-light/50">
+        <div className="container px-4 md:px-8 lg:px-12">
+          <ScrollAnimation>
+            <h2 className="text-3xl font-bold mb-8 text-center text-navy">Past Events & Highlights</h2>
+
+            <TagFilter tags={allTags} onFilterChange={setSelectedTags} />
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredPastProjects.map((project, index) => (
+                <ProjectCard
+                  key={index}
+                  title={project.title}
+                  description={project.description}
+                  image={project.image}
+                  date={project.date}
+                  isPast={project.isPast}
+                  tags={project.tags}
+                />
+              ))}
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container px-4 md:px-8 lg:px-12">
+          <ScrollAnimation>
+            <NewsletterSignup />
+          </ScrollAnimation>
+        </div>
+      </section>
     </>
   )
-} 
+}

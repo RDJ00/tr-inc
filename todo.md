@@ -25,6 +25,7 @@
 - [x] Update News page for mobile responsiveness with responsive grid and proper image/text handling
 - [x] Update News page header with new subtitle and enhanced gradient overlay
 - [x] Fix PageHeader component with proper client directive and simplified gradient overlay
+- [x] Standardize color scheme across the site using Tailwind color variables
 
 ## Medium Priority
 - [ ] Implement events management

@@ -36,6 +36,7 @@
 - Improved News page mobile responsiveness with better card layouts, proper text truncation, and responsive padding
 - Updated News page header with new subtitle and enhanced gradient overlay for cleaner visual design
 - Fixed PageHeader component issues with proper client directive and simplified gradient overlay
+- Standardized color scheme across the News page and components using Tailwind color variables
 
 ## Next Steps
 - Define project requirements

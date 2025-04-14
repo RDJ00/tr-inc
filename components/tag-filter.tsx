@@ -22,7 +22,7 @@ export function TagFilter({ tags, onFilterChange }: TagFilterProps) {
     <div className="flex flex-wrap gap-2 mb-6">
       <Button
         variant={selectedTags.length === 0 ? "default" : "outline"}
-        className={selectedTags.length === 0 ? "bg-[#0A1E39] text-white" : ""}
+        className={selectedTags.length === 0 ? "bg-navy text-white" : ""}
         onClick={() => {
           setSelectedTags([])
           onFilterChange([])
@@ -34,7 +34,7 @@ export function TagFilter({ tags, onFilterChange }: TagFilterProps) {
         <Button
           key={tag}
           variant={selectedTags.includes(tag) ? "default" : "outline"}
-          className={selectedTags.includes(tag) ? "bg-[#C79C4A] text-white" : ""}
+          className={selectedTags.includes(tag) ? "bg-gold text-white" : ""}
           onClick={() => toggleTag(tag)}
         >
           {tag}

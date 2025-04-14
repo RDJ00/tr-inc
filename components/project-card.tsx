@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Calendar, MapPin } from "lucide-react"
+import { Calendar } from "lucide-react"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 
@@ -13,7 +13,6 @@ interface ProjectCardProps {
   image: string
   date?: string
   time?: string
-  location?: string
   buttonText?: string
   buttonLink?: string
   isPast?: boolean
@@ -26,7 +25,6 @@ export function ProjectCard({
   image,
   date,
   time,
-  location,
   buttonText = "Learn More",
   buttonLink = "#",
   isPast = false,
@@ -43,13 +41,13 @@ export function ProjectCard({
         />
         {isPast && (
           <div className="absolute top-3 right-3">
-            <Badge className="bg-[#0A1E39]/80 hover:bg-[#0A1E39]">Past Event</Badge>
+            <Badge className="bg-navy/80 hover:bg-navy">Past Event</Badge>
           </div>
         )}
         {tags.length > 0 && (
           <div className="absolute bottom-3 left-3 flex flex-wrap gap-2">
             {tags.map((tag, index) => (
-              <Badge key={index} className="bg-[#C79C4A]/80 hover:bg-[#C79C4A]">
+              <Badge key={index} className="bg-gold/80 hover:bg-gold">
                 {tag}
               </Badge>
             ))}
@@ -57,31 +55,23 @@ export function ProjectCard({
         )}
       </div>
       <CardHeader className="pb-2">
-        <div className="space-y-2">
-          {date && (
-            <div className="flex items-center gap-2 text-[#C79C4A]">
-              <Calendar className="h-4 w-4" />
-              <span className="text-sm font-medium truncate">
-                {date}
-                {time && ` • ${time}`}
-              </span>
-            </div>
-          )}
-          {location && (
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <MapPin className="h-4 w-4" />
-              <span className="text-sm truncate">{location}</span>
-            </div>
-          )}
-        </div>
-        <CardTitle className="text-xl text-[#0A1E39] line-clamp-2">{title}</CardTitle>
+        {date && (
+          <div className="flex items-center gap-2 text-gold mb-2">
+            <Calendar className="h-4 w-4" />
+            <span className="text-sm font-medium truncate">
+              {date}
+              {time && ` • ${time}`}
+            </span>
+          </div>
+        )}
+        <CardTitle className="text-xl text-navy line-clamp-2">{title}</CardTitle>
       </CardHeader>
       <CardContent>
         <p className="text-muted-foreground line-clamp-3">{description}</p>
       </CardContent>
       <CardFooter>
         <Link href={buttonLink} className="w-full sm:w-auto">
-          <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white w-full sm:w-auto">{buttonText}</Button>
+          <Button className="bg-gold hover:bg-gold-dark text-white w-full sm:w-auto">{buttonText}</Button>
         </Link>
       </CardFooter>
     </Card>
