@@ -46,58 +46,58 @@ export default function NewsPage() {
 
   const pastProjects = [
     {
-      title: "Survivor Support Group Launch",
+      title: "Ladies in HAT Back to School Fundraiser",
       description:
-        "We launched our weekly support group for survivors, providing a safe space for healing, connection, and growth. The group is facilitated by licensed therapists with expertise in trauma recovery.",
-      image: "/placeholder.svg?height=400&width=600",
-      date: "March 10, 2025",
+        "Our elegant fundraising event featured a fashion show, raffles, and prizes for best hats, bringing the community together to support children affected by domestic violence. Attendees enjoyed an afternoon of style and philanthropy, with all proceeds providing essential school supplies and resources to help children start the academic year with confidence and the tools needed to succeed.",
+      image: "/events/ladies-in-hat-flyer.jpg",
+      date: "August 3, 2024",
       isPast: true,
-      tags: ["Outreach"],
+      tags: ["Fundraisers", "Outreach"],
     },
     {
-      title: "Legislative Advocacy Day",
+      title: "Reaching Up Out 2024 Edition",
       description:
-        "Our team and volunteers met with state legislators to advocate for stronger domestic violence laws and increased funding for survivor services. The day included training, meetings, and a press conference.",
-      image: "/placeholder.svg?height=400&width=600",
-      date: "February 15, 2025",
+        "A collaborative summit hosted by Hope and Destiny Foundation, A Collision with Purpose, and Touch and Restored Foundation. This powerful gathering featured distinguished speakers including Dr. Laxley W. Stephenson, Jacqueline Sinclair, Donna L Thompson, Claudy Eugene, and Trudy McBean, who shared insights on healing, empowerment, and community support for survivors of abuse. The event created meaningful connections and strengthened our collective mission to reach out and lift up those affected by trauma.",
+      image: "/events/reaching-up-out-flyer.jpg",
+      date: "May 2024",
       isPast: true,
       tags: ["Conferences", "Outreach"],
     },
     {
-      title: "Holiday Gift Drive",
+      title: "Kenya Mission 2023",
       description:
-        "Thanks to our generous community, we collected and distributed gifts for over 100 families affected by domestic violence, bringing joy and hope during the holiday season.",
-      image: "/placeholder.svg?height=400&width=600",
-      date: "December 20, 2024",
+        "Hope and Destiny Foundation's Kenya Mission 2023 empowered girls to stay in school by providing essential sanitary pads. Through the successful '1 pad keep a girl in school' campaign, the team distributed supplies and support, helping break barriers to education for young women. The mission was made possible by the generosity of Money Mastery for Her Mission and the wider community.",
+      image: "/events/kenya-mission-2023-flyer.jpg",
+      date: "2023",
+      isPast: true,
+      tags: ["Global Missions", "Outreach"],
+    },
+    {
+      title: "Dining with the Queen",
+      description:
+        "An elegant fundraising dinner hosted by Jacqueline Sinclair to support abused children. The evening featured special guest 2nd Chance, a renowned gospel artist, creating an atmosphere of hope and generosity at the Midland 8 Clubhouse. Guests enjoyed fine dining while contributing to programs that provide vital services for children who have experienced abuse and trauma.",
+      image: "/events/dining-with-the-queen-flyer.jpg",
+      date: "July 30, 2022",
       isPast: true,
       tags: ["Fundraisers"],
     },
     {
-      title: "International Women's Day Conference",
+      title: "No Secrets! 1st Anniversary",
       description:
-        "Our annual conference brought together experts, advocates, and survivors to discuss global perspectives on gender-based violence and strategies for prevention and intervention.",
-      image: "/placeholder.svg?height=400&width=600",
-      date: "March 8, 2024",
+        "The T.O.U.C.H. Foundation's 1st Anniversary event, 'No Secrets!', brought the community together for a powerful stand against domestic violence. Hosted by Jacqueline Sinclair, the event featured inspiring talks from advocates and survivors, practical resources, and training to empower attendees to make a difference. Guests learned about the realities of abuse, heard personal stories, and discovered tools to help eradicate domestic violence in their own lives and communities.",
+      image: "/events/no-secrets-flyer.jpeg",
+      date: "January 19, 2018",
       isPast: true,
-      tags: ["Conferences", "Global Missions"],
+      tags: ["Outreach", "Conferences"],
     },
     {
-      title: "Youth Prevention Workshop",
+      title: "No Secrets: Standing Against Domestic Violence",
       description:
-        "We conducted a series of workshops in local high schools on healthy relationships, consent, and recognizing warning signs of abuse. Over 500 students participated in these interactive sessions.",
-      image: "/placeholder.svg?height=400&width=600",
-      date: "October 5, 2024",
+        "A powerful and elegant gathering dedicated to standing against domestic violence. Guests walked the red carpet and joined a formal banquet at POFITA, where survivors, advocates, and supporters came together to raise awareness and foster hope. The event featured inspiring stories, community connection, and a shared commitment to ending abuse.",
+      image: "/events/no-secrets-2019-flyer.jpg",
+      date: "January 19, 2019",
       isPast: true,
-      tags: ["Workshops", "Outreach"],
-    },
-    {
-      title: "Survivor Scholarship Fundraiser",
-      description:
-        "Our annual fundraiser raised over $50,000 for educational scholarships for survivors of domestic violence, helping them achieve economic independence and pursue their dreams.",
-      image: "/placeholder.svg?height=400&width=600",
-      date: "September 18, 2024",
-      isPast: true,
-      tags: ["Fundraisers"],
+      tags: ["Outreach", "Awareness"],
     },
   ]
 
