@@ -34,7 +34,7 @@ export default function DomesticViolencePage() {
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
+                  src="/webp/help.webp"
                   alt="Domestic violence awareness"
                   fill
                   className="object-cover"
@@ -252,7 +252,7 @@ export default function DomesticViolencePage() {
               </div>
               <div className="relative h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=800&width=600"
+                  src="/webp/need-help.webp"
                   alt="Support and help"
                   fill
                   className="object-cover"

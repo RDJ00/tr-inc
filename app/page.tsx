@@ -297,21 +297,21 @@ export default function Home() {
                     title: "Healing Through Art Workshop",
                     excerpt: "Express emotions and process trauma through guided art therapy in a safe, supportive environment.",
                     location: "Community Center, 123 Main St",
-                    image: "/placeholder.jpg"
+                    image: "/webp/placeholder.webp"
                   },
                   {
                     date: "June 2, 2025",
                     title: "Volunteer Training Session",
                     excerpt: "Learn how to support survivors with trauma-informed care approaches and essential resources.",
                     location: "Touch & Restored Office",
-                    image: "/placeholder.jpg"
+                    image: "/webp/placeholder.webp"
                   },
                   {
                     date: "June 18, 2025",
                     title: "Annual Fundraising Gala",
                     excerpt: "Join us for an evening of inspiration, connection, and support for our shelter expansion project.",
                     location: "Grand Hotel Ballroom",
-                    image: "/placeholder.jpg"
+                    image: "/webp/placeholder.webp"
                   },
                 ].map((event, index) => (
                   <Card
@@ -380,7 +380,7 @@ export default function Home() {
                   title: "Annual Care Bag Drive",
                   excerpt:
                     "Thanks to our generous community, we collected over 200 care bags filled with essential items for survivors entering our emergency shelter program.",
-                  mainImage: "/placeholder.jpg",
+                  mainImage: "/webp/placeholder.webp",
                   slug: "annual-care-bag-drive",
                   publishedAt: "2025-04-10T12:00:00Z",
                   categories: ["Community", "Donations"]
@@ -390,7 +390,7 @@ export default function Home() {
                   title: "Trauma Therapy Sessions Launched",
                   excerpt:
                     "We're excited to announce our new trauma-informed therapy program, offering specialized healing sessions for survivors at no cost.",
-                  mainImage: "/placeholder.jpg",
+                  mainImage: "/webp/placeholder.webp",
                   slug: "trauma-therapy-sessions-launched",
                   publishedAt: "2025-03-27T10:30:00Z",
                   categories: ["Services", "Healing"]
@@ -400,7 +400,7 @@ export default function Home() {
                   title: "Partner Spotlight: Local Shelter Collaboration",
                   excerpt:
                     "Our new partnership with City Shelter expands housing options for survivors, creating a seamless support network across our community.",
-                  mainImage: "/placeholder.jpg",
+                  mainImage: "/webp/placeholder.webp",
                   slug: "partner-spotlight-local-shelter-collaboration",
                   publishedAt: "2025-03-15T09:45:00Z",
                   categories: ["Partnerships", "Housing"]
@@ -550,7 +550,7 @@ export default function Home() {
                   >
                     <div className="w-16 h-16 rounded-full bg-[#00D632]/10 flex items-center justify-center mb-3">
                       <Image 
-                        src="/cashapp-icon.png" 
+                        src="/webp/cashapp-icon.webp" 
                         alt="CashApp" 
                         width={40} 
                         height={40}
@@ -575,7 +575,7 @@ export default function Home() {
                   >
                     <div className="w-16 h-16 rounded-full bg-[#6D1ED4]/10 flex items-center justify-center mb-3">
                       <Image 
-                        src="/zelle-icon.png" 
+                        src="/webp/zelle-icon.webp" 
                         alt="Zelle" 
                         width={40} 
                         height={40}

@@ -82,14 +82,14 @@ export function SiteFooter() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-gold" />
-                <Link href="mailto:info@touchandrestored.org" className="text-navy/80 hover:text-gold">
-                  info@touchandrestored.org
+                <Link href="mailto:TOUCH.INC@HOTMAIL.COM" className="text-navy/80 hover:text-gold">
+                  TOUCH.INC@HOTMAIL.COM
                 </Link>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-gold" />
-                <Link href="tel:+1234567890" className="text-navy/80 hover:text-gold">
-                  (123) 456-7890
+                <Link href="tel:+19546733506" className="text-navy/80 hover:text-gold">
+                  +1 (954) 673-3506
                 </Link>
               </div>
             </div>

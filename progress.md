@@ -5,8 +5,10 @@
 - Next.js project structure in place
 - Development server running on localhost:3000
 - Site deployed to Vercel: https://tr-gjil8ybnm-rj-s-projects-b9c93809.vercel.app
+- WebP image conversion for improved performance
 
 ## Recent Updates
+- Updated contact information with correct email (TOUCH.INC@HOTMAIL.COM) and phone (+1 (954) 673-3506) while keeping the office address as 7860 W. Commercial Blvd, Suite 913, Lauderhill, FL 33351
 - Updated overlay backgrounds from black to navy in dialog, drawer, sheet, and alert-dialog components for better alignment with the site's color palette
 - Updated Wayne Robinson's profile picture in the "Meet the Team" section with a proper photo
 - Updated Jacqueline Sinclair's profile picture in the "Meet the Team" section with a proper photo
@@ -53,6 +55,14 @@
 - Fixed Tameka Morris's image path to correctly point to taneka-morris.png
 - Updated team member information: Replaced Elizabeth Howard with Richard Stephenson
 - Updated Zelle payment information to use phone number (954) 673-3506 across the website
+- Created WebP versions of all site images for improved performance and load times
+- Updated all image references in the homepage to use WebP format
+- Created public/webp and public/events/webp directories for optimized images
+- Optimized event flyers and main site images with 80% quality WebP conversion
+- Updated Children & Trauma page with child.png and therapy.png images
+- Created WebP versions of child.png and therapy.png for better performance
+- Updated Domestic Violence page with help.png and need-help.png images
+- Created WebP versions of help.png and need-help.png for better performance
 
 ## Next Steps
 - Define project requirements

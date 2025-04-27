@@ -30,7 +30,12 @@
 - [x] Standardize color scheme across the site using Tailwind color variables
 - [x] Improve card description text color for better readability and visual appeal
 - [x] Update overlay backgrounds from black to navy in UI components for better color palette alignment
+- [x] Remove dark mode support and related code for simplified maintenance
 - [x] Deploy latest changes to Vercel production environment
+- [x] Convert images to WebP format for better performance
+- [x] Update image references to use WebP versions
+- [x] Update Children & Trauma page with appropriate images
+- [x] Update Domestic Violence page with appropriate images
 
 ## Medium Priority
 - [ ] Implement events management

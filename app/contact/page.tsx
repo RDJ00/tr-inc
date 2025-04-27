@@ -31,7 +31,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-medium text-[#0A1E39] mb-1">Our Address</h3>
                       <p className="text-muted-foreground">
-                      7860 W. Commercial Blvd, Suite 913
+                        7860 W. Commercial Blvd, Suite 913
                         <br />
                         Lauderhill, FL 33351
                       </p>
@@ -45,9 +45,9 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-medium text-[#0A1E39] mb-1">Phone</h3>
                       <p className="text-muted-foreground">
-                        Main Office: (123) 456-7890
+                        Main Office: +1 (954) 673-3506
                         <br />
-                        24/7 Helpline: (123) 456-7899
+                        24/7 Helpline: +1 (954) 673-3506
                       </p>
                     </div>
                   </div>
@@ -60,13 +60,13 @@ export default function ContactPage() {
                       <h3 className="font-medium text-[#0A1E39] mb-1">Email</h3>
                       <p className="text-muted-foreground">
                         General Inquiries:{" "}
-                        <Link href="mailto:info@touchandrestored.org" className="hover:text-[#C79C4A]">
-                          info@touchandrestored.org
+                        <Link href="mailto:TOUCH.INC@HOTMAIL.COM" className="hover:text-[#C79C4A]">
+                          TOUCH.INC@HOTMAIL.COM
                         </Link>
                         <br />
                         Volunteer Coordinator:{" "}
-                        <Link href="mailto:volunteer@touchandrestored.org" className="hover:text-[#C79C4A]">
-                          volunteer@touchandrestored.org
+                        <Link href="mailto:TOUCH.INC@HOTMAIL.COM" className="hover:text-[#C79C4A]">
+                          TOUCH.INC@HOTMAIL.COM
                         </Link>
                       </p>
                     </div>

@@ -20,7 +20,7 @@ export default function ChildrenTraumaPage() {
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="relative h-[400px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=600&width=800"
+                  src="/webp/child.webp"
                   alt="Child with teddy bear"
                   fill
                   className="object-cover"
@@ -166,7 +166,7 @@ export default function ChildrenTraumaPage() {
               </div>
               <div className="relative h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=800&width=600"
+                  src="/webp/therapy.webp"
                   alt="Child therapy session"
                   fill
                   className="object-cover"
