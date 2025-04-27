@@ -244,9 +244,9 @@ export default function DomesticViolencePage() {
                   deserve to be safe.
                 </p>
                 <div className="bg-white/10 p-6 rounded-lg mb-6">
-                  <h3 className="font-bold text-xl mb-4">Contact our 24/7 Helpline</h3>
-                  <p className="text-2xl font-bold mb-2">(123) 456-7890</p>
-                  <p className="text-sm">Call or text anytime, day or night</p>
+                  <h3 className="font-bold text-xl mb-4">Contact the 24/7 Helpline</h3>
+                  <p className="text-2xl font-bold mb-2">(800) 799-7233</p>
+                  <p className="text-sm">Call or text BEGIN to 88788 anytime, or reach out to us below:</p>
                 </div>
                 <ContactForm />
               </div>

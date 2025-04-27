@@ -8,6 +8,16 @@
 - WebP image conversion for improved performance
 
 ## Recent Updates
+- Removed "Impact & Updates" section from the homepage
+- Updated events section with actual past events from the news section
+- Updated events section on homepage to showcase past events instead of upcoming ones
+- Updated Zelle donation button to open Zelle app/website with pre-filled phone number
+- Updated Zelle icon with new design and converted to WebP format for better performance
+- Removed "Voices of Impact" testimonial section from the homepage as it's no longer needed
+- Fixed Nadine Neabard's image path to correctly point to the .png file instead of .jpg
+- Added Nadine Neabard to the team as Fundraiser/Lead Supervisor with a bio highlighting her background as a flight attendant
+- Added Lincoln Grant to the team as Treasurer/Warehouse Supervisor who joined Touch & Restored in 2017
+- Updated Wayne Robinson's bio to specify his role as an Analyst/Business Consultant who joined Touch & Restored in 2017
 - Updated contact information with correct email (TOUCH.INC@HOTMAIL.COM) and phone (+1 (954) 673-3506) while keeping the office address as 7860 W. Commercial Blvd, Suite 913, Lauderhill, FL 33351
 - Updated overlay backgrounds from black to navy in dialog, drawer, sheet, and alert-dialog components for better alignment with the site's color palette
 - Updated Wayne Robinson's profile picture in the "Meet the Team" section with a proper photo

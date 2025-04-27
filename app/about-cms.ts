@@ -115,10 +115,32 @@ export const fallbackAboutData: AboutPageData = {
       _key: "member2",
       name: "Wayne Robinson",
       title: "Analyst/Business Consultant",
-      bio: "Joined: 2017",
+      bio: "Wayne Robinson serves as an Analyst and Business Consultant. Joined Touch & Restored in 2017.",
       image: {
         asset: {
           _ref: "/team-members/wayne-robinson.png"
+        }
+      }
+    },
+    {
+      _key: "member3",
+      name: "Lincoln Grant",
+      title: "Treasurer/Warehouse Supervisor",
+      bio: "Lincoln Grant serves as Treasurer and Warehouse Supervisor. Joined Touch & Restored in 2017.",
+      image: {
+        asset: {
+          _ref: "/team-members/lincoln-grant.jpg"
+        }
+      }
+    },
+    {
+      _key: "member4",
+      name: "Nadine Neabard",
+      title: "Fundraiser/Lead Supervisor",
+      bio: "Nadine Neabard brings her exceptional organizational and people skills as our Fundraiser and Lead Supervisor. As a flight attendant, she has developed a unique ability to connect with people from all walks of life, which she leverages in her fundraising efforts for Touch & Restored.",
+      image: {
+        asset: {
+          _ref: "/team-members/nadine-neabard.png"
         }
       }
     },

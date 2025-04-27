@@ -9,7 +9,6 @@ import { Heart, Calendar, Users, Shield, Lightbulb, HandHeart, Megaphone, ArrowR
 import { ScrollAnimation } from "@/components/scroll-animation"
 import { DonationCTA } from "@/components/donation-cta"
 import { ImpactCounter } from "@/components/impact-counter"
-import { TestimonialSlider } from "@/components/testimonial-slider"
 import { VolunteerCTA } from "@/components/volunteer-cta"
 import { motion } from "framer-motion"
 
@@ -267,15 +266,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonial Section */}
-      <section className="py-16 bg-white">
-        <div className="container">
-          <ScrollAnimation>
-            <TestimonialSlider />
-          </ScrollAnimation>
-        </div>
-      </section>
-
       {/* Events Section */}
       <section id="events" className="py-16 bg-tan-light relative overflow-hidden">
         {/* Decorative elements */}
@@ -284,33 +274,33 @@ export default function Home() {
         <div className="container relative z-10">
           <ScrollAnimation>
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-navy relative inline-block brush-stroke mx-auto">
-              Upcoming Events
+              Events
             </h2>
             <p className="text-center text-navy/70 max-w-2xl mx-auto mb-12">
-              Join us at these upcoming events to learn, connect, and make a difference.
+              Take a look at some of our past events and the impact we've made together.
             </p>
             <div className="relative">
               <div className="flex overflow-x-auto pb-6 gap-6 snap-x">
                 {[
                   {
-                    date: "May 15, 2025",
-                    title: "Healing Through Art Workshop",
-                    excerpt: "Express emotions and process trauma through guided art therapy in a safe, supportive environment.",
-                    location: "Community Center, 123 Main St",
+                    date: "April 10, 2024",
+                    title: "Annual Care Bag Drive",
+                    excerpt: "Thanks to our generous community, we collected over 200 care bags filled with essential items for survivors entering our emergency shelter program.",
+                    location: "Touch & Restored Office, Lauderhill",
                     image: "/webp/placeholder.webp"
                   },
                   {
-                    date: "June 2, 2025",
-                    title: "Volunteer Training Session",
-                    excerpt: "Learn how to support survivors with trauma-informed care approaches and essential resources.",
-                    location: "Touch & Restored Office",
+                    date: "March 27, 2024",
+                    title: "Trauma Therapy Sessions Launch",
+                    excerpt: "We're excited to announce our new trauma-informed therapy program, offering specialized healing sessions for survivors at no cost.",
+                    location: "Community Center, Fort Lauderdale",
                     image: "/webp/placeholder.webp"
                   },
                   {
-                    date: "June 18, 2025",
-                    title: "Annual Fundraising Gala",
-                    excerpt: "Join us for an evening of inspiration, connection, and support for our shelter expansion project.",
-                    location: "Grand Hotel Ballroom",
+                    date: "March 15, 2024",
+                    title: "Partner Spotlight: Local Shelter Collaboration",
+                    excerpt: "Our new partnership with City Shelter expands housing options for survivors, creating a seamless support network across our community.",
+                    location: "City Shelter, Fort Lauderdale",
                     image: "/webp/placeholder.webp"
                   },
                 ].map((event, index) => (
@@ -351,118 +341,13 @@ export default function Home() {
                           href={`/events/${event.title.toLowerCase().replace(/\s+/g, '-')}`}
                           className="flex items-center justify-center"
                         >
-                          Read More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                          View Photos <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Link>
                       </Button>
                     </CardFooter>
                   </Card>
                 ))}
               </div>
-            </div>
-          </ScrollAnimation>
-        </div>
-      </section>
-
-      {/* News/Projects Section */}
-      <section id="news" className="py-16 bg-white">
-        <div className="container">
-          <ScrollAnimation>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-navy relative inline-block brush-stroke mx-auto">
-              Impact & Updates
-            </h2>
-            <p className="text-center text-navy/70 max-w-2xl mx-auto mb-12">
-              Stay informed about our latest initiatives, success stories, and community impact.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  _id: "news-1",
-                  title: "Annual Care Bag Drive",
-                  excerpt:
-                    "Thanks to our generous community, we collected over 200 care bags filled with essential items for survivors entering our emergency shelter program.",
-                  mainImage: "/webp/placeholder.webp",
-                  slug: "annual-care-bag-drive",
-                  publishedAt: "2025-04-10T12:00:00Z",
-                  categories: ["Community", "Donations"]
-                },
-                {
-                  _id: "news-2",
-                  title: "Trauma Therapy Sessions Launched",
-                  excerpt:
-                    "We're excited to announce our new trauma-informed therapy program, offering specialized healing sessions for survivors at no cost.",
-                  mainImage: "/webp/placeholder.webp",
-                  slug: "trauma-therapy-sessions-launched",
-                  publishedAt: "2025-03-27T10:30:00Z",
-                  categories: ["Services", "Healing"]
-                },
-                {
-                  _id: "news-3",
-                  title: "Partner Spotlight: Local Shelter Collaboration",
-                  excerpt:
-                    "Our new partnership with City Shelter expands housing options for survivors, creating a seamless support network across our community.",
-                  mainImage: "/webp/placeholder.webp",
-                  slug: "partner-spotlight-local-shelter-collaboration",
-                  publishedAt: "2025-03-15T09:45:00Z",
-                  categories: ["Partnerships", "Housing"]
-                },
-              ].map((post, index) => (
-                <motion.div
-                  key={post._id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  <Card
-                    className="border-none shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white h-full flex flex-col"
-                  >
-                    <div className="aspect-video relative">
-                      <Image
-                        src={post.mainImage}
-                        alt={post.title}
-                        fill
-                        className="object-cover transition-transform duration-500 hover:scale-105"
-                      />
-                      {post.categories && post.categories.length > 0 && (
-                        <div className="absolute top-3 right-3">
-                          <span className="bg-purple/90 text-white text-xs px-2 py-1 rounded">
-                            {post.categories[0]}
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                    <CardHeader>
-                      <CardTitle className="text-xl text-navy">{post.title}</CardTitle>
-                      <CardDescription className="text-navy/60 text-sm">
-                        {new Date(post.publishedAt).toLocaleDateString('en-US', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric'
-                        })}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex-grow">
-                      <p className="text-navy/70 text-sm line-clamp-3">
-                        {post.excerpt.length > 100 ? `${post.excerpt.substring(0, 100)}...` : post.excerpt}
-                      </p>
-                    </CardContent>
-                    <CardFooter>
-                      <Button 
-                        variant="outline" 
-                        className="w-full border-gold/50 text-gold hover:bg-gold hover:text-white hover:border-gold transition-all duration-300"
-                        asChild
-                      >
-                        <Link
-                          href={`/news/${post.slug}`}
-                          className="flex items-center justify-center"
-                        >
-                          Read More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                        </Link>
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </motion.div>
-              ))}
             </div>
           </ScrollAnimation>
         </div>
@@ -588,7 +473,7 @@ export default function Home() {
                       className="w-full bg-[#6D1ED4] hover:bg-[#5A19B0] text-white transition-all"
                       asChild
                     >
-                      <Link href="tel:+19546733506">
+                      <Link href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiVG91Y2ggJiBSZXN0b3JlZCIsImFjdGlvbiI6InBheW1lbnQiLCJ0b2tlbiI6IisxOTU0NjczMzUwNiJ9">
                         Donate via Zelle
                       </Link>
                     </Button>

@@ -26,8 +26,20 @@ export default function AboutPage() {
     {
       name: "Wayne Robinson",
       title: "Analyst/Business Consultant",
-      bio: "Joined: 2017",
+      bio: "Wayne Robinson serves as an Analyst and Business Consultant. Joined Touch & Restored in 2017.",
       image: "/team-members/wayne-robinson.png",
+    },
+    {
+      name: "Lincoln Grant",
+      title: "Treasurer/Warehouse Supervisor",
+      bio: "Lincoln Grant serves as Treasurer and Warehouse Supervisor. Joined Touch & Restored in 2017.",
+      image: "/team-members/lincoln-grant.jpg",
+    },
+    {
+      name: "Nadine Neabard",
+      title: "Fundraiser/Lead Supervisor",
+      bio: "Nadine Neabard brings her exceptional organizational and people skills as our Fundraiser and Lead Supervisor. As a flight attendant, she has developed a unique ability to connect with people from all walks of life, which she leverages in her fundraising efforts for Touch & Restored.",
+      image: "/team-members/nadine-neabard.png",
     },
     {
       name: "Audie Gammon",

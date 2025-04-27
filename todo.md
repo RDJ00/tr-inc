@@ -21,6 +21,10 @@
 - [x] Update team members and leadership information
 - [x] Update Jacqueline Sinclair's profile picture in the "Meet the Team" section
 - [x] Update Wayne Robinson's profile picture in the "Meet the Team" section
+- [x] Update Wayne Robinson's bio with correct title and join date
+- [x] Add Lincoln Grant to the team as Treasurer/Warehouse Supervisor
+- [x] Add Nadine Neabard to the team as Fundraiser/Lead Supervisor
+- [x] Remove "Voices of Impact" testimonial section from the homepage
 - [x] Enhance About page mobile responsiveness
 - [x] Add smooth animations to About page sections
 - [x] Prepare Sanity CMS schema for About page content
