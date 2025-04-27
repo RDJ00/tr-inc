@@ -7,6 +7,7 @@
 - Site deployed to Vercel: https://tr-gjil8ybnm-rj-s-projects-b9c93809.vercel.app
 
 ## Recent Updates
+- Updated overlay backgrounds from black to navy in dialog, drawer, sheet, and alert-dialog components for better alignment with the site's color palette
 - Updated Wayne Robinson's profile picture in the "Meet the Team" section with a proper photo
 - Updated Jacqueline Sinclair's profile picture in the "Meet the Team" section with a proper photo
 - Updated Paulica Rolle's profile picture in the "Meet the Team" section with her photo
@@ -51,6 +52,7 @@
 - Updated team member information: Replaced Lincoln Grant with Tameka Morris
 - Fixed Tameka Morris's image path to correctly point to taneka-morris.png
 - Updated team member information: Replaced Elizabeth Howard with Richard Stephenson
+- Updated Zelle payment information to use phone number (954) 673-3506 across the website
 
 ## Next Steps
 - Define project requirements

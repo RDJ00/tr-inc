@@ -84,6 +84,23 @@ export default function SupportUsPage() {
                 </CardContent>
               </Card>
             </div>
+
+            <div className="mt-8 grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+              <Card className="border-none shadow-lg bg-white">
+                <CardHeader>
+                  <CardTitle className="text-xl text-[#0A1E39]">Zelle</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-[#0A1E39]/80 mb-4">
+                    Send your donation directly through Zelle to our organization:
+                  </p>
+                  <div className="bg-[#F6EFD6]/50 p-4 rounded-lg text-center">
+                    <p className="text-lg font-bold mb-2 text-[#0A1E39]">(954) 673-3506</p>
+                    <p className="text-sm text-[#0A1E39]/70">Please include "Donation" in the memo</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </ScrollAnimation>
         </div>
       </section>

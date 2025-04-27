@@ -29,6 +29,7 @@
 - [x] Fix PageHeader component with proper client directive and simplified gradient overlay
 - [x] Standardize color scheme across the site using Tailwind color variables
 - [x] Improve card description text color for better readability and visual appeal
+- [x] Update overlay backgrounds from black to navy in UI components for better color palette alignment
 - [x] Deploy latest changes to Vercel production environment
 
 ## Medium Priority

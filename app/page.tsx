@@ -558,12 +558,12 @@ export default function Home() {
                       />
                     </div>
                     <h4 className="font-medium text-navy mb-2">CashApp</h4>
-                    <p className="text-navy/70 text-sm text-center mb-3">Send to $TouchRestored</p>
+                    <p className="text-navy/70 text-sm text-center mb-3">Send to $Touch2015</p>
                     <Button 
                       className="w-full bg-[#00D632] hover:bg-[#00C02D] text-white transition-all"
                       asChild
                     >
-                      <Link href="https://cash.app/$TouchRestored" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://cash.app/$Touch2015" target="_blank" rel="noopener noreferrer">
                         Donate via CashApp
                       </Link>
                     </Button>
@@ -583,12 +583,12 @@ export default function Home() {
                       />
                     </div>
                     <h4 className="font-medium text-navy mb-2">Zelle</h4>
-                    <p className="text-navy/70 text-sm text-center mb-3">Send to info@touchandrestored.org</p>
+                    <p className="text-navy/70 text-sm text-center mb-3">Send to (954) 673-3506</p>
                     <Button 
                       className="w-full bg-[#6D1ED4] hover:bg-[#5A19B0] text-white transition-all"
                       asChild
                     >
-                      <Link href="mailto:info@touchandrestored.org?subject=Zelle%20Donation%20Inquiry">
+                      <Link href="tel:+19546733506">
                         Donate via Zelle
                       </Link>
                     </Button>
