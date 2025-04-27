@@ -75,9 +75,9 @@ export function SiteFooter() {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-gold mt-0.5" />
                 <span className="text-navy/80">
-                  123 Healing Way, Suite 101
+                  7860 W. Commercial Blvd, Suite 913
                   <br />
-                  Anytown, ST 12345
+                  Lauderhill, FL 33351
                 </span>
               </div>
               <div className="flex items-center gap-3">

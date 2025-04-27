@@ -19,6 +19,8 @@
 - [x] Update About page with founder story and serif typography
 - [x] Update About page hero section and story content
 - [x] Update team members and leadership information
+- [x] Update Jacqueline Sinclair's profile picture in the "Meet the Team" section
+- [x] Update Wayne Robinson's profile picture in the "Meet the Team" section
 - [x] Enhance About page mobile responsiveness
 - [x] Add smooth animations to About page sections
 - [x] Prepare Sanity CMS schema for About page content

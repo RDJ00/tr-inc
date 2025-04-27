@@ -107,7 +107,18 @@ export const fallbackAboutData: AboutPageData = {
       bio: "A Times Best Selling Author & Speaker. She's driven, energetic & has over 25 years of leadership experience. \"My goal is to inspire & be a catalyst of change as I educate against Domestic Violence & Abuse.\"",
       image: {
         asset: {
-          _ref: ""
+          _ref: "/team-members/jackie.jpeg"
+        }
+      }
+    },
+    {
+      _key: "member2",
+      name: "Wayne Robinson",
+      title: "Analyst/Business Consultant",
+      bio: "Joined: 2017",
+      image: {
+        asset: {
+          _ref: "/team-members/wayne-robinson.png"
         }
       }
     },

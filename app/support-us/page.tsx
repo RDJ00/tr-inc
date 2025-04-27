@@ -36,32 +36,32 @@ export default function SupportUsPage() {
             </p>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border-none shadow-md">
+              <Card className="border-none shadow-lg bg-white">
                 <CardHeader>
                   <CardTitle className="text-xl text-[#0A1E39]">Via Check</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-[#0A1E39]/80 mb-4">
                     Please make checks payable to "Touch & Restored Inc." and mail to:
                   </p>
-                  <div className="bg-white p-4 rounded-lg">
-                    <p className="text-sm">
+                  <div className="bg-[#F6EFD6]/50 p-4 rounded-lg">
+                    <p className="text-sm text-[#0A1E39]">
                       Touch & Restored Inc.
                       <br />
-                      123 Healing Way, Suite 101
+                      7860 W. Commercial Blvd, Suite 913
                       <br />
-                      Anytown, ST 12345
+                      Lauderhill, FL 33351
                     </p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-none shadow-md">
+              <Card className="border-none shadow-lg bg-white">
                 <CardHeader>
                   <CardTitle className="text-xl text-[#0A1E39]">Online</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-[#0A1E39]/80 mb-4">
                     Make a secure online donation through our website. You can choose to make a one-time gift or set up
                     recurring monthly donations.
                   </p>
@@ -69,17 +69,17 @@ export default function SupportUsPage() {
                 </CardContent>
               </Card>
 
-              <Card className="border-none shadow-md">
+              <Card className="border-none shadow-lg bg-white">
                 <CardHeader>
                   <CardTitle className="text-xl text-[#0A1E39]">Cash App</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-[#0A1E39]/80 mb-4">
                     Send your donation directly through Cash App to our organization:
                   </p>
-                  <div className="bg-white p-4 rounded-lg text-center">
-                    <p className="text-lg font-bold mb-2">$JacquelineSSinclair</p>
-                    <p className="text-sm text-muted-foreground">Please include "Donation" in the memo</p>
+                  <div className="bg-[#F6EFD6]/50 p-4 rounded-lg text-center">
+                    <p className="text-lg font-bold mb-2 text-[#0A1E39]">$Touch2015</p>
+                    <p className="text-sm text-[#0A1E39]/70">Please include "Donation" in the memo</p>
                   </div>
                 </CardContent>
               </Card>

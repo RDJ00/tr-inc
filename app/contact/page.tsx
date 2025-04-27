@@ -31,9 +31,9 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-medium text-[#0A1E39] mb-1">Our Address</h3>
                       <p className="text-muted-foreground">
-                        123 Healing Way, Suite 101
+                      7860 W. Commercial Blvd, Suite 913
                         <br />
-                        Anytown, ST 12345
+                        Lauderhill, FL 33351
                       </p>
                     </div>
                   </div>

@@ -7,6 +7,10 @@
 - Site deployed to Vercel: https://tr-gjil8ybnm-rj-s-projects-b9c93809.vercel.app
 
 ## Recent Updates
+- Updated Wayne Robinson's profile picture in the "Meet the Team" section with a proper photo
+- Updated Jacqueline Sinclair's profile picture in the "Meet the Team" section with a proper photo
+- Updated Paulica Rolle's profile picture in the "Meet the Team" section with her photo
+- Updated Yanira Rivera's profile picture in the "Meet the Team" section with her photo
 - Repository initialized
 - Basic project structure created
 - Dependencies installed
@@ -40,6 +44,13 @@
 - Refined project card description text color to use a softer navy tone instead of default black
 - Temporarily removed Sanity CMS related files to fix build issues
 - Deployed latest changes to Vercel with improved UI and color theme
+- Updated the card colors in the "Let's Make A Change" section to use light tan backgrounds with navy text for better contrast and readability
+- Improved card visibility in the "Let's Make A Change" section by using white backgrounds with stronger shadows and subtle inner content styling
+- Updated team member information: Replaced Yvonne Shirley with Paulica Rolle as Account Manager
+- Updated team member information: Replaced Trudy McBean with Audie Gammon as Business Owner and Donor/Fund Raiser
+- Updated team member information: Replaced Lincoln Grant with Tameka Morris
+- Fixed Tameka Morris's image path to correctly point to taneka-morris.png
+- Updated team member information: Replaced Elizabeth Howard with Richard Stephenson
 
 ## Next Steps
 - Define project requirements
