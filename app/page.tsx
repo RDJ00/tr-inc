@@ -278,7 +278,7 @@ export default function Home() {
               Events
             </h2>
             <p className="text-center text-navy/70 max-w-2xl mx-auto mb-12">
-              Take a look at some of our past events and the impact we've made together.
+              Take a look at some of our events and the impact we've made together.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
@@ -292,33 +292,22 @@ export default function Home() {
                   buttonLink: "#",
                 },
                 {
-                  title: "Annual Care Bag Drive",
-                  description: "Thanks to our generous community, we collected over 200 care bags filled with essential items for survivors entering our emergency shelter program.",
-                  image: "/webp/placeholder.webp",
-                  date: "April 10, 2024",
-                  location: "Touch & Restored Office, Lauderhill",
-                  buttonText: "View Photos",
-                  buttonLink: "/events/annual-care-bag-drive",
+                  title: "Touch & Restored 6th Anniversary: Broken But Not Beyond Repair",
+                  description: "Touch & Restored 6th Anniversary: 'Broken But Not Beyond Repair' Women Empowerment Conference. Join host Jacqueline Sinclair, Apostle Margaret Thompson, Rev. Maria Hinds, Lady Yvonne Shirley, Pastor K. Lyle, and Evangelist Marcia Baker for an inspiring celebration of healing and empowerment. Romans 8:28.",
+                  image: "/events/webp/touch-and-restored-flyer.webp",
+                  date: "January 24, 2025",
+                  buttonText: "Event Details",
+                  buttonLink: "#",
                 },
                 {
-                  title: "Trauma Therapy Sessions Launch",
-                  description: "We're excited to announce our new trauma-informed therapy program, offering specialized healing sessions for survivors at no cost.",
-                  image: "/webp/placeholder.webp",
-                  date: "March 27, 2024",
-                  location: "Community Center, Fort Lauderdale",
-                  buttonText: "View Photos",
-                  buttonLink: "/events/trauma-therapy-sessions-launch",
+                  title: "Ladies in HAT Back to School Fundraiser",
+                  description: "Our elegant fundraising event featured a fashion show, raffles, and prizes for best hats, bringing the community together to support children affected by domestic violence. Attendees enjoyed an afternoon of style and philanthropy, with all proceeds providing essential school supplies and resources to help children start the academic year with confidence and the tools needed to succeed.",
+                  image: "/events/webp/ladies-in-hat-flyer.webp",
+                  date: "August 3, 2024",
+                  buttonText: "Event Details",
+                  buttonLink: "#",
                 },
-                {
-                  title: "Partner Spotlight: Local Shelter Collaboration",
-                  description: "Our new partnership with City Shelter expands housing options for survivors, creating a seamless support network across our community.",
-                  image: "/webp/placeholder.webp",
-                  date: "March 15, 2024",
-                  location: "City Shelter, Fort Lauderdale",
-                  buttonText: "View Photos",
-                  buttonLink: "/events/partner-spotlight-local-shelter-collaboration",
-                },
-              ].slice(0, 3).map((event, index) => (
+              ].map((event, index) => (
                 <ProjectCard
                   key={index}
                   title={event.title}
