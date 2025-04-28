@@ -43,6 +43,8 @@
 - [x] Update Cash App and Zelle cards on the Support Us page to match the homepage design
 - [x] Add GoFundMe as a new donation option on the Support Us page
 - [x] Add Prayer Breakfast event to upcoming events and convert flyer image to WebP
+- [x] Add 5th Annual Broken to Be Mended Conference as a past event and convert flyer image to WebP
+- [x] Add Touch & Restored 6th Anniversary event as a past event and convert flyer image to WebP
 
 ## Medium Priority
 - [ ] Implement events management

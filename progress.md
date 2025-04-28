@@ -80,6 +80,8 @@
 - Created WebP versions of child.png and therapy.png for better performance
 - Updated Domestic Violence page with help.png and need-help.png images
 - Created WebP versions of help.png and need-help.png for better performance
+- Added 5th Annual Broken to Be Mended Conference as a past event and converted flyer image to WebP
+- Added Touch & Restored 6th Anniversary event as a past event and converted flyer image to WebP
 
 ## Next Steps
 - Define project requirements

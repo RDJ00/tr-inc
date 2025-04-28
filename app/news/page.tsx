@@ -19,42 +19,30 @@ export default function NewsPage() {
       buttonText: "$25 Tickets",
       buttonLink: "#", // Update with ticket link if available
     },
-    {
-      title: "Annual Domestic Violence Awareness Gala",
-      description:
-        "Join us for an evening of inspiration and impact as we raise funds and awareness for domestic violence survivors. The event will feature keynote speakers, survivor testimonials, and a silent auction.",
-      image: "/placeholder.svg?height=400&width=600",
-      date: "October 15, 2025",
-      time: "6:00 PM - 9:00 PM",
-      buttonText: "Get Tickets",
-      buttonLink: "#",
-    },
-    {
-      title: "Healing Through Art Workshop Series",
-      description:
-        "A six-week workshop series using art therapy techniques to help survivors process trauma and express emotions in a safe, supportive environment. No artistic experience necessary.",
-      image: "/placeholder.svg?height=400&width=600",
-      date: "Starting September 5, 2025",
-      time: "Saturdays, 10:00 AM - 12:00 PM",
-      buttonText: "Register Now",
-      buttonLink: "#",
-    },
-    {
-      title: "Community Resource Fair",
-      description:
-        "Connect with local organizations providing services for survivors of domestic violence, trauma, and abuse. Free health screenings, legal consultations, and childcare will be available.",
-      image: "/placeholder.svg?height=400&width=600",
-      date: "August 22, 2025",
-      time: "11:00 AM - 3:00 PM",
-      buttonText: "Learn More",
-      buttonLink: "#",
-    },
   ]
 
   const allTags = ["Conferences", "Fundraisers", "Outreach", "Workshops", "Global Missions"]
   const [selectedTags, setSelectedTags] = useState<string[]>([])
 
   const pastProjects = [
+    {
+      title: "Touch & Restored 6th Anniversary: Broken But Not Beyond Repair",
+      description:
+        "Touch & Restored 6th Anniversary: 'Broken But Not Beyond Repair' Women Empowerment Conference. Join host Jacqueline Sinclair, Apostle Margaret Thompson, Rev. Maria Hinds, Lady Yvonne Shirley, Pastor K. Lyle, and Evangelist Marcia Baker for an inspiring celebration of healing and empowerment. Romans 8:28.",
+      image: "/events/webp/touch-and-restored-flyer.webp",
+      date: "January 24, 2025",
+      isPast: true,
+      tags: ["Conferences", "Women Empowerment"],
+    },
+    {
+      title: "5th Annual Broken to Be Mended Conference",
+      description:
+        "Touch & Restored Foundation's 5th Annual Broken to Be Mended Conference. Host: Jacqueline Bonner Sinclair. Moderator: Evangelist Marcia Baker. Speakers: Pastor Paula Miller, Yvonne Shirley. Join us for an inspiring evening of healing and empowerment.",
+      image: "/events/webp/broken-to-be-mended.webp",
+      date: "January 22, 2022",
+      isPast: true,
+      tags: ["Conferences", "Outreach"],
+    },
     {
       title: "Ladies in HAT Back to School Fundraiser",
       description:
@@ -113,8 +101,31 @@ export default function NewsPage() {
 
   const filteredPastProjects =
     selectedTags.length === 0
-      ? pastProjects
-      : pastProjects.filter((project) => project.tags?.some((tag) => selectedTags.includes(tag)))
+      ? pastProjects.slice().sort((a, b) => {
+          // Parse as full date if possible, otherwise as year
+          const parseDate = (d: string) => {
+            if (!d) return 0;
+            // Try to parse as full date
+            const full = Date.parse(d);
+            if (!isNaN(full)) return full;
+            // Fallback: parse as year
+            const year = parseInt(d.match(/\d{4}/)?.[0] || "0", 10);
+            return Date.parse(`${year}-01-01`);
+          };
+          return parseDate(b.date) - parseDate(a.date);
+        })
+      : pastProjects
+          .filter((project) => project.tags?.some((tag) => selectedTags.includes(tag)))
+          .sort((a, b) => {
+            const parseDate = (d: string) => {
+              if (!d) return 0;
+              const full = Date.parse(d);
+              if (!isNaN(full)) return full;
+              const year = parseInt(d.match(/\d{4}/)?.[0] || "0", 10);
+              return Date.parse(`${year}-01-01`);
+            };
+            return parseDate(b.date) - parseDate(a.date);
+          });
 
   return (
     <>
