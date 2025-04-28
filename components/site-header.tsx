@@ -31,12 +31,17 @@ export function SiteHeader() {
         { title: "Board of Directors", href: "/about#team" },
       ],
     },
-    { title: "Projects / News", href: "/news" },
-    { title: "Domestic Violence", href: "/domestic-violence" },
     {
-      title: "More…",
-      items: [{ title: "Children & Trauma", href: "/children-trauma" }],
+      title: "What We Do",
+      items: [
+        { title: "Domestic Violence", href: "/domestic-violence" },
+        { title: "Sexual Assault", href: "/sexual-assault" },
+        { title: "Children & Trauma", href: "/children-trauma" },
+        { title: "Client-Centered Practice", href: "/client-centered-practice" },
+        { title: "Awareness & Action", href: "/awareness-and-action" },
+      ],
     },
+    { title: "Projects / News", href: "/news" },
     { title: "Support Us", href: "/support-us" },
     { title: "Contact", href: "/contact" },
   ]

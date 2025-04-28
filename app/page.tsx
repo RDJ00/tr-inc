@@ -324,7 +324,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Donation CTA Section */}
+      {/* Donation CTA Section - Temporarily hidden until PayPal/Stripe integration
       <section className="py-16 bg-white">
         <div className="container">
           <ScrollAnimation>
@@ -332,6 +332,7 @@ export default function Home() {
           </ScrollAnimation>
         </div>
       </section>
+      */}
 
       {/* Volunteer CTA Section */}
       <section className="py-16 bg-white">

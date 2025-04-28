@@ -6,6 +6,7 @@
 - [ ] Create essential UI components
 - [x] Deploy to Vercel
 - [ ] Implement CMS integration
+- [ ] Re-enable "Make a Difference Today" section on homepage once PayPal or Stripe payment processing is integrated
 - [x] Create proper client/server component separation
 - [x] Implement hydration-safe state management
 - [x] Fix any existing hydration issues
@@ -46,6 +47,7 @@
 - [x] Add 5th Annual Broken to Be Mended Conference as a past event and convert flyer image to WebP
 - [x] Add Touch & Restored 6th Anniversary event as a past event and convert flyer image to WebP
 - [x] Create dedicated pages for Sexual Assault, Client-Centered Practice, and Awareness & Action programs
+- [x] Verify navigation structure with proper dropdown menus for "About Us" and "What We Do" sections
 
 ## Medium Priority
 - [ ] Implement events management

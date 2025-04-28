@@ -101,7 +101,8 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="border-t border-gold/20 mt-8 pt-8 text-center text-sm text-navy/70">
-          <p>&copy; {new Date().getFullYear()} Touch & Restored Inc. All rights reserved.</p>
+          <p>&copy; 2019 Touch & Restored Inc. All rights reserved.</p>
+          <p className="mt-2">This website was designed and created by <Link href="https://graisol.com" target="_blank" rel="noopener noreferrer" className="text-purple hover:text-purple-dark transition-colors">GRAIsol LLC</Link></p>
         </div>
       </div>
     </footer>

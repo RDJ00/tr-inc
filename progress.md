@@ -1,13 +1,22 @@
 # Project Progress
 
+## Completion Status
+Project Completion: 75%
+
 ## Current Status
 - Initial repository setup completed
 - Next.js project structure in place
 - Development server running on localhost:3000
 - Site deployed to Vercel: https://tr-gjil8ybnm-rj-s-projects-b9c93809.vercel.app
 - WebP image conversion for improved performance
+- Navigation structure implemented with proper dropdown menus for About Us and What We Do sections
 
 ## Recent Updates
+- Added clickable link to graisol.com for GRAIsol LLC attribution in the footer
+- Added GRAIsol LLC attribution in the footer with purple text styling
+- Updated copyright year in the footer from dynamic current year to fixed "© 2019 Touch & Restored Inc. All rights reserved."
+- Temporarily hidden the "Make a Difference Today" section on the homepage until PayPal or Stripe payment integration is implemented
+- Reviewed and verified the site-header component implementation with proper dropdown menus for navigation
 - Added Prayer Breakfast event to upcoming events and converted flyer image to WebP
 - Added GoFundMe as a donation option on the Support Us page with icon and direct action button
 - Updated homepage hero Donate button to link directly to the "There Are Plenty of Ways to Give" section on the homepage
