@@ -82,6 +82,7 @@
 - Created WebP versions of help.png and need-help.png for better performance
 - Added 5th Annual Broken to Be Mended Conference as a past event and converted flyer image to WebP
 - Added Touch & Restored 6th Anniversary event as a past event and converted flyer image to WebP
+- Created dedicated pages for Sexual Assault, Client-Centered Practice, and Awareness & Action programs with comprehensive content and consistent styling
 
 ## Next Steps
 - Define project requirements

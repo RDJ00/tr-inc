@@ -206,7 +206,7 @@ export default function Home() {
                   description:
                     "Specialized care and advocacy for survivors of sexual violence, including crisis response, medical accompaniment, and trauma-informed counseling services.",
                   icon: <HandHeart className="h-6 w-6 text-gold" />,
-                  link: "#",
+                  link: "/sexual-assault",
                   delay: 0.3
                 },
                 {
@@ -214,7 +214,7 @@ export default function Home() {
                   description:
                     "Individualized support plans that honor each survivor's unique needs, choices, and healing journey, ensuring every person feels heard, valued, and empowered.",
                   icon: <Heart className="h-6 w-6 text-gold" />,
-                  link: "#",
+                  link: "/client-centered-practice",
                   delay: 0.4
                 },
                 {
@@ -222,7 +222,7 @@ export default function Home() {
                   description:
                     "Community education and prevention programs aimed at ending the cycle of violence through increased awareness, bystander intervention, and systemic change.",
                   icon: <Megaphone className="h-6 w-6 text-gold" />,
-                  link: "#",
+                  link: "/awareness-and-action",
                   delay: 0.5
                 },
               ].map((program, index) => (
