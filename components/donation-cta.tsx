@@ -61,7 +61,7 @@ export function DonationCTA() {
           </div>
         )}
 
-        <Link href="/support-us">
+        <Link href="/support-us#donate">
           <Button className="bg-gold hover:bg-gold-dark text-white px-8 py-6 text-lg font-medium rounded-md transition-all duration-300 hover:shadow-lg pulse-soft">
             Donate Now
           </Button>

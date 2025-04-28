@@ -40,6 +40,9 @@
 - [x] Update image references to use WebP versions
 - [x] Update Children & Trauma page with appropriate images
 - [x] Update Domestic Violence page with appropriate images
+- [x] Update Cash App and Zelle cards on the Support Us page to match the homepage design
+- [x] Add GoFundMe as a new donation option on the Support Us page
+- [x] Add Prayer Breakfast event to upcoming events and convert flyer image to WebP
 
 ## Medium Priority
 - [ ] Implement events management

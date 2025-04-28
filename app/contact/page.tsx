@@ -47,7 +47,7 @@ export default function ContactPage() {
                       <p className="text-muted-foreground">
                         Main Office: +1 (954) 673-3506
                         <br />
-                        24/7 Helpline: +1 (954) 673-3506
+                        National Domestic Violence 24/7 Hotline: +1 (800)-799-7233
                       </p>
                     </div>
                   </div>
@@ -77,8 +77,8 @@ export default function ContactPage() {
               </div>
               <div className="relative h-[600px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=900&width=600"
-                  alt="Two women smiling"
+                  src="/webp/contact-us.webp"
+                  alt="Contact Touch & Restored"
                   fill
                   className="object-cover"
                 />
@@ -97,7 +97,9 @@ export default function ContactPage() {
                 Your donation helps us provide critical services to survivors of domestic violence, trauma, and abuse.
                 Together, we can create a community where everyone lives free from violence.
               </p>
-              <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white">Donate Now</Button>
+              <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white" asChild>
+                <Link href="/support-us#donate">Donate Now</Link>
+              </Button>
             </div>
           </ScrollAnimation>
         </div>

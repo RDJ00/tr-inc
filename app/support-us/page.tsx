@@ -1,8 +1,10 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { PageHeader } from "@/components/page-header"
 import { ScrollAnimation } from "@/components/scroll-animation"
+import { motion } from "framer-motion"
 
 export default function SupportUsPage() {
   return (
@@ -26,7 +28,7 @@ export default function SupportUsPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#F6EFD6]">
+      <section id="donate" className="py-16 bg-[#F6EFD6]">
         <div className="container">
           <ScrollAnimation>
             <h2 className="text-3xl font-bold mb-8 text-center text-[#0A1E39]">Let's Make A Change</h2>
@@ -35,7 +37,7 @@ export default function SupportUsPage() {
               matter the size, makes a meaningful difference in the lives of those we serve.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <Card className="border-none shadow-lg bg-white">
                 <CardHeader>
                   <CardTitle className="text-xl text-[#0A1E39]">Via Check</CardTitle>
@@ -65,39 +67,95 @@ export default function SupportUsPage() {
                     Make a secure online donation through our website. You can choose to make a one-time gift or set up
                     recurring monthly donations.
                   </p>
-                  <Button className="w-full bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white">Donate Now</Button>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg bg-white">
-                <CardHeader>
-                  <CardTitle className="text-xl text-[#0A1E39]">Cash App</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-[#0A1E39]/80 mb-4">
-                    Send your donation directly through Cash App to our organization:
-                  </p>
-                  <div className="bg-[#F6EFD6]/50 p-4 rounded-lg text-center">
-                    <p className="text-lg font-bold mb-2 text-[#0A1E39]">$Touch2015</p>
-                    <p className="text-sm text-[#0A1E39]/70">Please include "Donation" in the memo</p>
-                  </div>
+                  <Button 
+                    className="w-full bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white"
+                    asChild
+                  >
+                    <Link href="#donate">Donate Now</Link>
+                  </Button>
                 </CardContent>
               </Card>
             </div>
 
-            <div className="mt-8 grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <div className="mt-8 grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <Card className="border-none shadow-lg bg-white">
+                <CardHeader>
+                  <CardTitle className="text-xl text-[#0A1E39]">Cash App</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-col items-center">
+                  <div className="w-16 h-16 rounded-full bg-[#00D632]/10 flex items-center justify-center mb-3">
+                    <Image 
+                      src="/webp/cashapp-icon.webp" 
+                      alt="CashApp" 
+                      width={40} 
+                      height={40}
+                      className="object-contain"
+                    />
+                  </div>
+                  <p className="text-[#0A1E39] font-medium mb-2">CashApp</p>
+                  <p className="text-[#0A1E39]/70 text-sm text-center mb-4">Send to $Touch2015</p>
+                  <Button 
+                    className="w-full bg-[#00D632] hover:bg-[#00C02D] text-white transition-all"
+                    asChild
+                  >
+                    <Link href="https://cash.app/$Touch2015" target="_blank" rel="noopener noreferrer">
+                      Donate via CashApp
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+
               <Card className="border-none shadow-lg bg-white">
                 <CardHeader>
                   <CardTitle className="text-xl text-[#0A1E39]">Zelle</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-[#0A1E39]/80 mb-4">
-                    Send your donation directly through Zelle to our organization:
-                  </p>
-                  <div className="bg-[#F6EFD6]/50 p-4 rounded-lg text-center">
-                    <p className="text-lg font-bold mb-2 text-[#0A1E39]">(954) 673-3506</p>
-                    <p className="text-sm text-[#0A1E39]/70">Please include "Donation" in the memo</p>
+                <CardContent className="flex flex-col items-center">
+                  <div className="w-16 h-16 rounded-full bg-[#6D1ED4]/10 flex items-center justify-center mb-3">
+                    <Image 
+                      src="/webp/zelle-icon.webp" 
+                      alt="Zelle" 
+                      width={40} 
+                      height={40}
+                      className="object-contain"
+                    />
                   </div>
+                  <p className="text-[#0A1E39] font-medium mb-2">Zelle</p>
+                  <p className="text-[#0A1E39]/70 text-sm text-center mb-4">Send to (954) 673-3506</p>
+                  <Button 
+                    className="w-full bg-[#6D1ED4] hover:bg-[#5A19B0] text-white transition-all"
+                    asChild
+                  >
+                    <Link href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiVG91Y2ggJiBSZXN0b3JlZCIsImFjdGlvbiI6InBheW1lbnQiLCJ0b2tlbiI6IisxOTU0NjczMzUwNiJ9" target="_blank" rel="noopener noreferrer">
+                      Donate via Zelle
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="border-none shadow-lg bg-white">
+                <CardHeader>
+                  <CardTitle className="text-xl text-[#0A1E39]">GoFundMe</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-col items-center">
+                  <div className="w-16 h-16 rounded-full bg-[#02A95C]/10 flex items-center justify-center mb-3">
+                    <Image 
+                      src="/webp/gofundme-icon.webp" 
+                      alt="GoFundMe" 
+                      width={40} 
+                      height={40}
+                      className="object-contain"
+                    />
+                  </div>
+                  <p className="text-[#0A1E39] font-medium mb-2">GoFundMe</p>
+                  <p className="text-[#0A1E39]/70 text-sm text-center mb-4">Support our charity campaign</p>
+                  <Button 
+                    className="w-full bg-[#02A95C] hover:bg-[#018F4D] text-white transition-all"
+                    asChild
+                  >
+                    <Link href="https://www.gofundme.com/charity/touch-and-restored-inc" target="_blank" rel="noopener noreferrer">
+                      Donate via GoFundMe
+                    </Link>
+                  </Button>
                 </CardContent>
               </Card>
             </div>
@@ -151,8 +209,8 @@ export default function SupportUsPage() {
               </div>
               <div className="relative h-[500px] rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=800&width=600"
-                  alt="Volunteers working together"
+                  src="/webp/volunteer.webp"
+                  alt="Volunteer with Touch & Restored"
                   fill
                   className="object-cover"
                 />

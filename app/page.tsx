@@ -11,6 +11,7 @@ import { DonationCTA } from "@/components/donation-cta"
 import { ImpactCounter } from "@/components/impact-counter"
 import { VolunteerCTA } from "@/components/volunteer-cta"
 import { motion } from "framer-motion"
+import { ProjectCard } from "@/components/project-card"
 
 export default function Home() {
   return (
@@ -92,7 +93,7 @@ export default function Home() {
                   className="bg-navy hover:bg-navy/80 text-white transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
                   asChild
                 >
-                  <Link href="/support-us#donate">Donate</Link>
+                  <Link href="#ways-to-give">Donate</Link>
                 </Button>
               </motion.div>
             </div>
@@ -279,75 +280,56 @@ export default function Home() {
             <p className="text-center text-navy/70 max-w-2xl mx-auto mb-12">
               Take a look at some of our past events and the impact we've made together.
             </p>
-            <div className="relative">
-              <div className="flex overflow-x-auto pb-6 gap-6 snap-x">
-                {[
-                  {
-                    date: "April 10, 2024",
-                    title: "Annual Care Bag Drive",
-                    excerpt: "Thanks to our generous community, we collected over 200 care bags filled with essential items for survivors entering our emergency shelter program.",
-                    location: "Touch & Restored Office, Lauderhill",
-                    image: "/webp/placeholder.webp"
-                  },
-                  {
-                    date: "March 27, 2024",
-                    title: "Trauma Therapy Sessions Launch",
-                    excerpt: "We're excited to announce our new trauma-informed therapy program, offering specialized healing sessions for survivors at no cost.",
-                    location: "Community Center, Fort Lauderdale",
-                    image: "/webp/placeholder.webp"
-                  },
-                  {
-                    date: "March 15, 2024",
-                    title: "Partner Spotlight: Local Shelter Collaboration",
-                    excerpt: "Our new partnership with City Shelter expands housing options for survivors, creating a seamless support network across our community.",
-                    location: "City Shelter, Fort Lauderdale",
-                    image: "/webp/placeholder.webp"
-                  },
-                ].map((event, index) => (
-                  <Card
-                    key={index}
-                    className="min-w-[300px] sm:min-w-[350px] border-none shadow-md snap-start flex-shrink-0 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white overflow-hidden"
-                  >
-                    <div className="relative h-[150px] w-full">
-                      <Image 
-                        src={event.image} 
-                        alt={event.title}
-                        fill
-                        className="object-cover"
-                      />
-                      <div className="absolute top-0 left-0 bg-purple text-white text-xs px-3 py-1">
-                        {event.date}
-                      </div>
-                    </div>
-                    <CardHeader className="pb-2">
-                      <CardTitle className="text-xl text-navy">{event.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-navy/70 text-sm line-clamp-2">
-                        {event.excerpt.length > 100 ? `${event.excerpt.substring(0, 100)}...` : event.excerpt}
-                      </p>
-                      <div className="flex items-start gap-2 mt-3">
-                        <MapPin className="h-4 w-4 text-navy/50 mt-0.5" />
-                        <span className="text-xs text-navy/70">{event.location}</span>
-                      </div>
-                    </CardContent>
-                    <CardFooter>
-                      <Button 
-                        variant="outline" 
-                        className="w-full border-gold/50 text-gold hover:bg-gold hover:text-white hover:border-gold transition-all duration-300"
-                        asChild
-                      >
-                        <Link
-                          href={`/events/${event.title.toLowerCase().replace(/\s+/g, '-')}`}
-                          className="flex items-center justify-center"
-                        >
-                          View Photos <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                        </Link>
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                ))}
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Prayer Breakfast",
+                  description: "Join us for a morning of faith, food, and fellowship. Theme: Pray Bold (Hebrews 4:16). Hosted by Hon. Jaqueline Sinclaire & Pastor Pratt Brown, with Apostle Dr. K. Lyle, Prophetess Sausha McDonald, and Guest Speaker Apostle Margaret Thompson. $25 entry. Location: Transformation Ministries, 4987 N University Drive, Lauderhill, FL 33351.",
+                  image: "/events/webp/prayer-breakfast-flyer.webp",
+                  date: "May 24, 2024",
+                  time: "10:00 AM",
+                  buttonText: "$25 Tickets",
+                  buttonLink: "#",
+                },
+                {
+                  title: "Annual Care Bag Drive",
+                  description: "Thanks to our generous community, we collected over 200 care bags filled with essential items for survivors entering our emergency shelter program.",
+                  image: "/webp/placeholder.webp",
+                  date: "April 10, 2024",
+                  location: "Touch & Restored Office, Lauderhill",
+                  buttonText: "View Photos",
+                  buttonLink: "/events/annual-care-bag-drive",
+                },
+                {
+                  title: "Trauma Therapy Sessions Launch",
+                  description: "We're excited to announce our new trauma-informed therapy program, offering specialized healing sessions for survivors at no cost.",
+                  image: "/webp/placeholder.webp",
+                  date: "March 27, 2024",
+                  location: "Community Center, Fort Lauderdale",
+                  buttonText: "View Photos",
+                  buttonLink: "/events/trauma-therapy-sessions-launch",
+                },
+                {
+                  title: "Partner Spotlight: Local Shelter Collaboration",
+                  description: "Our new partnership with City Shelter expands housing options for survivors, creating a seamless support network across our community.",
+                  image: "/webp/placeholder.webp",
+                  date: "March 15, 2024",
+                  location: "City Shelter, Fort Lauderdale",
+                  buttonText: "View Photos",
+                  buttonLink: "/events/partner-spotlight-local-shelter-collaboration",
+                },
+              ].slice(0, 3).map((event, index) => (
+                <ProjectCard
+                  key={index}
+                  title={event.title}
+                  description={event.description}
+                  image={event.image}
+                  date={event.date}
+                  time={event.time}
+                  buttonText={event.buttonText}
+                  buttonLink={event.buttonLink}
+                />
+              ))}
             </div>
           </ScrollAnimation>
         </div>
@@ -372,7 +354,7 @@ export default function Home() {
       </section>
 
       {/* Ways to Give Section */}
-      <section className="py-16 bg-tan relative overflow-hidden">
+      <section id="ways-to-give" className="py-16 bg-tan relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-purple/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
@@ -486,7 +468,7 @@ export default function Home() {
                     className="border-gold text-gold hover:bg-gold hover:text-white transition-all duration-300"
                     asChild
                   >
-                    <Link href="/support-us">
+                    <Link href="/support-us#donate">
                       Explore More Ways to Give
                     </Link>
                   </Button>

@@ -10,6 +10,16 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 export default function NewsPage() {
   const upcomingProjects = [
     {
+      title: "Prayer Breakfast",
+      description:
+        "Join us for a morning of faith, food, and fellowship. Theme: Pray Bold (Hebrews 4:16). Hosted by Hon. Jaqueline Sinclaire & Pastor Pratt Brown, with Apostle Dr. K. Lyle, Prophetess Sausha McDonald, and Guest Speaker Apostle Margaret Thompson. Come and connect with God for uplifting, spiritual refreshment and leave blessed and empowered.",
+      image: "/events/webp/prayer-breakfast-flyer.webp",
+      date: "May 24, 2024",
+      time: "10:00 AM",
+      buttonText: "$25 Tickets",
+      buttonLink: "#", // Update with ticket link if available
+    },
+    {
       title: "Annual Domestic Violence Awareness Gala",
       description:
         "Join us for an evening of inspiration and impact as we raise funds and awareness for domestic violence survivors. The event will feature keynote speakers, survivor testimonials, and a silent auction.",

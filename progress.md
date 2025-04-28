@@ -8,9 +8,16 @@
 - WebP image conversion for improved performance
 
 ## Recent Updates
+- Added Prayer Breakfast event to upcoming events and converted flyer image to WebP
+- Added GoFundMe as a donation option on the Support Us page with icon and direct action button
+- Updated homepage hero Donate button to link directly to the "There Are Plenty of Ways to Give" section on the homepage
+- Updated all "Donate Now" links across the site to point directly to the "Let's Make A Change" section on the Support Us page
+- Updated "Donate Now" button to link to the "Let's Make A Change" section on the Support Us page
+- Reorganized donation cards on Support Us page with Check and Online options in the top row, and Cash App and Zelle in the bottom row
 - Removed "Impact & Updates" section from the homepage
 - Updated events section with actual past events from the news section
 - Updated events section on homepage to showcase past events instead of upcoming ones
+- Updated Cash App and Zelle cards on the Support Us page to match the homepage design with icons and direct action buttons
 - Updated Zelle donation button to open Zelle app/website with pre-filled phone number
 - Updated Zelle icon with new design and converted to WebP format for better performance
 - Removed "Voices of Impact" testimonial section from the homepage as it's no longer needed

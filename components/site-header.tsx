@@ -104,7 +104,7 @@ export function SiteHeader() {
           })}
         </nav>
         <div className="hidden md:flex items-center gap-4">
-          <Link href="/support-us">
+          <Link href="/support-us#donate">
             <Button className="bg-purple hover:bg-purple-dark text-white">Donate Now</Button>
           </Link>
         </div>
@@ -165,7 +165,7 @@ export function SiteHeader() {
                 )
               })}
               <div className="mt-6 pt-6 border-t border-gold/20">
-                <Link href="/support-us" className="w-full">
+                <Link href="/support-us#donate" className="w-full">
                   <Button className="w-full bg-purple hover:bg-purple-dark text-white">Donate Now</Button>
                 </Link>
               </div>

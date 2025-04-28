@@ -58,7 +58,7 @@ export function SiteFooter() {
               <Link href="/contact" className="text-navy/80 hover:text-gold transition-colors">
                 Contact
               </Link>
-              <Link href="/support-us" className="text-navy/80 hover:text-gold transition-colors">
+              <Link href="/support-us#donate" className="text-navy/80 hover:text-gold transition-colors">
                 Donate
               </Link>
               <Link href="/domestic-violence" className="text-navy/80 hover:text-gold transition-colors">
