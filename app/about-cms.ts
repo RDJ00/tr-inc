@@ -129,7 +129,7 @@ export const fallbackAboutData: AboutPageData = {
       bio: "Lincoln Grant serves as Treasurer and Warehouse Supervisor. Joined Touch & Restored in 2017.",
       image: {
         asset: {
-          _ref: "/team-members/lincoln-grant.jpg"
+          _ref: "/team-members/webp/lincoln-grant.webp"
         }
       }
     },

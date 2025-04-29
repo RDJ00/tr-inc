@@ -33,7 +33,7 @@ export default function AboutPage() {
       name: "Lincoln Grant",
       title: "Treasurer/Warehouse Supervisor",
       bio: "Lincoln Grant serves as Treasurer and Warehouse Supervisor. Joined Touch & Restored in 2017.",
-      image: "/team-members/lincoln-grant.jpg",
+      image: "/team-members/webp/lincoln-grant.webp",
     },
     {
       name: "Nadine Neabard",
@@ -45,7 +45,7 @@ export default function AboutPage() {
       name: "Audie Gammon",
       title: "Business Owner",
       bio: "Donor/Fund Raiser. Joined: 2017",
-      image: "/team-members/audie-gammon.png",
+      image: "/team-members/webp/audie-gammon.webp",
     },
     {
       name: "Tameka Morris",
