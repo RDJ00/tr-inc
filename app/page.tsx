@@ -13,6 +13,7 @@ import { VolunteerCTA } from "@/components/volunteer-cta"
 import { motion } from "framer-motion"
 import { ProjectCard } from "@/components/project-card"
 import { FormEvent, useState } from "react"
+import { VolunteerModal } from "@/components/volunteer-modal"
 
 export default function Home() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -125,12 +126,13 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                <Button 
-                  className="bg-purple hover:bg-purple-dark text-white transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
-                  asChild
-                >
-                  <Link href="/support-us#volunteer">Volunteer</Link>
-                </Button>
+                <VolunteerModal>
+                  <Button 
+                    className="bg-purple hover:bg-purple-dark text-white transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
+                  >
+                    Volunteer
+                  </Button>
+                </VolunteerModal>
               </motion.div>
               
               <motion.div

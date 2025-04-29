@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Users, Check, Heart, Calendar } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { VolunteerModal } from "@/components/volunteer-modal"
 
 export function VolunteerCTA() {
   const [activeTab, setActiveTab] = useState<"opportunities" | "benefits" | "requirements">("opportunities")
@@ -157,12 +158,12 @@ export function VolunteerCTA() {
               </div>
 
               <div className="mt-8 text-center">
-                <Link href="/support-us#volunteer">
+                <VolunteerModal>
                   <Button className="bg-purple hover:bg-purple-dark text-white px-8 py-6 text-lg font-medium rounded-md transition-all duration-300 hover:shadow-lg">
                     <Users className="mr-2 h-5 w-5" />
                     Apply to Volunteer
                   </Button>
-                </Link>
+                </VolunteerModal>
                 <p className="text-xs text-navy/60 mt-2">
                   Applications are reviewed on a rolling basis. We'll contact you within 5 business days.
                 </p>
