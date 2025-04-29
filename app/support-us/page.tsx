@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { PageHeader } from "@/components/page-header"
 import { ScrollAnimation } from "@/components/scroll-animation"
 import { motion } from "framer-motion"
+import { PartnerModal } from "@/components/partner-modal"
 
 export default function SupportUsPage() {
   return (
@@ -251,7 +252,9 @@ export default function SupportUsPage() {
                   </p>
                 </div>
               </div>
-              <Button className="bg-white text-[#0A1E39] hover:bg-white/90">Become a Partner</Button>
+              <PartnerModal>
+                <Button className="bg-white text-[#0A1E39] hover:bg-white/90">Become a Partner</Button>
+              </PartnerModal>
             </div>
           </ScrollAnimation>
         </div>
