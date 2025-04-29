@@ -48,6 +48,7 @@
 - [x] Add Touch & Restored 6th Anniversary event as a past event and convert flyer image to WebP
 - [x] Create dedicated pages for Sexual Assault, Client-Centered Practice, and Awareness & Action programs
 - [x] Verify navigation structure with proper dropdown menus for "About Us" and "What We Do" sections
+- [x] Implement Formspree for the "Sign the Pledge" form on the homepage
 
 ## Medium Priority
 - [ ] Implement events management

@@ -5,15 +5,76 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Heart, Calendar, Users, Shield, Lightbulb, HandHeart, Megaphone, ArrowRight, MapPin } from "lucide-react"
+import { Heart, Calendar, Users, Shield, Lightbulb, HandHeart, Megaphone, ArrowRight, MapPin, CheckCircle, AlertCircle } from "lucide-react"
 import { ScrollAnimation } from "@/components/scroll-animation"
 import { DonationCTA } from "@/components/donation-cta"
 import { ImpactCounter } from "@/components/impact-counter"
 import { VolunteerCTA } from "@/components/volunteer-cta"
 import { motion } from "framer-motion"
 import { ProjectCard } from "@/components/project-card"
+import { useState, ChangeEvent, FormEvent } from "react"
 
 export default function Home() {
+  interface FormState {
+    firstName: string;
+    lastName: string;
+    email: string;
+    message: string;
+  }
+
+  interface FormStatus {
+    submitted: boolean;
+    submitting: boolean;
+    error: string | null;
+  }
+
+  const [formState, setFormState] = useState<FormState>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: ""
+  });
+  
+  const [formStatus, setFormStatus] = useState<FormStatus>({
+    submitted: false,
+    submitting: false,
+    error: null
+  });
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormState(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handlePledgeSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setFormStatus({ submitted: false, submitting: true, error: null });
+
+    try {
+      const response = await fetch("https://formspree.io/f/xldbggee", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formState)
+      });
+
+      if (response.ok) {
+        setFormStatus({ submitted: true, submitting: false, error: null });
+        setFormState({ firstName: "", lastName: "", email: "", message: "" });
+      } else {
+        const error = await response.text();
+        setFormStatus({ submitted: false, submitting: false, error });
+      }
+    } catch (error) {
+      setFormStatus({ 
+        submitted: false, 
+        submitting: false, 
+        error: error instanceof Error ? error.message : "An unknown error occurred"
+      });
+    }
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -492,46 +553,80 @@ export default function Home() {
                   "I will not tolerate domestic abuse in any form in my own space and will do my part to help end it."
                 </p>
 
-                <form className="space-y-4 max-w-xl mx-auto">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {formStatus.submitted ? (
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-6 max-w-xl mx-auto">
+                    <div className="flex items-center gap-3 mb-3">
+                      <CheckCircle className="h-6 w-6 text-green-500" />
+                      <h3 className="font-medium text-lg text-green-700">Thank You!</h3>
+                    </div>
+                    <p className="text-green-600">Your pledge has been received. Together, we can make a difference in ending domestic violence.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handlePledgeSubmit} className="space-y-4 max-w-xl mx-auto">
+                    {formStatus.error && (
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <div className="flex items-center gap-2">
+                          <AlertCircle className="h-5 w-5 text-red-500" />
+                          <p className="text-red-600 text-sm">There was an error submitting your pledge. Please try again.</p>
+                        </div>
+                      </div>
+                    )}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <Input
+                          type="text"
+                          name="firstName"
+                          placeholder="First Name"
+                          value={formState.firstName}
+                          onChange={handleChange}
+                          className="bg-white/80 border-navy/20 focus:border-gold focus:ring-gold/50"
+                        />
+                      </div>
+                      <div>
+                        <Input
+                          type="text"
+                          name="lastName"
+                          placeholder="Last Name"
+                          value={formState.lastName}
+                          onChange={handleChange}
+                          className="bg-white/80 border-navy/20 focus:border-gold focus:ring-gold/50"
+                        />
+                      </div>
+                    </div>
                     <div>
                       <Input
-                        type="text"
-                        placeholder="First Name"
+                        type="email"
+                        name="email"
+                        placeholder="Email (required)"
+                        value={formState.email}
+                        onChange={handleChange}
+                        required
                         className="bg-white/80 border-navy/20 focus:border-gold focus:ring-gold/50"
                       />
                     </div>
                     <div>
-                      <Input
-                        type="text"
-                        placeholder="Last Name"
-                        className="bg-white/80 border-navy/20 focus:border-gold focus:ring-gold/50"
-                      />
+                      <textarea
+                        name="message"
+                        placeholder="Message (optional)"
+                        value={formState.message}
+                        onChange={handleChange}
+                        className="w-full min-h-[120px] rounded-md border border-navy/20 bg-white/80 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
+                      ></textarea>
                     </div>
-                  </div>
-                  <div>
-                    <Input
-                      type="email"
-                      placeholder="Email (required)"
-                      required
-                      className="bg-white/80 border-navy/20 focus:border-gold focus:ring-gold/50"
-                    />
-                  </div>
-                  <div>
-                    <textarea
-                      placeholder="Message (optional)"
-                      className="w-full min-h-[120px] rounded-md border border-navy/20 bg-white/80 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
-                    ></textarea>
-                  </div>
-                  <div className="pt-2">
-                    <Button className="w-full bg-purple hover:bg-purple-dark text-white transition-all duration-300 hover:shadow-md transform hover:scale-105">
-                      Submit
-                    </Button>
-                  </div>
-                  <p className="text-xs text-center text-navy/60 pt-2">
-                    By submitting, you agree to receive occasional email updates. You can unsubscribe at any time.
-                  </p>
-                </form>
+                    <div className="pt-2">
+                      <Button 
+                        type="submit" 
+                        className="w-full bg-purple hover:bg-purple-dark text-white transition-all duration-300 hover:shadow-md transform hover:scale-105"
+                        disabled={formStatus.submitting}
+                      >
+                        {formStatus.submitting ? "Submitting..." : "Submit"}
+                      </Button>
+                    </div>
+                    <p className="text-xs text-center text-navy/60 pt-2">
+                      By submitting, you agree to receive occasional email updates. You can unsubscribe at any time.
+                    </p>
+                  </form>
+                )}
               </div>
             </div>
           </ScrollAnimation>
