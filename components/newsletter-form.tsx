@@ -11,19 +11,23 @@ export function NewsletterForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     
     if (!email) return
     
     setIsSubmitting(true)
     
+    // Create a FormData object to handle the form data
+    const formData = new FormData()
+    formData.append("email", email)
+    
     try {
       const response = await fetch("https://formspree.io/f/xnndjjdl", {
         method: "POST",
-        body: JSON.stringify({ email }),
+        body: formData,
         headers: {
-          "Content-Type": "application/json"
+          "Accept": "application/json"
         }
       })
       
@@ -35,6 +39,8 @@ export function NewsletterForm() {
         setTimeout(() => {
           setIsSubmitted(false)
         }, 5000)
+      } else {
+        console.error("Form submission error:", await response.text())
       }
     } catch (error) {
       console.error("Newsletter signup error:", error)
