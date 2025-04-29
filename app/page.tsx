@@ -59,24 +59,34 @@ export default function Home() {
     formData.append("pledge", "I will not tolerate domestic abuse in any form in my own space and will do my part to help end it.");
 
     try {
+      console.log("Submitting form data:", Object.fromEntries(formData));
+      
       const response = await fetch("https://formspree.io/f/xldbggee", {
         method: "POST",
         body: formData,
-        // No Content-Type header needed, FormData automatically sets the correct header with boundary
+        headers: {
+          Accept: "application/json"
+        }
       });
 
+      console.log("Form submission response:", response.status, response.statusText);
+      
       if (response.ok) {
+        const data = await response.json();
+        console.log("Form submission successful:", data);
         setFormStatus({ submitted: true, submitting: false, error: null });
         setFormState({ name: "", lastName: "", email: "", message: "" });
       } else {
-        const error = await response.text();
-        setFormStatus({ submitted: false, submitting: false, error });
+        const errorText = await response.text();
+        console.error("Form submission failed:", errorText);
+        setFormStatus({ submitted: false, submitting: false, error: "There was an error submitting your pledge. Please try again." });
       }
     } catch (error) {
+      console.error("Form submission error:", error);
       setFormStatus({ 
         submitted: false, 
         submitting: false, 
-        error: error instanceof Error ? error.message : "An unknown error occurred"
+        error: "There was an error submitting your pledge. Please try again."
       });
     }
   };
