@@ -1,7 +1,7 @@
 # Project Progress
 
 ## Completion Status
-Project Completion: 85%
+Project Completion: 88%
 
 ## Current Status
 - Initial repository setup completed
@@ -13,8 +13,13 @@ Project Completion: 85%
 - Implemented Formspree for "Sign the Pledge" form on the homepage with client-side handling and success feedback
 - Implemented Formspree for the "Get in Touch" contact form with client-side submission handling
 - Added "Become a Partner" modal form with Formspree integration
+- Added "Become a Volunteer" modal form with Formspree integration
 
 ## Recent Updates
+- Created new "Become a Volunteer" form component with Formspree integration
+- Implemented modal dialog for the volunteer form with a clean user interface
+- Added comprehensive volunteer application fields including contact information, areas of interest, and availability
+- Enhanced the Support Us page with an embedded volunteer form triggered by the "Become a Volunteer" button
 - Created new "Become a Partner" form component with Formspree integration
 - Implemented modal dialog for the partner form to create a focused user experience
 - Added comprehensive form fields for organization partnerships including organization name, contact details, and partnership type

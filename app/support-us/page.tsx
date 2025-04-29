@@ -6,6 +6,7 @@ import { PageHeader } from "@/components/page-header"
 import { ScrollAnimation } from "@/components/scroll-animation"
 import { motion } from "framer-motion"
 import { PartnerModal } from "@/components/partner-modal"
+import { VolunteerModal } from "@/components/volunteer-modal"
 
 export default function SupportUsPage() {
   return (
@@ -206,7 +207,9 @@ export default function SupportUsPage() {
                     </li>
                   ))}
                 </ul>
-                <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white">Become a Volunteer</Button>
+                <VolunteerModal>
+                  <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white">Become a Volunteer</Button>
+                </VolunteerModal>
               </div>
               <div className="relative h-[500px] rounded-lg overflow-hidden">
                 <Image

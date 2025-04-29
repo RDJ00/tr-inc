@@ -52,6 +52,7 @@
 - [x] Add form success/error handling for the "Sign the Pledge" form
 - [x] Implement Formspree for the "Get in Touch" contact form
 - [x] Implement "Become a Partner" modal form with Formspree integration
+- [x] Implement "Become a Volunteer" modal form with Formspree integration
 - [ ] Test Formspree form submission flow and verify email notifications for all forms
 
 ## Medium Priority
