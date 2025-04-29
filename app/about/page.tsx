@@ -8,6 +8,7 @@ import { TeamMemberCard } from "@/components/team-member-card"
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Award, Calendar } from "lucide-react"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 export default function AboutPage() {
   const teamMembers = [
@@ -178,10 +179,14 @@ export default function AboutPage() {
                   difference.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-                  <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white text-sm sm:text-base">Volunteer With Us</Button>
-                  <Button className="bg-white text-[#0A1E39] hover:bg-white/90 text-sm sm:text-base">Make a Donation</Button>
-                  <Button variant="outline" className="border-white text-white hover:bg-white/10 text-sm sm:text-base">
-                    Contact Us
+                  <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white text-sm sm:text-base" asChild>
+                    <Link href="/support-us#volunteer">Volunteer With Us</Link>
+                  </Button>
+                  <Button className="bg-white text-[#0A1E39] hover:bg-white/90 text-sm sm:text-base" asChild>
+                    <Link href="/support-us#donate">Make a Donation</Link>
+                  </Button>
+                  <Button className="bg-purple hover:bg-purple-dark text-white text-sm sm:text-base" asChild>
+                    <Link href="/contact">Contact Us</Link>
                   </Button>
                 </div>
               </div>

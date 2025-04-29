@@ -42,7 +42,7 @@ export interface AboutPageData {
     _key: string;
     label: string;
     link: string;
-    variant: 'primary' | 'secondary' | 'outline';
+    variant: 'primary' | 'secondary' | 'outline' | 'purple';
   }[];
 }
 
@@ -153,20 +153,20 @@ export const fallbackAboutData: AboutPageData = {
     {
       _key: "button1",
       label: "Volunteer With Us",
-      link: "/volunteer",
+      link: "/support-us#volunteer",
       variant: "primary"
     },
     {
       _key: "button2",
       label: "Make a Donation",
-      link: "/donate",
+      link: "/support-us#donate",
       variant: "secondary"
     },
     {
       _key: "button3",
       label: "Contact Us",
       link: "/contact",
-      variant: "outline"
+      variant: "purple"
     }
   ]
 }; 
