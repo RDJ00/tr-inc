@@ -49,6 +49,7 @@
 - [x] Create dedicated pages for Sexual Assault, Client-Centered Practice, and Awareness & Action programs
 - [x] Verify navigation structure with proper dropdown menus for "About Us" and "What We Do" sections
 - [x] Implement Formspree for the "Sign the Pledge" form on the homepage
+- [x] Add form success/error handling for the "Sign the Pledge" form
 - [ ] Test Formspree form submission flow and verify email notifications
 
 ## Medium Priority
@@ -61,7 +62,7 @@
 - [x] Resolve package dependency conflicts
 - [ ] Install and configure next-sanity package
 - [ ] Configure Sanity CMS schema for events, news, and team members
-- [ ] Add form success/error handling for Formspree submissions
+- [x] Add form success/error handling for Formspree submissions
 
 ## Low Priority
 - [ ] Add testing framework

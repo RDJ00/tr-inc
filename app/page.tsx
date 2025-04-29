@@ -12,8 +12,57 @@ import { ImpactCounter } from "@/components/impact-counter"
 import { VolunteerCTA } from "@/components/volunteer-cta"
 import { motion } from "framer-motion"
 import { ProjectCard } from "@/components/project-card"
+import { FormEvent, useState } from "react"
 
 export default function Home() {
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: ""
+  });
+  
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+  
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    try {
+      const response = await fetch("https://formspree.io/f/myzwkkez", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+      
+      if (response.ok) {
+        setFormSubmitted(true);
+        // Reset form fields
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          message: ""
+        });
+        
+        // Optional: Reset success message after a few seconds
+        setTimeout(() => {
+          setFormSubmitted(false);
+        }, 5000);
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+    }
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -492,9 +541,14 @@ export default function Home() {
                   "I will not tolerate domestic abuse in any form in my own space and will do my part to help end it."
                 </p>
 
+                {formSubmitted && (
+                  <div className="mb-6 p-4 bg-green-50 border border-green-200 text-green-700 rounded-lg text-center">
+                    Thank you for signing the pledge! Your commitment makes a difference.
+                  </div>
+                )}
+
                 <form 
-                  action="https://formspree.io/f/myzwkkez" 
-                  method="POST"
+                  onSubmit={handleSubmit}
                   className="space-y-4 max-w-xl mx-auto"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -505,6 +559,8 @@ export default function Home() {
                         placeholder="First Name"
                         className="bg-white/80 border-navy/20 focus:border-gold focus:ring-gold/50"
                         required
+                        value={formData.firstName}
+                        onChange={handleInputChange}
                       />
                     </div>
                     <div>
@@ -514,6 +570,8 @@ export default function Home() {
                         placeholder="Last Name"
                         className="bg-white/80 border-navy/20 focus:border-gold focus:ring-gold/50"
                         required
+                        value={formData.lastName}
+                        onChange={handleInputChange}
                       />
                     </div>
                   </div>
@@ -524,6 +582,8 @@ export default function Home() {
                       placeholder="Email (required)"
                       required
                       className="bg-white/80 border-navy/20 focus:border-gold focus:ring-gold/50"
+                      value={formData.email}
+                      onChange={handleInputChange}
                     />
                   </div>
                   <div>
@@ -531,6 +591,8 @@ export default function Home() {
                       name="message"
                       placeholder="Message (optional)"
                       className="w-full min-h-[120px] rounded-md border border-navy/20 bg-white/80 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
+                      value={formData.message}
+                      onChange={handleInputChange}
                     ></textarea>
                   </div>
                   <div className="pt-2">
