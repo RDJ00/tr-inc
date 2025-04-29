@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { PageHeader } from "@/components/page-header"
 import { ScrollAnimation } from "@/components/scroll-animation"
-import { ContactForm } from "@/components/contact-form"
+import { HelpForm } from "@/components/help-form"
 
 export default function AwarenessAndActionPage() {
   return (
@@ -300,7 +300,7 @@ export default function AwarenessAndActionPage() {
                     <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#0A1E39]">Donate</Button>
                   </div>
                 </div>
-                <ContactForm />
+                <HelpForm />
               </div>
               <div className="space-y-6">
                 <Card className="bg-white/10 border-none">

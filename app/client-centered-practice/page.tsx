@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { PageHeader } from "@/components/page-header"
 import { ScrollAnimation } from "@/components/scroll-animation"
-import { ContactForm } from "@/components/contact-form"
+import { HelpForm } from "@/components/help-form"
 
 export default function ClientCenteredPracticePage() {
   return (
@@ -234,7 +234,7 @@ export default function ClientCenteredPracticePage() {
                   </p>
                   <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white w-full">Call (954) 673-3506</Button>
                 </div>
-                <ContactForm />
+                <HelpForm />
               </div>
               <div className="relative h-[500px] rounded-lg overflow-hidden">
                 <Image

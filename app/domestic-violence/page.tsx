@@ -2,7 +2,7 @@ import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { PageHeader } from "@/components/page-header"
 import { ScrollAnimation } from "@/components/scroll-animation"
-import { ContactForm } from "@/components/contact-form"
+import { HelpForm } from "@/components/help-form"
 
 export default function DomesticViolencePage() {
   return (
@@ -248,7 +248,7 @@ export default function DomesticViolencePage() {
                   <p className="text-2xl font-bold mb-2">(800) 799-7233</p>
                   <p className="text-sm">Call or text BEGIN to 88788 anytime, or reach out to us below:</p>
                 </div>
-                <ContactForm />
+                <HelpForm />
               </div>
               <div className="relative h-[500px] rounded-lg overflow-hidden">
                 <Image

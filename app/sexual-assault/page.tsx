@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { PageHeader } from "@/components/page-header"
 import { ScrollAnimation } from "@/components/scroll-animation"
-import { ContactForm } from "@/components/contact-form"
+import { HelpForm } from "@/components/help-form"
 
 export default function SexualAssaultPage() {
   return (
@@ -238,7 +238,7 @@ export default function SexualAssaultPage() {
                   <p className="text-2xl font-bold mb-2">1-800-656-HOPE (4673)</p>
                   <p className="text-sm">Call anytime for confidential support, or reach out to us directly:</p>
                 </div>
-                <ContactForm />
+                <HelpForm />
               </div>
               <div className="relative h-[500px] rounded-lg overflow-hidden">
                 <Image
