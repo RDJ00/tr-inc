@@ -16,7 +16,7 @@ import { useState, ChangeEvent, FormEvent } from "react"
 
 export default function Home() {
   interface FormState {
-    firstName: string;
+    name: string;
     lastName: string;
     email: string;
     message: string;
@@ -29,7 +29,7 @@ export default function Home() {
   }
 
   const [formState, setFormState] = useState<FormState>({
-    firstName: "",
+    name: "",
     lastName: "",
     email: "",
     message: ""
@@ -50,18 +50,24 @@ export default function Home() {
     e.preventDefault();
     setFormStatus({ submitted: false, submitting: true, error: null });
 
+    // Create FormData object for proper Formspree submission
+    const formData = new FormData();
+    formData.append("name", formState.name);
+    formData.append("lastName", formState.lastName);
+    formData.append("email", formState.email);
+    formData.append("message", formState.message);
+    formData.append("pledge", "I will not tolerate domestic abuse in any form in my own space and will do my part to help end it.");
+
     try {
       const response = await fetch("https://formspree.io/f/xldbggee", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formState)
+        body: formData,
+        // No Content-Type header needed, FormData automatically sets the correct header with boundary
       });
 
       if (response.ok) {
         setFormStatus({ submitted: true, submitting: false, error: null });
-        setFormState({ firstName: "", lastName: "", email: "", message: "" });
+        setFormState({ name: "", lastName: "", email: "", message: "" });
       } else {
         const error = await response.text();
         setFormStatus({ submitted: false, submitting: false, error });
@@ -575,9 +581,9 @@ export default function Home() {
                       <div>
                         <Input
                           type="text"
-                          name="firstName"
+                          name="name"
                           placeholder="First Name"
-                          value={formState.firstName}
+                          value={formState.name}
                           onChange={handleChange}
                           className="bg-white/80 border-navy/20 focus:border-gold focus:ring-gold/50"
                         />
