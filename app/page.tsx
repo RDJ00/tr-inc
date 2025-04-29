@@ -14,6 +14,13 @@ import { motion } from "framer-motion"
 import { ProjectCard } from "@/components/project-card"
 import { FormEvent, useState } from "react"
 import { VolunteerModal } from "@/components/volunteer-modal"
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious 
+} from "@/components/ui/carousel"
 
 export default function Home() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -234,7 +241,98 @@ export default function Home() {
             <p className="text-center text-navy/70 max-w-2xl mx-auto mb-12">
               Our comprehensive programs address the diverse needs of survivors at every stage of their healing journey.
             </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            {/* Mobile view carousel (visible only on small screens) */}
+            <div className="block sm:hidden mb-6 relative">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+              >
+                <CarouselContent>
+                  {[
+                    {
+                      title: "Domestic Violence",
+                      description:
+                        "Providing crisis intervention, safety planning, and ongoing support for survivors of intimate partner violence to ensure immediate safety and long-term healing.",
+                      icon: <Shield className="h-6 w-6 text-gold" />,
+                      link: "/domestic-violence",
+                      delay: 0.1
+                    },
+                    {
+                      title: "Children & Trauma",
+                      description:
+                        "Age-appropriate therapy and support services for children who have witnessed or experienced trauma, helping them process experiences and build resilience.",
+                      icon: <Users className="h-6 w-6 text-gold" />,
+                      link: "/children-trauma",
+                      delay: 0.2
+                    },
+                    {
+                      title: "Sexual Assault",
+                      description:
+                        "Specialized care and advocacy for survivors of sexual violence, including crisis response, medical accompaniment, and trauma-informed counseling services.",
+                      icon: <HandHeart className="h-6 w-6 text-gold" />,
+                      link: "/sexual-assault",
+                      delay: 0.3
+                    },
+                    {
+                      title: "Client-Centered Practice (CCP)",
+                      description:
+                        "Individualized support plans that honor each survivor's unique needs, choices, and healing journey, ensuring every person feels heard, valued, and empowered.",
+                      icon: <Heart className="h-6 w-6 text-gold" />,
+                      link: "/client-centered-practice",
+                      delay: 0.4
+                    },
+                    {
+                      title: "Awareness & Action",
+                      description:
+                        "Community education and prevention programs aimed at ending the cycle of violence through increased awareness, bystander intervention, and systemic change.",
+                      icon: <Megaphone className="h-6 w-6 text-gold" />,
+                      link: "/awareness-and-action",
+                      delay: 0.5
+                    },
+                  ].map((program, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <Card
+                        className="border-none shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-tan-light h-full flex flex-col"
+                      >
+                        <CardHeader className="pb-3 border-b border-gold/10">
+                          <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-4">
+                            {program.icon}
+                          </div>
+                          <CardTitle className="text-xl text-navy font-bold">{program.title}</CardTitle>
+                        </CardHeader>
+                        <CardContent className="py-6 flex-grow">
+                          <p className="text-navy/70">{program.description}</p>
+                        </CardContent>
+                        <CardFooter className="pt-0">
+                          <Button 
+                            variant="outline" 
+                            className="w-full border-gold/50 text-gold hover:bg-gold hover:text-white hover:border-gold transition-all duration-300"
+                            asChild
+                          >
+                            <Link
+                              href={program.link}
+                              className="flex items-center justify-center"
+                            >
+                              Learn More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            </Link>
+                          </Button>
+                        </CardFooter>
+                      </Card>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <div className="flex justify-center mt-4">
+                  <CarouselPrevious className="relative -left-0 top-0 translate-y-0 bg-gold/10 hover:bg-gold/20 border-0 text-navy static mr-2" />
+                  <CarouselNext className="relative -right-0 top-0 translate-y-0 bg-gold/10 hover:bg-gold/20 border-0 text-navy static" />
+                </div>
+              </Carousel>
+            </div>
+
+            {/* Desktop view grid (hidden on small screens) */}
+            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Domestic Violence",
@@ -331,7 +429,65 @@ export default function Home() {
             <p className="text-center text-navy/70 max-w-2xl mx-auto mb-12">
               Take a look at some of our events and the impact we've made together.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            {/* Mobile Events Carousel */}
+            <div className="block sm:hidden mb-6">
+              <Carousel
+                opts={{
+                  align: "center",
+                  loop: true,
+                }}
+              >
+                <CarouselContent>
+                  {[
+                    {
+                      title: "Prayer Breakfast",
+                      description: "Join us for a morning of faith, food, and fellowship. Theme: Pray Bold (Hebrews 4:16). Hosted by Hon. Jaqueline Sinclaire & Pastor Pratt Brown, with Apostle Dr. K. Lyle, Prophetess Sausha McDonald, and Guest Speaker Apostle Margaret Thompson. $25 entry. Location: Transformation Ministries, 4987 N University Drive, Lauderhill, FL 33351.",
+                      image: "/events/webp/prayer-breakfast-flyer.webp",
+                      date: "May 24, 2024",
+                      time: "10:00 AM",
+                      buttonText: "$25 Tickets",
+                      buttonLink: "#",
+                    },
+                    {
+                      title: "Touch & Restored 6th Anniversary: Broken But Not Beyond Repair",
+                      description: "Touch & Restored 6th Anniversary: 'Broken But Not Beyond Repair' Women Empowerment Conference. Join host Jacqueline Sinclair, Apostle Margaret Thompson, Rev. Maria Hinds, Lady Yvonne Shirley, Pastor K. Lyle, and Evangelist Marcia Baker for an inspiring celebration of healing and empowerment. Romans 8:28.",
+                      image: "/events/webp/touch-and-restored-flyer.webp",
+                      date: "January 24, 2025",
+                      buttonText: "Event Details",
+                      buttonLink: "#",
+                    },
+                    {
+                      title: "Ladies in HAT Back to School Fundraiser",
+                      description: "Our elegant fundraising event featured a fashion show, raffles, and prizes for best hats, bringing the community together to support children affected by domestic violence. Attendees enjoyed an afternoon of style and philanthropy, with all proceeds providing essential school supplies and resources to help children start the academic year with confidence and the tools needed to succeed.",
+                      image: "/events/webp/ladies-in-hat-flyer.webp",
+                      date: "August 3, 2024",
+                      buttonText: "Event Details",
+                      buttonLink: "#",
+                    },
+                  ].map((event, index) => (
+                    <CarouselItem key={index} className="basis-full">
+                      <ProjectCard
+                        title={event.title}
+                        description={event.description}
+                        image={event.image}
+                        date={event.date}
+                        time={event.time}
+                        buttonText={event.buttonText}
+                        buttonLink={event.buttonLink}
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <div className="flex justify-center mt-4">
+                  <CarouselPrevious className="relative -left-0 top-0 translate-y-0 bg-gold/10 hover:bg-gold/20 border-0 text-navy static mr-2" />
+                  <CarouselNext className="relative -right-0 top-0 translate-y-0 bg-gold/10 hover:bg-gold/20 border-0 text-navy static" />
+                </div>
+              </Carousel>
+            </div>
+            
+            {/* Desktop Events Grid */}
+            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
                   title: "Prayer Breakfast",

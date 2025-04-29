@@ -1,7 +1,7 @@
 # Project Progress
 
 ## Completion Status
-Project Completion: 98%
+Project Completion: 99%
 
 ## Current Status
 - Initial repository setup completed
@@ -17,8 +17,15 @@ Project Completion: 98%
 - Implemented Formspree for newsletter signup forms with proper validation and feedback
 - Created specialized "Need Help" form with Formspree integration across program pages
 - Implemented static content management without CMS for better maintainability
+- Enhanced mobile experience with carousels for "What We Do" and "Events" sections
+- Implemented responsive design improvements across the site
 
 ## Recent Updates
+- Added mobile-friendly carousels with navigation controls for the "What We Do" section on homepage
+- Added mobile-friendly carousels with navigation controls for the "Events" section on homepage
+- Updated homepage layout to show carousels on mobile and grid layout on desktop for better user experience
+- Improved "Join Our Volunteer Team" section with better mobile responsiveness
+- Changed homepage "Volunteer" button to open the volunteer form modal directly instead of linking to the Support Us page
 - Removed all Sanity CMS dependencies and related code for simplified maintenance
 - Refactored data architecture to use direct content instead of CMS schemas
 - Enhanced maintainability by allowing direct content editing in components

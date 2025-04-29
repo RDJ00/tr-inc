@@ -51,6 +51,10 @@
 - [x] Implement "Become a Volunteer" modal form with Formspree integration
 - [x] Implement Formspree for newsletter signup forms
 - [x] Create specialized "Need Help" form with Formspree integration for program pages
+- [x] Update homepage "Volunteer" button to open the volunteer form modal directly instead of linking to the Support Us page
+- [x] Implement mobile-friendly carousels for "What We Do" section on homepage 
+- [x] Implement mobile-friendly carousels for "Events" section on homepage
+- [x] Improve mobile responsiveness of the "Join Our Volunteer Team" section
 - [ ] Test Formspree form submission flow and verify email notifications for all forms
 - [ ] Re-enable "Make a Difference Today" section on homepage once PayPal or Stripe payment processing is integrated
 
