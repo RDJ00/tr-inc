@@ -1,7 +1,7 @@
 # Project Progress
 
 ## Completion Status
-Project Completion: 88%
+Project Completion: 90%
 
 ## Current Status
 - Initial repository setup completed
@@ -14,8 +14,13 @@ Project Completion: 88%
 - Implemented Formspree for the "Get in Touch" contact form with client-side submission handling
 - Added "Become a Partner" modal form with Formspree integration
 - Added "Become a Volunteer" modal form with Formspree integration
+- Implemented Formspree for newsletter signup forms with proper validation and feedback
 
 ## Recent Updates
+- Updated newsletter subscription forms with Formspree integration for both "Stay Updated" and "Get Monthly Updates" forms
+- Added form validation, loading states, and success messages to newsletter signup forms
+- Created unified Formspree endpoint for all newsletter signups for easier management
+- Enhanced user experience with proper error handling and loading indicators during submission
 - Created new "Become a Volunteer" form component with Formspree integration
 - Implemented modal dialog for the volunteer form with a clean user interface
 - Added comprehensive volunteer application fields including contact information, areas of interest, and availability

@@ -6,16 +6,38 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Mail } from "lucide-react"
+import { FormEvent } from "react"
 
 export function NewsletterSignup() {
   const [email, setEmail] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the email to your backend
-    setIsSubmitted(true)
-    setEmail("")
+    
+    if (!email) return
+    
+    setIsSubmitting(true)
+    
+    try {
+      const response = await fetch("https://formspree.io/f/xnndjjdl", {
+        method: "POST",
+        body: JSON.stringify({ email }),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      
+      if (response.ok) {
+        setIsSubmitted(true)
+        setEmail("")
+      }
+    } catch (error) {
+      console.error("Newsletter signup error:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -37,14 +59,19 @@ export function NewsletterSignup() {
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <Input
               type="email"
+              name="email"
               placeholder="Your email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
               className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
             />
-            <Button type="submit" className="bg-gold hover:bg-gold-dark text-white">
-              Subscribe
+            <Button 
+              type="submit" 
+              className="bg-gold hover:bg-gold-dark text-white"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Subscribing..." : "Subscribe"}
             </Button>
           </form>
         )}
