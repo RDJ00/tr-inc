@@ -5,8 +5,6 @@
 - [ ] Set up basic page layouts
 - [ ] Create essential UI components
 - [x] Deploy to Vercel
-- [ ] Implement CMS integration
-- [ ] Re-enable "Make a Difference Today" section on homepage once PayPal or Stripe payment processing is integrated
 - [x] Create proper client/server component separation
 - [x] Implement hydration-safe state management
 - [x] Fix any existing hydration issues
@@ -14,8 +12,7 @@
 - [x] Update hero section with new title and animated CTA buttons
 - [x] Update mission/vision section with new content
 - [x] Enhance program cards with descriptions and animations
-- [x] Redesign upcoming events section for Sanity integration
-- [x] Update Impact & Updates section for Sanity NewsPost schema
+- [x] Update events section with past events
 - [x] Update Ways to Give section with payment method CTAs
 - [x] Update About page with founder story and serif typography
 - [x] Update About page hero section and story content
@@ -28,7 +25,6 @@
 - [x] Remove "Voices of Impact" testimonial section from the homepage
 - [x] Enhance About page mobile responsiveness
 - [x] Add smooth animations to About page sections
-- [x] Prepare Sanity CMS schema for About page content
 - [x] Update News page for mobile responsiveness with responsive grid and proper image/text handling
 - [x] Update News page header with new subtitle and enhanced gradient overlay
 - [x] Fix PageHeader component with proper client directive and simplified gradient overlay
@@ -56,22 +52,18 @@
 - [x] Implement Formspree for newsletter signup forms
 - [x] Create specialized "Need Help" form with Formspree integration for program pages
 - [ ] Test Formspree form submission flow and verify email notifications for all forms
+- [ ] Re-enable "Make a Difference Today" section on homepage once PayPal or Stripe payment processing is integrated
 
 ## Medium Priority
-- [ ] Implement events management
-- [ ] Implement user authentication
-- [ ] Set up database schema
-- [ ] Create API endpoints
+- [ ] Implement simple static events management
 - [ ] Configure custom domain
 - [ ] Set up environment variables in Vercel
 - [x] Resolve package dependency conflicts
-- [ ] Install and configure next-sanity package
-- [ ] Configure Sanity CMS schema for events, news, and team members
 - [x] Add form success/error handling for Formspree submissions
+- [ ] Implement PayPal or Stripe payment processing for donations
 
 ## Low Priority
 - [ ] Add testing framework
 - [ ] Set up CI/CD pipeline
 - [ ] Create documentation
-- [ ] Configure Vercel analytics
-- [ ] Add more content types to Sanity (testimonials, team members, etc.) 
+- [ ] Configure Vercel analytics 
