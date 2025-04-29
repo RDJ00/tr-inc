@@ -50,7 +50,8 @@
 - [x] Verify navigation structure with proper dropdown menus for "About Us" and "What We Do" sections
 - [x] Implement Formspree for the "Sign the Pledge" form on the homepage
 - [x] Add form success/error handling for the "Sign the Pledge" form
-- [ ] Test Formspree form submission flow and verify email notifications
+- [x] Implement Formspree for the "Get in Touch" contact form
+- [ ] Test Formspree form submission flow and verify email notifications for both forms
 
 ## Medium Priority
 - [ ] Implement events management
