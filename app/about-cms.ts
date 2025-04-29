@@ -153,7 +153,7 @@ export const fallbackAboutData: AboutPageData = {
     {
       _key: "button1",
       label: "Volunteer With Us",
-      link: "/support-us#volunteer",
+      link: "#",
       variant: "primary"
     },
     {

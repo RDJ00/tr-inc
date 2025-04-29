@@ -9,6 +9,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Award, Calendar } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { VolunteerModal } from "@/components/volunteer-modal"
 
 export default function AboutPage() {
   const teamMembers = [
@@ -179,9 +180,11 @@ export default function AboutPage() {
                   difference.
                 </p>
                 <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-                  <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white text-sm sm:text-base" asChild>
-                    <Link href="/support-us#volunteer">Volunteer With Us</Link>
-                  </Button>
+                  <VolunteerModal>
+                    <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white text-sm sm:text-base">
+                      Volunteer With Us
+                    </Button>
+                  </VolunteerModal>
                   <Button className="bg-white text-[#0A1E39] hover:bg-white/90 text-sm sm:text-base" asChild>
                     <Link href="/support-us#donate">Make a Donation</Link>
                   </Button>
