@@ -478,16 +478,26 @@ export default function Home() {
                       description: "Touch & Restored 6th Anniversary: 'Broken But Not Beyond Repair' Women Empowerment Conference. Join host Jacqueline Sinclair, Apostle Margaret Thompson, Rev. Maria Hinds, Lady Yvonne Shirley, Pastor K. Lyle, and Evangelist Marcia Baker for an inspiring celebration of healing and empowerment. Romans 8:28.",
                       image: "/events/webp/touch-and-restored-flyer.webp",
                       date: "January 24, 2025",
-                      buttonText: "Event Details",
-                      buttonLink: "#",
+                      buttons: [
+                        {
+                          text: "Event Details",
+                          link: "/news/touch-and-restored-anniversary",
+                          primary: true
+                        }
+                      ]
                     },
                     {
                       title: "Ladies in HAT Back to School Fundraiser",
                       description: "Our elegant fundraising event featured a fashion show, raffles, and prizes for best hats, bringing the community together to support children affected by domestic violence. Attendees enjoyed an afternoon of style and philanthropy, with all proceeds providing essential school supplies and resources to help children start the academic year with confidence and the tools needed to succeed.",
                       image: "/events/webp/ladies-in-hat-flyer.webp",
                       date: "August 3, 2024",
-                      buttonText: "Event Details",
-                      buttonLink: "#",
+                      buttons: [
+                        {
+                          text: "Event Details",
+                          link: "/news/ladies-in-hat-fundraiser",
+                          primary: true
+                        }
+                      ]
                     },
                   ].map((event, index) => (
                     <CarouselItem key={index} className="basis-full">
@@ -550,16 +560,26 @@ export default function Home() {
                   description: "Touch & Restored 6th Anniversary: 'Broken But Not Beyond Repair' Women Empowerment Conference. Join host Jacqueline Sinclair, Apostle Margaret Thompson, Rev. Maria Hinds, Lady Yvonne Shirley, Pastor K. Lyle, and Evangelist Marcia Baker for an inspiring celebration of healing and empowerment. Romans 8:28.",
                   image: "/events/webp/touch-and-restored-flyer.webp",
                   date: "January 24, 2025",
-                  buttonText: "Event Details",
-                  buttonLink: "#",
+                  buttons: [
+                    {
+                      text: "Event Details",
+                      link: "/news/touch-and-restored-anniversary",
+                      primary: true
+                    }
+                  ]
                 },
                 {
                   title: "Ladies in HAT Back to School Fundraiser",
                   description: "Our elegant fundraising event featured a fashion show, raffles, and prizes for best hats, bringing the community together to support children affected by domestic violence. Attendees enjoyed an afternoon of style and philanthropy, with all proceeds providing essential school supplies and resources to help children start the academic year with confidence and the tools needed to succeed.",
                   image: "/events/webp/ladies-in-hat-flyer.webp",
                   date: "August 3, 2024",
-                  buttonText: "Event Details",
-                  buttonLink: "#",
+                  buttons: [
+                    {
+                      text: "Event Details",
+                      link: "/news/ladies-in-hat-fundraiser",
+                      primary: true
+                    }
+                  ]
                 },
               ].map((event, index) => (
                 <ProjectCard
