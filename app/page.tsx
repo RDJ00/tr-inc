@@ -441,13 +441,37 @@ export default function Home() {
                 <CarouselContent>
                   {[
                     {
+                      title: "Trailblazers Talk Show for Christ – March 2025",
+                      description: "Guest: Minister Jacqueline Sinclair, Host: Latoya Edwards. Together, they explored topics of real faith, personal stories of grace, and Christ-centered encouragement. Join us for an inspiring conversation that will strengthen your spiritual journey.",
+                      image: "/events/trailblazers-talk-show-flyer.jpeg",
+                      date: "March 8, 2025",
+                      time: "12:00 PM EST",
+                      buttons: [
+                        {
+                          text: "View Event Details",
+                          link: "/news/trailblazers-march-2025",
+                          primary: true
+                        }
+                      ]
+                    },
+                    {
                       title: "Prayer Breakfast",
                       description: "Join us for a morning of faith, food, and fellowship. Theme: Pray Bold (Hebrews 4:16). Hosted by Hon. Jaqueline Sinclaire & Pastor Pratt Brown, with Apostle Dr. K. Lyle, Prophetess Sausha McDonald, and Guest Speaker Apostle Margaret Thompson. $25 entry. Location: Transformation Ministries, 4987 N University Drive, Lauderhill, FL 33351.",
                       image: "/events/webp/prayer-breakfast-flyer.webp",
                       date: "May 24, 2024",
                       time: "10:00 AM",
-                      buttonText: "$25 Tickets",
-                      buttonLink: "#",
+                      buttons: [
+                        {
+                          text: "$25 Tickets",
+                          link: "#",
+                          primary: true
+                        },
+                        {
+                          text: "View Details",
+                          link: "/news/prayer-breakfast",
+                          primary: false
+                        }
+                      ]
                     },
                     {
                       title: "Touch & Restored 6th Anniversary: Broken But Not Beyond Repair",
@@ -473,8 +497,7 @@ export default function Home() {
                         image={event.image}
                         date={event.date}
                         time={event.time}
-                        buttonText={event.buttonText}
-                        buttonLink={event.buttonLink}
+                        buttons={event.buttons}
                       />
                     </CarouselItem>
                   ))}
@@ -490,13 +513,37 @@ export default function Home() {
             <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
+                  title: "Trailblazers Talk Show for Christ – March 2025",
+                  description: "Guest: Minister Jacqueline Sinclair, Host: Latoya Edwards. Together, they explored topics of real faith, personal stories of grace, and Christ-centered encouragement. Join us for an inspiring conversation that will strengthen your spiritual journey.",
+                  image: "/events/trailblazers-talk-show-flyer.jpeg",
+                  date: "March 8, 2025",
+                  time: "12:00 PM EST",
+                  buttons: [
+                    {
+                      text: "View Event Details",
+                      link: "/news/trailblazers-march-2025",
+                      primary: true
+                    }
+                  ]
+                },
+                {
                   title: "Prayer Breakfast",
                   description: "Join us for a morning of faith, food, and fellowship. Theme: Pray Bold (Hebrews 4:16). Hosted by Hon. Jaqueline Sinclaire & Pastor Pratt Brown, with Apostle Dr. K. Lyle, Prophetess Sausha McDonald, and Guest Speaker Apostle Margaret Thompson. $25 entry. Location: Transformation Ministries, 4987 N University Drive, Lauderhill, FL 33351.",
                   image: "/events/webp/prayer-breakfast-flyer.webp",
                   date: "May 24, 2024",
                   time: "10:00 AM",
-                  buttonText: "$25 Tickets",
-                  buttonLink: "#",
+                  buttons: [
+                    {
+                      text: "$25 Tickets",
+                      link: "#",
+                      primary: true
+                    },
+                    {
+                      text: "View Details",
+                      link: "/news/prayer-breakfast",
+                      primary: false
+                    }
+                  ]
                 },
                 {
                   title: "Touch & Restored 6th Anniversary: Broken But Not Beyond Repair",
@@ -522,8 +569,7 @@ export default function Home() {
                   image={event.image}
                   date={event.date}
                   time={event.time}
-                  buttonText={event.buttonText}
-                  buttonLink={event.buttonLink}
+                  buttons={event.buttons}
                 />
               ))}
             </div>

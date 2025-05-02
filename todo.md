@@ -55,8 +55,11 @@
 - [x] Implement mobile-friendly carousels for "What We Do" section on homepage 
 - [x] Implement mobile-friendly carousels for "Events" section on homepage
 - [x] Improve mobile responsiveness of the "Join Our Volunteer Team" section
+- [x] Add Trailblazers Talk Show for Christ – March 2025 event to Past Events section
+- [x] Create individual detail pages for all events in the Past Events section
+- [x] Create detailed page for Prayer Breakfast event with payment information
 - [ ] Test Formspree form submission flow and verify email notifications for all forms
-- [ ] Re-enable "Make a Difference Today" section on homepage once PayPal or Stripe payment processing is integrated
+- [x] Re-enable "Make a Difference Today" section on homepage once PayPal or Stripe payment processing is integrated
 
 ## Medium Priority
 - [ ] Implement simple static events management
@@ -64,7 +67,7 @@
 - [ ] Set up environment variables in Vercel
 - [x] Resolve package dependency conflicts
 - [x] Add form success/error handling for Formspree submissions
-- [ ] Implement PayPal or Stripe payment processing for donations
+- [x] Implement PayPal or Stripe payment processing for donations
 
 ## Low Priority
 - [ ] Add testing framework

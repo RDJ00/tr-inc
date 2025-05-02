@@ -73,7 +73,7 @@ export default function SupportUsPage() {
                     className="w-full bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white"
                     asChild
                   >
-                    <Link href="#donate">Donate Now</Link>
+                    <Link href="https://buy.stripe.com/cN2eXp1sw1uAfOE7su" target="_blank" rel="noopener noreferrer">Donate Now</Link>
                   </Button>
                 </CardContent>
               </Card>

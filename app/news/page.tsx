@@ -16,8 +16,18 @@ export default function NewsPage() {
       image: "/events/webp/prayer-breakfast-flyer.webp",
       date: "May 24, 2024",
       time: "10:00 AM",
-      buttonText: "$25 Tickets",
-      buttonLink: "#", // Update with ticket link if available
+      buttons: [
+        {
+          text: "$25 Tickets",
+          link: "#",
+          primary: true
+        },
+        {
+          text: "View Details",
+          link: "/news/prayer-breakfast",
+          primary: false
+        }
+      ]
     },
   ]
 
@@ -26,6 +36,16 @@ export default function NewsPage() {
 
   const pastProjects = [
     {
+      title: "Trailblazers Talk Show for Christ – March 2025",
+      description: "Guest: Minister Jacqueline Sinclair, Host: Latoya Edwards. Together, they explored topics of real faith, personal stories of grace, and Christ-centered encouragement. Join us for an inspiring conversation that will strengthen your spiritual journey.",
+      image: "/events/trailblazers-talk-show-flyer.jpeg",
+      date: "March 8, 2025",
+      isPast: true,
+      tags: ["Conferences", "Women Empowerment", "Talk Show"],
+      buttonText: "View Event Details",
+      buttonLink: "/news/trailblazers-march-2025",
+    },
+    {
       title: "Touch & Restored 6th Anniversary: Broken But Not Beyond Repair",
       description:
         "Touch & Restored 6th Anniversary: 'Broken But Not Beyond Repair' Women Empowerment Conference. Join host Jacqueline Sinclair, Apostle Margaret Thompson, Rev. Maria Hinds, Lady Yvonne Shirley, Pastor K. Lyle, and Evangelist Marcia Baker for an inspiring celebration of healing and empowerment. Romans 8:28.",
@@ -33,6 +53,8 @@ export default function NewsPage() {
       date: "January 24, 2025",
       isPast: true,
       tags: ["Conferences", "Women Empowerment"],
+      buttonText: "View Event Details",
+      buttonLink: "/news/touch-and-restored-anniversary",
     },
     {
       title: "5th Annual Broken to Be Mended Conference",
@@ -42,6 +64,8 @@ export default function NewsPage() {
       date: "January 22, 2022",
       isPast: true,
       tags: ["Conferences", "Outreach"],
+      buttonText: "View Event Details",
+      buttonLink: "/news/broken-to-be-mended-conference",
     },
     {
       title: "Ladies in HAT Back to School Fundraiser",
@@ -51,6 +75,8 @@ export default function NewsPage() {
       date: "August 3, 2024",
       isPast: true,
       tags: ["Fundraisers", "Outreach"],
+      buttonText: "View Event Details",
+      buttonLink: "/news/ladies-in-hat-fundraiser",
     },
     {
       title: "Reaching Up Out 2024 Edition",
@@ -60,6 +86,8 @@ export default function NewsPage() {
       date: "May 2024",
       isPast: true,
       tags: ["Conferences", "Outreach"],
+      buttonText: "View Event Details",
+      buttonLink: "/news/reaching-up-out-2024",
     },
     {
       title: "Kenya Mission 2023",
@@ -69,6 +97,8 @@ export default function NewsPage() {
       date: "2023",
       isPast: true,
       tags: ["Global Missions", "Outreach"],
+      buttonText: "View Event Details",
+      buttonLink: "/news/kenya-mission-2023",
     },
     {
       title: "Dining with the Queen",
@@ -78,6 +108,8 @@ export default function NewsPage() {
       date: "July 30, 2022",
       isPast: true,
       tags: ["Fundraisers"],
+      buttonText: "View Event Details",
+      buttonLink: "/news/dining-with-the-queen",
     },
     {
       title: "No Secrets! 1st Anniversary",
@@ -87,6 +119,8 @@ export default function NewsPage() {
       date: "January 19, 2018",
       isPast: true,
       tags: ["Outreach", "Conferences"],
+      buttonText: "View Event Details",
+      buttonLink: "/news/no-secrets-anniversary",
     },
     {
       title: "No Secrets: Standing Against Domestic Violence",
@@ -96,6 +130,8 @@ export default function NewsPage() {
       date: "January 19, 2019",
       isPast: true,
       tags: ["Outreach", "Awareness"],
+      buttonText: "View Event Details",
+      buttonLink: "/news/no-secrets-2019",
     },
   ]
 
@@ -148,8 +184,7 @@ export default function NewsPage() {
                   image={project.image}
                   date={project.date}
                   time={project.time}
-                  buttonText={project.buttonText}
-                  buttonLink={project.buttonLink}
+                  buttons={project.buttons}
                 />
               ))}
             </div>
@@ -174,6 +209,8 @@ export default function NewsPage() {
                   date={project.date}
                   isPast={project.isPast}
                   tags={project.tags}
+                  buttonText={project.buttonText}
+                  buttonLink={project.buttonLink}
                 />
               ))}
             </div>

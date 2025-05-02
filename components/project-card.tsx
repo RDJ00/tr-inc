@@ -7,6 +7,12 @@ import { Calendar } from "lucide-react"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 
+interface ButtonConfig {
+  text: string
+  link: string
+  primary?: boolean
+}
+
 interface ProjectCardProps {
   title: string
   description: string
@@ -15,6 +21,7 @@ interface ProjectCardProps {
   time?: string
   buttonText?: string
   buttonLink?: string
+  buttons?: ButtonConfig[]
   isPast?: boolean
   tags?: string[]
 }
@@ -27,6 +34,7 @@ export function ProjectCard({
   time,
   buttonText = "Learn More",
   buttonLink = "#",
+  buttons,
   isPast = false,
   tags = [],
 }: ProjectCardProps) {
@@ -69,10 +77,27 @@ export function ProjectCard({
       <CardContent>
         <p className="text-navy/70 line-clamp-3">{description}</p>
       </CardContent>
-      <CardFooter>
-        <Link href={buttonLink} className="w-full sm:w-auto">
-          <Button className="bg-gold hover:bg-gold-dark text-white w-full sm:w-auto">{buttonText}</Button>
-        </Link>
+      <CardFooter className="flex flex-wrap gap-2">
+        {buttons ? (
+          // Render multiple buttons if provided
+          buttons.map((button, index) => (
+            <Link key={index} href={button.link} className="flex-1 min-w-24">
+              <Button 
+                className={button.primary !== false 
+                  ? "bg-gold hover:bg-gold-dark text-white w-full" 
+                  : "bg-navy/10 hover:bg-navy/20 text-navy w-full"
+                }
+              >
+                {button.text}
+              </Button>
+            </Link>
+          ))
+        ) : (
+          // Backward compatibility for single button
+          <Link href={buttonLink} className="w-full sm:w-auto">
+            <Button className="bg-gold hover:bg-gold-dark text-white w-full sm:w-auto">{buttonText}</Button>
+          </Link>
+        )}
       </CardFooter>
     </Card>
   )
