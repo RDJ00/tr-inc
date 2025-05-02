@@ -441,6 +441,24 @@ export default function Home() {
                 <CarouselContent>
                   {[
                     {
+                      title: "A Collision With Purpose: 2025 Kenya Outreach",
+                      description: "In 2025, our Kenya Outreach mission will construct vital toilets, distribute clothing and dental care packages, plant trees for conservation, and visit cancer fighters. Join Dr. Jacqueline Bonner Sinclair in this compassionate initiative to empower lives, nurture the environment, and spread kindness throughout Kenya. Support needed via CashApp: $jbs1714j or Zelle: 954-673-3506.",
+                      image: "/kenya-outreach-flyer.jpeg",
+                      date: "June 6th-20th, 2025",
+                      buttons: [
+                        {
+                          text: "Support This Mission",
+                          link: "/news/kenya-outreach-2025",
+                          primary: true
+                        },
+                        {
+                          text: "View Details",
+                          link: "/news/kenya-outreach-2025",
+                          primary: false
+                        }
+                      ]
+                    },
+                    {
                       title: "Trailblazers Talk Show for Christ – March 2025",
                       description: "Guest: Minister Jacqueline Sinclair, Host: Latoya Edwards. Together, they explored topics of real faith, personal stories of grace, and Christ-centered encouragement. Join us for an inspiring conversation that will strengthen your spiritual journey.",
                       image: "/events/trailblazers-talk-show-flyer.jpeg",
@@ -522,6 +540,24 @@ export default function Home() {
             {/* Desktop Events Grid */}
             <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
+                {
+                  title: "A Collision With Purpose: 2025 Kenya Outreach",
+                  description: "In 2025, our Kenya Outreach mission will construct vital toilets, distribute clothing and dental care packages, plant trees for conservation, and visit cancer fighters. Join Dr. Jacqueline Bonner Sinclair in this compassionate initiative to empower lives, nurture the environment, and spread kindness throughout Kenya. Support needed via CashApp: $jbs1714j or Zelle: 954-673-3506.",
+                  image: "/kenya-outreach-flyer.jpeg",
+                  date: "June 6th-20th, 2025",
+                  buttons: [
+                    {
+                      text: "Support This Mission",
+                      link: "/news/kenya-outreach-2025",
+                      primary: true
+                    },
+                    {
+                      text: "View Details",
+                      link: "/news/kenya-outreach-2025",
+                      primary: false
+                    }
+                  ]
+                },
                 {
                   title: "Trailblazers Talk Show for Christ – March 2025",
                   description: "Guest: Minister Jacqueline Sinclair, Host: Latoya Edwards. Together, they explored topics of real faith, personal stories of grace, and Christ-centered encouragement. Join us for an inspiring conversation that will strengthen your spiritual journey.",

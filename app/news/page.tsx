@@ -10,6 +10,25 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 export default function NewsPage() {
   const upcomingProjects = [
     {
+      title: "A Collision With Purpose: 2025 Kenya Outreach",
+      description: "In 2025, the Kenya Outreach Initiative is set to make a transformative impact in the community by addressing critical needs and fostering hope. Our dedicated team will construct vital toilets to enhance sanitation and improve health outcomes for children while distributing clothing and dental care packages to uplift the most vulnerable among us. Committed to environmental stewardship, we will plant trees to bolster nature conservation efforts, promoting a greener and more sustainable future.",
+      image: "/kenya-outreach-flyer.jpeg",
+      date: "June 6th-20th, 2025",
+      buttons: [
+        {
+          text: "Support This Mission",
+          link: "/news/kenya-outreach-2025",
+          primary: true
+        },
+        {
+          text: "View Details",
+          link: "/news/kenya-outreach-2025",
+          primary: false
+        }
+      ],
+      tags: ["Global Missions", "Outreach", "Humanitarian"]
+    },
+    {
       title: "Prayer Breakfast",
       description:
         "Join us for a morning of faith, food, and fellowship. Theme: Pray Bold (Hebrews 4:16). Hosted by Hon. Jaqueline Sinclaire & Pastor Pratt Brown, with Apostle Dr. K. Lyle, Prophetess Sausha McDonald, and Guest Speaker Apostle Margaret Thompson. Come and connect with God for uplifting, spiritual refreshment and leave blessed and empowered.",

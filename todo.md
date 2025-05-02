@@ -58,6 +58,9 @@
 - [x] Add Trailblazers Talk Show for Christ – March 2025 event to Past Events section
 - [x] Create individual detail pages for all events in the Past Events section
 - [x] Create detailed page for Prayer Breakfast event with payment information
+- [x] Create Kenya Outreach 2025 campaign page with donation options
+- [x] Feature Kenya Outreach 2025 prominently on homepage and news page
+- [ ] Set up Cashapp integration for Kenya Outreach donations tracking
 - [ ] Test Formspree form submission flow and verify email notifications for all forms
 - [x] Re-enable "Make a Difference Today" section on homepage once PayPal or Stripe payment processing is integrated
 
@@ -68,9 +71,19 @@
 - [x] Resolve package dependency conflicts
 - [x] Add form success/error handling for Formspree submissions
 - [x] Implement PayPal or Stripe payment processing for donations
+- [ ] Create social media sharing assets for Kenya Outreach campaign
+- [ ] Create email template for Kenya Outreach campaign updates
+- [ ] Improve image loading performance by optimizing all images
+- [ ] Enhance SEO metadata for all pages
 
 ## Low Priority
 - [ ] Add testing framework
 - [ ] Set up CI/CD pipeline
 - [ ] Create documentation
-- [ ] Configure Vercel analytics 
+- [ ] Configure Vercel analytics
+
+## Future Enhancements
+- [ ] Add testimonials from previous Kenya missions
+- [ ] Create a photo gallery section for past events
+- [ ] Implement a blog section for regular updates
+- [ ] Add a progress tracker for Kenya Outreach fundraising goals 
