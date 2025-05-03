@@ -63,6 +63,11 @@
 - [ ] Set up Cashapp integration for Kenya Outreach donations tracking
 - [ ] Test Formspree form submission flow and verify email notifications for all forms
 - [x] Re-enable "Make a Difference Today" section on homepage once PayPal or Stripe payment processing is integrated
+- [x] Reduce vertical white space in the "Our Purpose" and "What We Do" sections
+- [x] Improve icon visibility in cards with beige backgrounds by using purple as secondary brand color
+- [x] Revise the Meet the Team section to remove hover/click functionality and always display team member information
+- [x] Create a fallback state for event search using the carousel layout for featured/upcoming events
+- [x] Ensure all components are mobile-optimized and do not rely on hover actions
 
 ## Medium Priority
 - [ ] Implement simple static events management

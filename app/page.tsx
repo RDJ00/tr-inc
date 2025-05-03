@@ -174,21 +174,21 @@ export default function Home() {
       </section>
 
       {/* Mission/Vision Section */}
-      <section id="about" className="py-16 bg-tan relative overflow-hidden">
+      <section id="about" className="py-10 bg-tan relative overflow-hidden">
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
 
         <div className="container relative z-10">
           <ScrollAnimation>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-navy relative inline-block brush-stroke mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-navy relative inline-block brush-stroke mx-auto">
               Our Purpose
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-6">
               <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 bg-white border border-gold/20">
-                <CardHeader className="pb-2">
-                  <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center mb-4">
-                    <Heart className="h-6 w-6 text-gold" />
+                <CardHeader className="pb-2 pt-4">
+                  <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center mb-2">
+                    <Heart className="h-5 w-5 text-gold" />
                   </div>
                   <CardTitle className="text-2xl text-navy">Our Mission</CardTitle>
                 </CardHeader>
@@ -196,7 +196,7 @@ export default function Home() {
                   <p className="text-navy/70">
                     To bring normality to the lives of adults or children and families who feel displaced.
                   </p>
-                  <div className="mt-4 p-4 bg-tan-light rounded-lg border border-gold/20">
+                  <div className="mt-3 p-3 bg-tan-light rounded-lg border border-gold/20">
                     <p className="text-navy/80 text-sm font-medium">
                       If you are in need of immediate help please call
                       <br />
@@ -211,9 +211,9 @@ export default function Home() {
                 </CardContent>
               </Card>
               <Card className="border-none shadow-lg hover:shadow-xl transition-all duration-300 bg-white border border-gold/20">
-                <CardHeader className="pb-2">
-                  <div className="w-12 h-12 rounded-full bg-purple/20 flex items-center justify-center mb-4">
-                    <Lightbulb className="h-6 w-6 text-purple" />
+                <CardHeader className="pb-2 pt-4">
+                  <div className="w-10 h-10 rounded-full bg-purple/20 flex items-center justify-center mb-2">
+                    <Lightbulb className="h-5 w-5 text-purple" />
                   </div>
                   <CardTitle className="text-2xl text-navy">Our Vision</CardTitle>
                 </CardHeader>
@@ -229,16 +229,16 @@ export default function Home() {
       </section>
 
       {/* Programs Section */}
-      <section id="programs" className="py-16 bg-white relative">
+      <section id="programs" className="py-10 bg-white relative">
         {/* Decorative pattern */}
         <div className="absolute inset-0 dot-pattern opacity-10"></div>
 
         <div className="container relative z-10">
           <ScrollAnimation>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-navy relative inline-block brush-stroke mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 text-navy relative inline-block brush-stroke mx-auto">
               What We Do
             </h2>
-            <p className="text-center text-navy/70 max-w-2xl mx-auto mb-12">
+            <p className="text-center text-navy/70 max-w-2xl mx-auto mb-6">
               Our comprehensive programs address the diverse needs of survivors at every stage of their healing journey.
             </p>
             
@@ -256,7 +256,7 @@ export default function Home() {
                       title: "Domestic Violence",
                       description:
                         "Providing crisis intervention, safety planning, and ongoing support for survivors of intimate partner violence to ensure immediate safety and long-term healing.",
-                      icon: <Shield className="h-6 w-6 text-gold" />,
+                      icon: <Shield className="h-6 w-6 text-purple" />,
                       link: "/domestic-violence",
                       delay: 0.1
                     },
@@ -264,7 +264,7 @@ export default function Home() {
                       title: "Children & Trauma",
                       description:
                         "Age-appropriate therapy and support services for children who have witnessed or experienced trauma, helping them process experiences and build resilience.",
-                      icon: <Users className="h-6 w-6 text-gold" />,
+                      icon: <Users className="h-6 w-6 text-purple" />,
                       link: "/children-trauma",
                       delay: 0.2
                     },
@@ -272,7 +272,7 @@ export default function Home() {
                       title: "Sexual Assault",
                       description:
                         "Specialized care and advocacy for survivors of sexual violence, including crisis response, medical accompaniment, and trauma-informed counseling services.",
-                      icon: <HandHeart className="h-6 w-6 text-gold" />,
+                      icon: <HandHeart className="h-6 w-6 text-purple" />,
                       link: "/sexual-assault",
                       delay: 0.3
                     },
@@ -280,7 +280,7 @@ export default function Home() {
                       title: "Client-Centered Practice (CCP)",
                       description:
                         "Individualized support plans that honor each survivor's unique needs, choices, and healing journey, ensuring every person feels heard, valued, and empowered.",
-                      icon: <Heart className="h-6 w-6 text-gold" />,
+                      icon: <Heart className="h-6 w-6 text-purple" />,
                       link: "/client-centered-practice",
                       delay: 0.4
                     },
@@ -288,7 +288,7 @@ export default function Home() {
                       title: "Awareness & Action",
                       description:
                         "Community education and prevention programs aimed at ending the cycle of violence through increased awareness, bystander intervention, and systemic change.",
-                      icon: <Megaphone className="h-6 w-6 text-gold" />,
+                      icon: <Megaphone className="h-6 w-6 text-purple" />,
                       link: "/awareness-and-action",
                       delay: 0.5
                     },
@@ -298,7 +298,7 @@ export default function Home() {
                         className="border-none shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-tan-light h-full flex flex-col"
                       >
                         <CardHeader className="pb-3 border-b border-gold/10">
-                          <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-4">
+                          <div className="w-12 h-12 rounded-full bg-purple/20 flex items-center justify-center mb-4">
                             {program.icon}
                           </div>
                           <CardTitle className="text-xl text-navy font-bold">{program.title}</CardTitle>
@@ -338,7 +338,7 @@ export default function Home() {
                   title: "Domestic Violence",
                   description:
                     "Providing crisis intervention, safety planning, and ongoing support for survivors of intimate partner violence to ensure immediate safety and long-term healing.",
-                  icon: <Shield className="h-6 w-6 text-gold" />,
+                  icon: <Shield className="h-6 w-6 text-purple" />,
                   link: "/domestic-violence",
                   delay: 0.1
                 },
@@ -346,7 +346,7 @@ export default function Home() {
                   title: "Children & Trauma",
                   description:
                     "Age-appropriate therapy and support services for children who have witnessed or experienced trauma, helping them process experiences and build resilience.",
-                  icon: <Users className="h-6 w-6 text-gold" />,
+                  icon: <Users className="h-6 w-6 text-purple" />,
                   link: "/children-trauma",
                   delay: 0.2
                 },
@@ -354,7 +354,7 @@ export default function Home() {
                   title: "Sexual Assault",
                   description:
                     "Specialized care and advocacy for survivors of sexual violence, including crisis response, medical accompaniment, and trauma-informed counseling services.",
-                  icon: <HandHeart className="h-6 w-6 text-gold" />,
+                  icon: <HandHeart className="h-6 w-6 text-purple" />,
                   link: "/sexual-assault",
                   delay: 0.3
                 },
@@ -362,7 +362,7 @@ export default function Home() {
                   title: "Client-Centered Practice (CCP)",
                   description:
                     "Individualized support plans that honor each survivor's unique needs, choices, and healing journey, ensuring every person feels heard, valued, and empowered.",
-                  icon: <Heart className="h-6 w-6 text-gold" />,
+                  icon: <Heart className="h-6 w-6 text-purple" />,
                   link: "/client-centered-practice",
                   delay: 0.4
                 },
@@ -370,7 +370,7 @@ export default function Home() {
                   title: "Awareness & Action",
                   description:
                     "Community education and prevention programs aimed at ending the cycle of violence through increased awareness, bystander intervention, and systemic change.",
-                  icon: <Megaphone className="h-6 w-6 text-gold" />,
+                  icon: <Megaphone className="h-6 w-6 text-purple" />,
                   link: "/awareness-and-action",
                   delay: 0.5
                 },

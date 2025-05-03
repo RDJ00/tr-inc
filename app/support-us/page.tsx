@@ -24,7 +24,9 @@ export default function SupportUsPage() {
                 abuse. Together, we can create a community where everyone lives free from violence and has the resources
                 they need to heal and thrive.
               </p>
-              <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white">See Our Events</Button>
+              <Button className="bg-[#C79C4A] hover:bg-[#C79C4A]/90 text-white" asChild>
+                <Link href="/news">See Our Events</Link>
+              </Button>
             </div>
           </ScrollAnimation>
         </div>
