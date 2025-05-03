@@ -308,3 +308,16 @@ h6 {
   z-index: -1;
   border-radius: 50% 50% 0 0;
 }
+
+@keyframes subtle-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(128, 0, 128, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(128, 0, 128, 0.8);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: subtle-pulse 3s infinite ease-in-out;
+}

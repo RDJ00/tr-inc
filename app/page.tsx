@@ -456,7 +456,8 @@ export default function Home() {
                           link: "/news/kenya-outreach-2025",
                           primary: false
                         }
-                      ]
+                      ],
+                      featured: true
                     },
                     {
                       title: "Trailblazers Talk Show for Christ – March 2025",
@@ -526,6 +527,7 @@ export default function Home() {
                         date={event.date}
                         time={event.time}
                         buttons={event.buttons}
+                        className={event.featured ? "ring-4 ring-purple/40 shadow-[0_0_15px_rgba(128,0,128,0.5)]" : ""}
                       />
                     </CarouselItem>
                   ))}
@@ -537,97 +539,114 @@ export default function Home() {
               </Carousel>
             </div>
             
-            {/* Desktop Events Grid */}
-            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "A Collision With Purpose: 2025 Kenya Outreach",
-                  description: "In 2025, our Kenya Outreach mission will construct vital toilets, distribute clothing and dental care packages, plant trees for conservation, and visit cancer fighters. Join Dr. Jacqueline Bonner Sinclair in this compassionate initiative to empower lives, nurture the environment, and spread kindness throughout Kenya. Support needed via CashApp: $jbs1714j or Zelle: 954-673-3506.",
-                  image: "/kenya-outreach-flyer.jpeg",
-                  date: "June 6th-20th, 2025",
-                  buttons: [
+            {/* Desktop Events Carousel */}
+            <div className="hidden sm:block">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                  slidesToScroll: 1
+                }}
+              >
+                <CarouselContent className="-ml-4">
+                  {[
                     {
-                      text: "Support This Mission",
-                      link: "/news/kenya-outreach-2025",
-                      primary: true
+                      title: "A Collision With Purpose: 2025 Kenya Outreach",
+                      description: "In 2025, our Kenya Outreach mission will construct vital toilets, distribute clothing and dental care packages, plant trees for conservation, and visit cancer fighters. Join Dr. Jacqueline Bonner Sinclair in this compassionate initiative to empower lives, nurture the environment, and spread kindness throughout Kenya. Support needed via CashApp: $jbs1714j or Zelle: 954-673-3506.",
+                      image: "/kenya-outreach-flyer.jpeg",
+                      date: "June 6th-20th, 2025",
+                      buttons: [
+                        {
+                          text: "Support This Mission",
+                          link: "/news/kenya-outreach-2025",
+                          primary: true
+                        },
+                        {
+                          text: "View Details",
+                          link: "/news/kenya-outreach-2025",
+                          primary: false
+                        }
+                      ],
+                      featured: true
                     },
                     {
-                      text: "View Details",
-                      link: "/news/kenya-outreach-2025",
-                      primary: false
-                    }
-                  ]
-                },
-                {
-                  title: "Trailblazers Talk Show for Christ – March 2025",
-                  description: "Guest: Minister Jacqueline Sinclair, Host: Latoya Edwards. Together, they explored topics of real faith, personal stories of grace, and Christ-centered encouragement. Join us for an inspiring conversation that will strengthen your spiritual journey.",
-                  image: "/events/trailblazers-talk-show-flyer.jpeg",
-                  date: "March 8, 2025",
-                  time: "12:00 PM EST",
-                  buttons: [
-                    {
-                      text: "View Event Details",
-                      link: "/news/trailblazers-march-2025",
-                      primary: true
-                    }
-                  ]
-                },
-                {
-                  title: "Prayer Breakfast",
-                  description: "Join us for a morning of faith, food, and fellowship. Theme: Pray Bold (Hebrews 4:16). Hosted by Hon. Jaqueline Sinclaire & Pastor Pratt Brown, with Apostle Dr. K. Lyle, Prophetess Sausha McDonald, and Guest Speaker Apostle Margaret Thompson. $25 entry. Location: Transformation Ministries, 4987 N University Drive, Lauderhill, FL 33351.",
-                  image: "/events/webp/prayer-breakfast-flyer.webp",
-                  date: "May 24, 2024",
-                  time: "10:00 AM",
-                  buttons: [
-                    {
-                      text: "$25 Tickets",
-                      link: "#",
-                      primary: true
+                      title: "Trailblazers Talk Show for Christ – March 2025",
+                      description: "Guest: Minister Jacqueline Sinclair, Host: Latoya Edwards. Together, they explored topics of real faith, personal stories of grace, and Christ-centered encouragement. Join us for an inspiring conversation that will strengthen your spiritual journey.",
+                      image: "/events/trailblazers-talk-show-flyer.jpeg",
+                      date: "March 8, 2025",
+                      time: "12:00 PM EST",
+                      buttons: [
+                        {
+                          text: "View Event Details",
+                          link: "/news/trailblazers-march-2025",
+                          primary: true
+                        }
+                      ]
                     },
                     {
-                      text: "View Details",
-                      link: "/news/prayer-breakfast",
-                      primary: false
-                    }
-                  ]
-                },
-                {
-                  title: "Touch & Restored 6th Anniversary: Broken But Not Beyond Repair",
-                  description: "Touch & Restored 6th Anniversary: 'Broken But Not Beyond Repair' Women Empowerment Conference. Join host Jacqueline Sinclair, Apostle Margaret Thompson, Rev. Maria Hinds, Lady Yvonne Shirley, Pastor K. Lyle, and Evangelist Marcia Baker for an inspiring celebration of healing and empowerment. Romans 8:28.",
-                  image: "/events/webp/touch-and-restored-flyer.webp",
-                  date: "January 24, 2025",
-                  buttons: [
+                      title: "Prayer Breakfast",
+                      description: "Join us for a morning of faith, food, and fellowship. Theme: Pray Bold (Hebrews 4:16). Hosted by Hon. Jaqueline Sinclaire & Pastor Pratt Brown, with Apostle Dr. K. Lyle, Prophetess Sausha McDonald, and Guest Speaker Apostle Margaret Thompson. $25 entry. Location: Transformation Ministries, 4987 N University Drive, Lauderhill, FL 33351.",
+                      image: "/events/webp/prayer-breakfast-flyer.webp",
+                      date: "May 24, 2024",
+                      time: "10:00 AM",
+                      buttons: [
+                        {
+                          text: "$25 Tickets",
+                          link: "#",
+                          primary: true
+                        },
+                        {
+                          text: "View Details",
+                          link: "/news/prayer-breakfast",
+                          primary: false
+                        }
+                      ]
+                    },
                     {
-                      text: "Event Details",
-                      link: "/news/touch-and-restored-anniversary",
-                      primary: true
-                    }
-                  ]
-                },
-                {
-                  title: "Ladies in HAT Back to School Fundraiser",
-                  description: "Our elegant fundraising event featured a fashion show, raffles, and prizes for best hats, bringing the community together to support children affected by domestic violence. Attendees enjoyed an afternoon of style and philanthropy, with all proceeds providing essential school supplies and resources to help children start the academic year with confidence and the tools needed to succeed.",
-                  image: "/events/webp/ladies-in-hat-flyer.webp",
-                  date: "August 3, 2024",
-                  buttons: [
+                      title: "Touch & Restored 6th Anniversary: Broken But Not Beyond Repair",
+                      description: "Touch & Restored 6th Anniversary: 'Broken But Not Beyond Repair' Women Empowerment Conference. Join host Jacqueline Sinclair, Apostle Margaret Thompson, Rev. Maria Hinds, Lady Yvonne Shirley, Pastor K. Lyle, and Evangelist Marcia Baker for an inspiring celebration of healing and empowerment. Romans 8:28.",
+                      image: "/events/webp/touch-and-restored-flyer.webp",
+                      date: "January 24, 2025",
+                      buttons: [
+                        {
+                          text: "Event Details",
+                          link: "/news/touch-and-restored-anniversary",
+                          primary: true
+                        }
+                      ]
+                    },
                     {
-                      text: "Event Details",
-                      link: "/news/ladies-in-hat-fundraiser",
-                      primary: true
-                    }
-                  ]
-                },
-              ].map((event, index) => (
-                <ProjectCard
-                  key={index}
-                  title={event.title}
-                  description={event.description}
-                  image={event.image}
-                  date={event.date}
-                  time={event.time}
-                  buttons={event.buttons}
-                />
-              ))}
+                      title: "Ladies in HAT Back to School Fundraiser",
+                      description: "Our elegant fundraising event featured a fashion show, raffles, and prizes for best hats, bringing the community together to support children affected by domestic violence. Attendees enjoyed an afternoon of style and philanthropy, with all proceeds providing essential school supplies and resources to help children start the academic year with confidence and the tools needed to succeed.",
+                      image: "/events/webp/ladies-in-hat-flyer.webp",
+                      date: "August 3, 2024",
+                      buttons: [
+                        {
+                          text: "Event Details",
+                          link: "/news/ladies-in-hat-fundraiser",
+                          primary: true
+                        }
+                      ]
+                    },
+                  ].map((event, index) => (
+                    <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                      <ProjectCard
+                        title={event.title}
+                        description={event.description}
+                        image={event.image}
+                        date={event.date}
+                        time={event.time}
+                        buttons={event.buttons}
+                        className={event.featured ? "ring-4 ring-purple/60 shadow-[0_0_20px_rgba(128,0,128,0.6)] animate-pulse-subtle" : ""}
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <div className="flex justify-center mt-6">
+                  <CarouselPrevious className="relative -left-0 top-0 translate-y-0 bg-gold/10 hover:bg-gold/20 border-0 text-navy static mr-2" />
+                  <CarouselNext className="relative -right-0 top-0 translate-y-0 bg-gold/10 hover:bg-gold/20 border-0 text-navy static" />
+                </div>
+              </Carousel>
             </div>
           </ScrollAnimation>
         </div>

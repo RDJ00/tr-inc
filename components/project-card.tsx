@@ -24,6 +24,7 @@ interface ProjectCardProps {
   buttons?: ButtonConfig[]
   isPast?: boolean
   tags?: string[]
+  className?: string
 }
 
 export function ProjectCard({
@@ -37,9 +38,10 @@ export function ProjectCard({
   buttons,
   isPast = false,
   tags = [],
+  className = "",
 }: ProjectCardProps) {
   return (
-    <Card className="border-none shadow-md overflow-hidden group transition-all duration-300 hover:shadow-lg hover:scale-[1.02]">
+    <Card className={`border-none shadow-md overflow-hidden group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] ${className}`}>
       <div className="relative aspect-video overflow-hidden">
         <Image
           src={image || "/placeholder.svg"}
