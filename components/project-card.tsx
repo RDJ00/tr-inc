@@ -41,13 +41,14 @@ export function ProjectCard({
   className = "",
 }: ProjectCardProps) {
   return (
-    <Card className={`border-none shadow-md overflow-hidden group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] ${className}`}>
+    <Card className={`border-none shadow-md overflow-hidden group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] flex flex-col h-full ${className}`}>
       <div className="relative aspect-video overflow-hidden">
         <Image
           src={image || "/placeholder.svg"}
           alt={title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         {isPast && (
           <div className="absolute top-3 right-3">
@@ -64,10 +65,10 @@ export function ProjectCard({
           </div>
         )}
       </div>
-      <CardHeader className="pb-2">
+      <CardHeader className="pb-2 flex-shrink-0">
         {date && (
           <div className="flex items-center gap-2 text-gold mb-2">
-            <Calendar className="h-4 w-4" />
+            <Calendar className="h-4 w-4 flex-shrink-0" />
             <span className="text-sm font-medium truncate">
               {date}
               {time && ` • ${time}`}
@@ -76,10 +77,10 @@ export function ProjectCard({
         )}
         <CardTitle className="text-xl text-navy line-clamp-2">{title}</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="pb-4 flex-grow">
         <p className="text-navy/70 line-clamp-3">{description}</p>
       </CardContent>
-      <CardFooter className="flex flex-wrap gap-2">
+      <CardFooter className="flex flex-wrap gap-2 mt-auto pt-2">
         {buttons ? (
           // Render multiple buttons if provided
           buttons.map((button, index) => (

@@ -437,8 +437,9 @@ export default function Home() {
                   align: "center",
                   loop: true,
                 }}
+                className="pb-6"
               >
-                <CarouselContent>
+                <CarouselContent className="py-4">
                   {[
                     {
                       title: "A Collision With Purpose: 2025 Kenya Outreach",
@@ -520,15 +521,17 @@ export default function Home() {
                     },
                   ].map((event, index) => (
                     <CarouselItem key={index} className="basis-full">
-                      <ProjectCard
-                        title={event.title}
-                        description={event.description}
-                        image={event.image}
-                        date={event.date}
-                        time={event.time}
-                        buttons={event.buttons}
-                        className={event.featured ? "ring-4 ring-purple/40 shadow-[0_0_15px_rgba(128,0,128,0.5)]" : ""}
-                      />
+                      <div className="h-full">
+                        <ProjectCard
+                          title={event.title}
+                          description={event.description}
+                          image={event.image}
+                          date={event.date}
+                          time={event.time}
+                          buttons={event.buttons}
+                          className={`h-full ${event.featured ? "ring-4 ring-purple/40 shadow-[0_0_15px_rgba(128,0,128,0.5)]" : ""}`}
+                        />
+                      </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
@@ -547,8 +550,9 @@ export default function Home() {
                   loop: true,
                   slidesToScroll: 1
                 }}
+                className="pb-8"
               >
-                <CarouselContent className="-ml-4">
+                <CarouselContent className="-ml-4 py-4">
                   {[
                     {
                       title: "A Collision With Purpose: 2025 Kenya Outreach",
@@ -629,16 +633,18 @@ export default function Home() {
                       ]
                     },
                   ].map((event, index) => (
-                    <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                      <ProjectCard
-                        title={event.title}
-                        description={event.description}
-                        image={event.image}
-                        date={event.date}
-                        time={event.time}
-                        buttons={event.buttons}
-                        className={event.featured ? "ring-4 ring-purple/60 shadow-[0_0_20px_rgba(128,0,128,0.6)] animate-pulse-subtle" : ""}
-                      />
+                    <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 h-full">
+                      <div className="h-full">
+                        <ProjectCard
+                          title={event.title}
+                          description={event.description}
+                          image={event.image}
+                          date={event.date}
+                          time={event.time}
+                          buttons={event.buttons}
+                          className={`h-full ${event.featured ? "ring-4 ring-purple/60 shadow-[0_0_20px_rgba(128,0,128,0.6)] animate-pulse-subtle" : ""}`}
+                        />
+                      </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
