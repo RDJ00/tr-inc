@@ -66,9 +66,9 @@ export function ProjectCard({
         )}
       </div>
       <div className="flex flex-col flex-grow">
-        <CardHeader className="pb-2 flex-shrink-0">
+        <CardHeader className="pb-0 pt-3 flex-shrink-0">
           {date && (
-            <div className="flex items-center gap-2 text-gold mb-2">
+            <div className="flex items-center gap-2 text-gold mb-1">
               <Calendar className="h-4 w-4 flex-shrink-0" />
               <span className="text-sm font-medium truncate">
                 {date}
@@ -78,10 +78,10 @@ export function ProjectCard({
           )}
           <CardTitle className="text-xl text-navy line-clamp-2">{title}</CardTitle>
         </CardHeader>
-        <CardContent className="pb-4 flex-grow overflow-hidden">
-          <p className="text-navy/70 line-clamp-4 md:line-clamp-3">{description}</p>
+        <CardContent className="py-2 flex-grow overflow-hidden">
+          <p className="text-navy/70 line-clamp-3">{description}</p>
         </CardContent>
-        <CardFooter className="flex flex-wrap gap-2 mt-auto pt-2">
+        <CardFooter className="flex flex-wrap gap-2 pt-0 pb-4">
           {buttons ? (
             // Render multiple buttons if provided
             buttons.map((button, index) => (

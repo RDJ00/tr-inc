@@ -520,7 +520,7 @@ export default function Home() {
                       ]
                     },
                   ].map((event, index) => (
-                    <CarouselItem key={index} className="basis-full flex h-[600px]">
+                    <CarouselItem key={index} className="basis-full flex h-[500px]">
                       <div className="w-full h-full flex flex-col">
                         <ProjectCard
                           title={event.title}
@@ -633,7 +633,7 @@ export default function Home() {
                       ]
                     },
                   ].map((event, index) => (
-                    <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 flex h-[650px]">
+                    <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 flex h-[530px]">
                       <div className="w-full h-full flex flex-col">
                         <ProjectCard
                           title={event.title}
