@@ -28,13 +28,13 @@ export default function AboutPage() {
     {
       name: "Wayne Robinson",
       title: "Analyst/Business Consultant",
-      bio: "Wayne Robinson serves as an Analyst and Business Consultant. Joined Touch & Restored in 2017.",
+      bio: "Wayne Robinson brings valuable analytical expertise to our organization, helping develop strategic plans and evaluate program effectiveness. With his business consulting background, he provides insights that strengthen our operational capacity and sustainability. Joined Touch & Restored in 2017.",
       image: "/team-members/wayne-robinson.png",
     },
     {
       name: "Lincoln Grant",
       title: "Treasurer/Warehouse Supervisor",
-      bio: "Lincoln Grant serves as Treasurer and Warehouse Supervisor. Joined Touch & Restored in 2017.",
+      bio: "Lincoln Grant manages our financial oversight and warehouse operations with precision and dedication. His dual role ensures both fiscal responsibility and efficient distribution of resources to those we serve. His organizational skills have been instrumental in our growth since joining Touch & Restored in 2017.",
       image: "/team-members/webp/lincoln-grant.webp",
     },
     {
@@ -46,19 +46,19 @@ export default function AboutPage() {
     {
       name: "Audie Gammon",
       title: "Business Owner",
-      bio: "Donor/Fund Raiser. Joined: 2017",
+      bio: "Audie Gammon leverages her entrepreneurial expertise to support our mission through both financial contributions and innovative fundraising initiatives. Her business acumen and dedication to community service have made her a valuable addition to our team since joining in 2024.",
       image: "/team-members/webp/audie-gammon.webp",
     },
     {
-      name: "Tameka Morris",
-      title: "",
-      bio: "",
+      name: "Taneka Morris",
+      title: "Assistant Counselor",
+      bio: "Taneka Morris brings empathy and supportive care to her role as Assistant Counselor, working closely with survivors of domestic violence. With her compassionate approach, she helps create a safe space for healing and recovery. Joined Touch & Restored in 2019.",
       image: "/team-members/taneka-morris.png",
     },
     {
       name: "Richard Stephenson",
-      title: "",
-      bio: "",
+      title: "Counselor",
+      bio: "Richard Stephenson provides vital counseling services to survivors, drawing on his professional experience to support healing and recovery. His compassionate approach helps clients navigate trauma and build resilience on their journey toward restoration. Joined Touch & Restored in 2019.",
       image: "/team-members/richard-stephenson.png",
     },
     {

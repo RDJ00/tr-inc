@@ -20,8 +20,13 @@
 - [x] Update Jacqueline Sinclair's profile picture in the "Meet the Team" section
 - [x] Update Wayne Robinson's profile picture in the "Meet the Team" section
 - [x] Update Wayne Robinson's bio with correct title and join date
+- [x] Enhance Wayne Robinson's bio with more detailed information about his analytical expertise
 - [x] Add Lincoln Grant to the team as Treasurer/Warehouse Supervisor
+- [x] Enhance Lincoln Grant's bio with detailed information about his financial oversight and warehouse roles
 - [x] Add Nadine Neabard to the team as Fundraiser/Lead Supervisor
+- [x] Update Audie Gammon's bio with more detailed information about her role as a donor and fundraiser
+- [x] Add Richard Stephenson's title as Counselor and bio with join date (2019)
+- [x] Add Taneka Morris's title as Assistant Counselor and bio with join date (2019)
 - [x] Remove "Voices of Impact" testimonial section from the homepage
 - [x] Enhance About page mobile responsiveness
 - [x] Add smooth animations to About page sections
