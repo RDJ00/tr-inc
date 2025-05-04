@@ -520,8 +520,8 @@ export default function Home() {
                       ]
                     },
                   ].map((event, index) => (
-                    <CarouselItem key={index} className="basis-full">
-                      <div className="h-full">
+                    <CarouselItem key={index} className="basis-full flex h-[600px]">
+                      <div className="w-full h-full flex flex-col">
                         <ProjectCard
                           title={event.title}
                           description={event.description}
@@ -529,7 +529,7 @@ export default function Home() {
                           date={event.date}
                           time={event.time}
                           buttons={event.buttons}
-                          className={`h-full ${event.featured ? "ring-4 ring-purple/40 shadow-[0_0_15px_rgba(128,0,128,0.5)]" : ""}`}
+                          className={`h-full flex-1 ${event.featured ? "ring-4 ring-purple/40 shadow-[0_0_15px_rgba(128,0,128,0.5)]" : ""}`}
                         />
                       </div>
                     </CarouselItem>
@@ -633,8 +633,8 @@ export default function Home() {
                       ]
                     },
                   ].map((event, index) => (
-                    <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 h-full">
-                      <div className="h-full">
+                    <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 flex h-[650px]">
+                      <div className="w-full h-full flex flex-col">
                         <ProjectCard
                           title={event.title}
                           description={event.description}
@@ -642,7 +642,7 @@ export default function Home() {
                           date={event.date}
                           time={event.time}
                           buttons={event.buttons}
-                          className={`h-full ${event.featured ? "ring-4 ring-purple/60 shadow-[0_0_20px_rgba(128,0,128,0.6)] animate-pulse-subtle" : ""}`}
+                          className={`h-full flex-1 ${event.featured ? "ring-4 ring-purple/60 shadow-[0_0_20px_rgba(128,0,128,0.6)] animate-pulse-subtle" : ""}`}
                         />
                       </div>
                     </CarouselItem>

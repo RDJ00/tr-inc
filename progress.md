@@ -24,6 +24,9 @@ Project completion: 100%
 ## Recent Updates
 - Added mobile-friendly carousels with navigation controls for the "What We Do" section on homepage
 - Added mobile-friendly carousels with navigation controls for the "Events" section on homepage
+- Fixed event card heights in carousels to ensure consistent sizing and better visual alignment
+- Improved ProjectCard component with better flex structure to support fixed-height layouts
+- Enhanced description truncation in ProjectCard component for better text display
 - Updated homepage layout to show carousels on mobile and grid layout on desktop for better user experience
 - Improved "Join Our Volunteer Team" section with better mobile responsiveness
 - Changed homepage "Volunteer" button to open the volunteer form modal directly instead of linking to the Support Us page
