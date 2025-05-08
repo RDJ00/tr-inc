@@ -46,7 +46,7 @@ export default function AboutPage() {
     {
       name: "Audie Gammon",
       title: "Business Owner",
-      bio: "Audie Gammon leverages her entrepreneurial expertise to support our mission through both financial contributions and innovative fundraising initiatives. Her business acumen and dedication to community service have made her a valuable addition to our team since joining in 2024.",
+      bio: "Audie Gammon leverages his entrepreneurial expertise to support our mission through both financial contributions and innovative fundraising initiatives. His business acumen and dedication to community service have made him a valuable addition to our team since joining in 2024.",
       image: "/team-members/webp/audie-gammon.webp",
     },
     {
